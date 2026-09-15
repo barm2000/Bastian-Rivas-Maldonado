@@ -24,7 +24,7 @@
       --border-blue: rgba(56,200,255,.28);
       --shadow: 0 18px 52px rgba(0,0,0,.30);
       --radius: 20px;
-      --max: 1180px;
+      --max: 1480px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,7 +56,7 @@
     a { color: inherit; text-decoration: none; }
     img, video { display: block; max-width: 100%; }
     button { font: inherit; }
-    .container { width: min(calc(100% - 36px), var(--max)); margin: 0 auto; }
+    .container { width: min(calc(100% - 48px), var(--max)); margin: 0 auto; }
 
     /* NAV */
     .navbar {
@@ -70,35 +70,35 @@
       backdrop-filter: blur(16px);
     }
     .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: .9rem; letter-spacing: -.02em; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: .98rem; letter-spacing: -.02em; }
     .brand-mark {
       width: 35px; height: 35px; display: grid; place-items: center; border-radius: 10px;
       background: linear-gradient(135deg, var(--forest), var(--water)); color: #00140d; font-size: .7rem; font-weight: 900;
     }
     .nav-links { display: flex; align-items: center; gap: 2px; }
-    .nav-links a { padding: 8px 9px; border-radius: 8px; color: var(--text); font-size: .74rem; font-weight: 650; transition: .2s; }
+    .nav-links a { padding: 8px 10px; border-radius: 8px; color: var(--text); font-size: .82rem; font-weight: 650; transition: .2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--water); background: rgba(56,200,255,.065); }
     .menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.035); color: white; cursor: pointer; }
 
     /* HERO */
-    .hero { min-height: 76vh; display: flex; align-items: center; padding: 112px 0 64px; }
-    .hero-content { max-width: 900px; }
+    .hero { min-height: 72vh; display: flex; align-items: center; padding: 116px 0 70px; }
+    .hero-content { max-width: 1120px; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 7px 11px;
       border: 1px solid var(--border-green); border-radius: 999px; background: rgba(57,217,138,.045);
       color: var(--forest); font-size: .68rem; font-weight: 850; letter-spacing: .105em; text-transform: uppercase;
     }
     .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 11px var(--forest); }
-    h1 { font-size: clamp(2.65rem, 5.2vw, 4.65rem); line-height: .99; letter-spacing: -.055em; }
+    h1 { font-size: clamp(3rem, 5.35vw, 5.35rem); line-height: .98; letter-spacing: -.055em; }
     .gradient-name {
       display: block;
       background: linear-gradient(90deg, #fff 0%, #e3fff0 30%, var(--forest) 62%, var(--water) 100%);
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .hero-subtitle { margin-top: 18px; color: #e2ece7; font-size: clamp(.95rem, 1.25vw, 1.12rem); font-weight: 650; }
-    .hero-copy { max-width: 760px; margin-top: 13px; color: var(--text); font-size: .94rem; }
+    .hero-subtitle { margin-top: 20px; color: #e2ece7; font-size: clamp(1.03rem, 1.35vw, 1.24rem); font-weight: 650; }
+    .hero-copy { max-width: 920px; margin-top: 14px; color: var(--text); font-size: 1.02rem; }
     .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 21px; }
-    .tag { padding: 6px 9px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.023); color: #c6d2cc; font-size: .7rem; }
+    .tag { padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.023); color: #c6d2cc; font-size: .76rem; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
     .button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; border-radius: 11px; font-size: .78rem; font-weight: 750; transition: .2s; }
     .button-primary { background: linear-gradient(135deg, var(--forest), var(--water)); color: #00140e; }
@@ -107,12 +107,12 @@
     .button-secondary:hover { border-color: var(--border-blue); background: rgba(56,200,255,.05); }
 
     /* GLOBAL SECTIONS */
-    section { padding: 74px 0; }
-    .section-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 48px; align-items: end; margin-bottom: 34px; }
+    section { padding: 82px 0; }
+    .section-head { display: grid; grid-template-columns: .62fr 1.38fr; gap: 64px; align-items: end; margin-bottom: 38px; }
     .section-kicker { margin-bottom: 9px; color: var(--forest); font-size: .64rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
     .section-kicker.blue { color: var(--water); }
-    h2 { font-size: clamp(1.75rem, 3.1vw, 2.75rem); line-height: 1.05; letter-spacing: -.043em; }
-    .section-intro { max-width: 680px; color: var(--text); font-size: .88rem; }
+    h2 { font-size: clamp(2rem, 3.35vw, 3.25rem); line-height: 1.04; letter-spacing: -.043em; }
+    .section-intro { max-width: 860px; color: var(--text); font-size: .98rem; }
 
     /* KNOWLEDGE */
     .knowledge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
@@ -127,17 +127,17 @@
       background: rgba(57,217,138,.07); border: 1px solid rgba(57,217,138,.13); color: var(--forest); font-size: .66rem; font-weight: 850;
     }
     .water .knowledge-index { color: var(--water); background: rgba(56,200,255,.07); border-color: rgba(56,200,255,.13); }
-    .knowledge-card h3 { margin-bottom: 7px; font-size: 1rem; }
-    .knowledge-card p { min-height: 39px; color: var(--muted); font-size: .74rem; margin-bottom: 14px; }
+    .knowledge-card h3 { margin-bottom: 7px; font-size: 1.1rem; }
+    .knowledge-card p { min-height: 42px; color: var(--muted); font-size: .82rem; margin-bottom: 15px; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .chip { padding: 6px 8px; border: 1px solid rgba(255,255,255,.05); border-radius: 7px; background: rgba(255,255,255,.033); color: #c5d2cc; font-size: .68rem; }
+    .chip { padding: 6px 9px; border: 1px solid rgba(255,255,255,.05); border-radius: 7px; background: rgba(255,255,255,.033); color: #c5d2cc; font-size: .74rem; }
 
     /* APPLIED AREAS */
     .problem-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
     .problem { padding: 21px; border: 1px solid var(--border); border-radius: 17px; background: rgba(10,18,15,.82); }
     .problem small { color: var(--water); font-size: .62rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
-    .problem h3 { margin: 10px 0 7px; font-size: .91rem; }
-    .problem p { color: var(--muted); font-size: .74rem; }
+    .problem h3 { margin: 10px 0 7px; font-size: 1rem; }
+    .problem p { color: var(--muted); font-size: .81rem; }
 
     /* PROJECT CAROUSEL */
     .projects-shell { position: relative; }
@@ -157,10 +157,10 @@
     .project-media img, .project-media video { width: 100%; height: 100%; object-fit: cover; }
     .project-body { padding: 21px; display: flex; flex-direction: column; flex: 1; }
     .project-label { margin-bottom: 8px; color: var(--forest); font-size: .61rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
-    .project h3 { margin-bottom: 9px; font-size: .98rem; line-height: 1.3; }
-    .project p { color: var(--text); font-size: .75rem; }
-    .project-tech { margin-top: auto; padding-top: 13px; color: var(--water) !important; font-size: .67rem !important; font-weight: 650; }
-    .project-link { display: inline-flex; margin-top: 10px; color: var(--forest); font-size: .7rem; font-weight: 750; }
+    .project h3 { margin-bottom: 9px; font-size: 1.08rem; line-height: 1.28; }
+    .project p { color: var(--text); font-size: .82rem; }
+    .project-tech { margin-top: auto; padding-top: 13px; color: var(--water) !important; font-size: .73rem !important; font-weight: 650; }
+    .project-link { display: inline-flex; margin-top: 10px; color: var(--forest); font-size: .77rem; font-weight: 750; }
     .project-placeholder {
       height: 168px; flex: 0 0 168px; display: flex; align-items: flex-end; padding: 20px;
       border-bottom: 1px solid var(--border);
@@ -177,17 +177,17 @@
     /* PUBLICATIONS */
     .publication { display: grid; grid-template-columns: 78px 1fr auto; gap: 20px; align-items: start; padding: 21px 0; border-top: 1px solid var(--border); }
     .publication:last-child { border-bottom: 1px solid var(--border); }
-    .pub-year { color: var(--water); font-size: .84rem; font-weight: 850; }
-    .pub-title { margin-bottom: 4px; font-size: .9rem; }
-    .pub-copy { color: var(--muted); font-size: .74rem; }
-    .pub-link { color: var(--forest); font-size: .72rem; font-weight: 750; white-space: nowrap; }
+    .pub-year { color: var(--water); font-size: .92rem; font-weight: 850; }
+    .pub-title { margin-bottom: 4px; font-size: 1rem; }
+    .pub-copy { color: var(--muted); font-size: .82rem; }
+    .pub-link { color: var(--forest); font-size: .8rem; font-weight: 750; white-space: nowrap; }
 
     /* TOOLS */
-    .tools-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .tools-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
     .tool {
-      min-height: 48px; display: grid; place-items: center; padding: 8px 10px; text-align: center;
+      min-height: 43px; display: grid; place-items: center; padding: 7px 9px; text-align: center;
       border: 1px solid var(--border); border-radius: 11px; background: rgba(9,17,14,.80);
-      color: #e5efea; font-size: .72rem; font-weight: 730; transition: .2s;
+      color: #e5efea; font-size: .73rem; font-weight: 730; transition: .2s;
     }
     .tool:hover { transform: translateY(-2px); border-color: var(--border-blue); background: linear-gradient(135deg, rgba(57,217,138,.06), rgba(56,200,255,.055)); color: white; }
 
@@ -197,13 +197,48 @@
       background: radial-gradient(circle at 10% 100%, rgba(57,217,138,.08), transparent 31%), radial-gradient(circle at 92% 0%, rgba(56,200,255,.08), transparent 32%), rgba(8,17,14,.94);
     }
     .contact h2 { max-width: 700px; margin: 0 auto; }
-    .contact p { max-width: 600px; margin: 15px auto 0; color: var(--text); font-size: .82rem; }
+    .contact p { max-width: 720px; margin: 15px auto 0; color: var(--text); font-size: .92rem; }
     .socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 20px; }
     .social-link {
-      min-height: 38px; display: inline-flex; align-items: center; justify-content: center; padding: 0 14px;
-      border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.03); color: #e6f0eb; font-size: .74rem; font-weight: 720; transition: .2s;
+      min-height: 40px; display: inline-flex; align-items: center; justify-content: center; padding: 0 15px;
+      border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.03); color: #e6f0eb; font-size: .8rem; font-weight: 720; transition: .2s;
     }
     .social-link:hover { border-color: var(--border-blue); background: rgba(56,200,255,.05); }
+
+    /* MEDIA / LIGHTBOX */
+    .project-media { position: relative; }
+    .project-media-logo { display: grid; place-items: center; padding: 18px; }
+    .project-media-logo img { object-fit: contain; background: rgba(255,255,255,.96); border-radius: 12px; padding: 8px; }
+    .media-fallback { display: none; color: rgba(245,251,248,.72); font-size: 1.35rem; font-weight: 900; letter-spacing: -.04em; text-align: center; }
+    .project-media.missing .media-fallback { display: block; }
+    .zoomable-media { cursor: zoom-in; }
+    .media-lightbox {
+      position: fixed; inset: 0; z-index: 5000; display: none; align-items: center; justify-content: center;
+      padding: 34px; background: rgba(0,0,0,.88); backdrop-filter: blur(10px);
+    }
+    .media-lightbox.open { display: flex; }
+    .lightbox-content { max-width: min(94vw, 1500px); max-height: 90vh; display: grid; place-items: center; }
+    .lightbox-content img, .lightbox-content video { max-width: 94vw; max-height: 88vh; width: auto; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 26px 80px rgba(0,0,0,.55); }
+    .lightbox-close {
+      position: absolute; top: 18px; right: 22px; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%; background: rgba(8,14,12,.82); color: white; font-size: 1.45rem; cursor: pointer;
+    }
+
+    /* PUBLICATION FILTER */
+    .publication-toolbar { position: relative; display: flex; justify-content: flex-end; margin: -10px 0 16px; }
+    .year-filter-button {
+      min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 1px solid var(--border);
+      border-radius: 10px; background: rgba(255,255,255,.035); color: var(--white); cursor: pointer; font-size: .8rem; font-weight: 720;
+    }
+    .year-filter-button:hover { border-color: var(--border-blue); }
+    .year-filter-menu {
+      position: absolute; right: 0; top: calc(100% + 7px); z-index: 30; min-width: 145px; display: none; padding: 7px;
+      border: 1px solid var(--border); border-radius: 11px; background: #0a1411; box-shadow: var(--shadow);
+    }
+    .year-filter-menu.open { display: grid; gap: 4px; }
+    .year-option { border: 0; border-radius: 8px; padding: 8px 10px; text-align: left; background: transparent; color: var(--text); cursor: pointer; font-size: .78rem; }
+    .year-option:hover, .year-option.active { background: rgba(56,200,255,.07); color: var(--water); }
+    .publication[hidden] { display: none; }
 
     footer { padding: 24px 0 36px; color: var(--muted); font-size: .7rem; }
     .footer-inner { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border); }
@@ -216,7 +251,7 @@
       .knowledge-grid { grid-template-columns: repeat(2,1fr); }
       .problem-grid { grid-template-columns: repeat(2,1fr); }
       .project { flex-basis: calc((100% - 14px) / 2); }
-      .tools-grid { grid-template-columns: repeat(4,1fr); }
+      .tools-grid { grid-template-columns: repeat(5,1fr); }
     }
 
     @media (max-width: 760px) {
@@ -236,15 +271,15 @@
       .container { width: calc(100% - 26px); }
       section { padding: 58px 0; }
       .hero { min-height: auto; padding: 96px 0 62px; }
-      h1 { font-size: clamp(2.5rem, 12vw, 3.35rem); }
-      h2 { font-size: clamp(1.65rem, 8vw, 2.05rem); }
-      .hero-copy { font-size: .86rem; }
+      h1 { font-size: clamp(2.75rem, 12vw, 3.7rem); }
+      h2 { font-size: clamp(1.82rem, 8vw, 2.25rem); }
+      .hero-copy { font-size: .94rem; }
       .knowledge-grid, .problem-grid { grid-template-columns: 1fr; }
       .knowledge-card { min-height: 0; }
       .project { flex-basis: 92%; height: 410px; }
       .project-media, .project-placeholder { height: 150px; flex-basis: 150px; }
       .tools-grid { grid-template-columns: repeat(2,1fr); gap: 7px; }
-      .tool { min-height: 45px; font-size: .68rem; }
+      .tool { min-height: 41px; font-size: .7rem; }
       .contact { padding: 35px 18px; }
       .footer-inner { flex-direction: column; }
     }
@@ -310,7 +345,7 @@
         <div class="section-head reveal">
           <div>
             <div class="section-kicker">01 · Conocimientos</div>
-            <h2>Areas of knowledge.</h2>
+            <h2>Áreas de conocimiento.</h2>
           </div>
           <p class="section-intro">
             Un perfil interdisciplinario que integra ciencias forestales, hidrología, información geoespacial, programación, inteligencia artificial y tecnologías tridimensionales.
@@ -407,6 +442,33 @@
 
           <div class="projects-viewport">
             <div class="projects-track" id="projectsTrack">
+              <article class="project">
+                <div class="project-media project-media-logo">
+                  <img src="gifs/logo.jpeg" alt="Logo de HydroGeoAI Lab" loading="lazy">
+                  <span class="media-fallback">HydroGeoAI Lab</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-label">Desarrollo web · Ciencia</div>
+                  <h3>HydroGeoAI Lab</h3>
+                  <p>Diseño y desarrollo del sitio web del laboratorio, organizado para comunicar proyectos, equipo, servicios, publicaciones, equipamiento y recursos.</p>
+                  <p class="project-tech">GitHub Pages · HTML · CSS · JavaScript · Automatización</p>
+                  <a class="project-link" href="https://syepez14.github.io/HydroGeoAI-Lab/" target="_blank" rel="noopener noreferrer">Visitar HydroGeoAI Lab</a>
+                </div>
+              </article>
+
+              <article class="project">
+                <div class="project-media project-media-logo">
+                  <img src="gifs/normal.png" alt="Logo de Hyperion Explorer" loading="lazy">
+                  <span class="media-fallback">Hyperion Explorer</span>
+                </div>
+                <div class="project-body">
+                  <div class="project-label">Google Earth Engine · Hiperespectral</div>
+                  <h3>Hyperion Explorer</h3>
+                  <p>Aplicación desarrollada en Google Earth Engine para explorar y analizar información hiperespectral de EO-1 Hyperion mediante una interfaz web interactiva.</p>
+                  <p class="project-tech">Google Earth Engine · Hyperion · JavaScript · Visualización</p>
+                  <a class="project-link" href="https://batyrivas2000.users.earthengine.app/view/hyperion-explorer" target="_blank" rel="noopener noreferrer">Abrir Hyperion Explorer</a>
+                </div>
+              </article>
               <article class="project">
                 <div class="project-placeholder"><span>HYD</span></div>
                 <div class="project-body">
@@ -508,8 +570,13 @@
           <p class="section-intro">Trabajos científicos y resultados asociados a las líneas de investigación desarrolladas.</p>
         </div>
 
-        <div class="reveal">
-          <article class="publication">
+        <div class="publication-toolbar reveal">
+          <button class="year-filter-button" id="yearFilterButton" type="button" aria-expanded="false">Año: <span id="activeYearLabel">Todos</span> ▾</button>
+          <div class="year-filter-menu" id="yearFilterMenu" role="menu"></div>
+        </div>
+
+        <div class="reveal" id="publicationList">
+          <article class="publication" data-year="2025">
             <div class="pub-year">2025</div>
             <div>
               <div class="pub-title">Modelación hidrológica mediante SRM y modelos GRxJ</div>
@@ -567,6 +634,12 @@
     </section>
   </main>
 
+
+  <div class="media-lightbox" id="mediaLightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Visor multimedia">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar visor">×</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> Bastián Alejandro Rivas Maldonado</div>
@@ -604,13 +677,14 @@
     window.addEventListener('scroll', setActive, { passive: true });
     setActive();
 
-    /* CARRUSEL DE PROYECTOS: autoplay hasta que el usuario interactúa */
+    /* CARRUSEL DE PROYECTOS: avanza solo y se detiene al usar las flechas */
     const track = document.getElementById('projectsTrack');
     const prev = document.getElementById('projectsPrev');
     const next = document.getElementById('projectsNext');
     const cards = [...track.querySelectorAll('.project')];
     let autoplayTimer = null;
-    let userControlled = false;
+    let currentProjectIndex = 0;
+    let autoplayStopped = false;
 
     function cardStep() {
       if (!cards.length) return 0;
@@ -618,36 +692,135 @@
       return cards[0].getBoundingClientRect().width + gap;
     }
 
-    function moveProjects(direction, stopAutoplay = true) {
-      if (stopAutoplay) stopProjectsAutoplay();
+    function maxProjectIndex() {
       const step = cardStep();
-      const maxScroll = track.scrollWidth - track.clientWidth;
-      let target = track.scrollLeft + direction * step;
+      if (!step) return 0;
+      return Math.max(0, Math.round((track.scrollWidth - track.clientWidth) / step));
+    }
 
-      if (direction > 0 && target >= maxScroll - 4) target = 0;
-      if (direction < 0 && track.scrollLeft <= 4) target = maxScroll;
-
-      track.scrollTo({ left: target, behavior: 'smooth' });
+    function goToProject(index, stopAutoplay = false) {
+      if (stopAutoplay) stopProjectsAutoplay();
+      const max = maxProjectIndex();
+      if (index > max) index = 0;
+      if (index < 0) index = max;
+      currentProjectIndex = index;
+      track.scrollTo({ left: currentProjectIndex * cardStep(), behavior: 'smooth' });
     }
 
     function startProjectsAutoplay() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      autoplayTimer = window.setInterval(() => moveProjects(1, false), 3600);
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || autoplayStopped) return;
+      if (autoplayTimer) clearInterval(autoplayTimer);
+      autoplayTimer = setInterval(() => goToProject(currentProjectIndex + 1, false), 3000);
     }
 
     function stopProjectsAutoplay() {
-      userControlled = true;
-      if (autoplayTimer) window.clearInterval(autoplayTimer);
+      autoplayStopped = true;
+      if (autoplayTimer) clearInterval(autoplayTimer);
       autoplayTimer = null;
     }
 
-    prev.addEventListener('click', () => moveProjects(-1, true));
-    next.addEventListener('click', () => moveProjects(1, true));
-    track.addEventListener('pointerdown', stopProjectsAutoplay, { once: true });
-    track.addEventListener('touchstart', stopProjectsAutoplay, { once: true, passive: true });
-    track.addEventListener('wheel', stopProjectsAutoplay, { once: true, passive: true });
+    prev.addEventListener('click', () => goToProject(currentProjectIndex - 1, true));
+    next.addEventListener('click', () => goToProject(currentProjectIndex + 1, true));
+    window.addEventListener('resize', () => goToProject(Math.min(currentProjectIndex, maxProjectIndex()), false));
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && autoplayTimer) clearInterval(autoplayTimer);
+      else if (!document.hidden && !autoplayStopped) startProjectsAutoplay();
+    });
 
     startProjectsAutoplay();
+
+    /* Fallback para logos que todavía no estén presentes en la carpeta */
+    document.querySelectorAll('.project-media img').forEach(img => {
+      img.addEventListener('error', () => {
+        img.style.display = 'none';
+        img.closest('.project-media')?.classList.add('missing');
+      });
+    });
+
+    /* VISOR GRANDE PARA TODAS LAS IMÁGENES Y VIDEOS */
+    const lightbox = document.getElementById('mediaLightbox');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(media) {
+      lightboxContent.innerHTML = '';
+      let expanded;
+      if (media.tagName === 'VIDEO') {
+        expanded = document.createElement('video');
+        expanded.src = media.currentSrc || media.querySelector('source')?.src || '';
+        expanded.controls = true;
+        expanded.autoplay = true;
+        expanded.loop = true;
+        expanded.playsInline = true;
+      } else {
+        expanded = document.createElement('img');
+        expanded.src = media.currentSrc || media.src;
+        expanded.alt = media.alt || 'Imagen ampliada';
+      }
+      lightboxContent.appendChild(expanded);
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const video = lightboxContent.querySelector('video');
+      if (video) video.pause();
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('img, video').forEach(media => {
+      media.classList.add('zoomable-media');
+      media.title = 'Clic para ampliar';
+      media.addEventListener('click', event => {
+        event.stopPropagation();
+        openLightbox(media);
+      });
+    });
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
+
+    /* FILTRO AUTOMÁTICO DE PUBLICACIONES POR AÑO */
+    const yearFilterButton = document.getElementById('yearFilterButton');
+    const yearFilterMenu = document.getElementById('yearFilterMenu');
+    const activeYearLabel = document.getElementById('activeYearLabel');
+    const publications = [...document.querySelectorAll('.publication[data-year]')];
+    const publicationYears = [...new Set(publications.map(item => item.dataset.year))].sort((a,b) => b.localeCompare(a));
+
+    function applyPublicationYear(year) {
+      publications.forEach(item => {
+        item.hidden = year !== 'Todos' && item.dataset.year !== year;
+      });
+      activeYearLabel.textContent = year;
+      yearFilterMenu.querySelectorAll('.year-option').forEach(btn => btn.classList.toggle('active', btn.dataset.year === year));
+      yearFilterMenu.classList.remove('open');
+      yearFilterButton.setAttribute('aria-expanded', 'false');
+    }
+
+    ['Todos', ...publicationYears].forEach(year => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'year-option' + (year === 'Todos' ? ' active' : '');
+      button.dataset.year = year;
+      button.textContent = year;
+      button.addEventListener('click', () => applyPublicationYear(year));
+      yearFilterMenu.appendChild(button);
+    });
+
+    yearFilterButton.addEventListener('click', () => {
+      const open = yearFilterMenu.classList.toggle('open');
+      yearFilterButton.setAttribute('aria-expanded', String(open));
+    });
+    document.addEventListener('click', event => {
+      if (!event.target.closest('.publication-toolbar')) {
+        yearFilterMenu.classList.remove('open');
+        yearFilterButton.setAttribute('aria-expanded', 'false');
+      }
+    });
   </script>
 </body>
 </html>
