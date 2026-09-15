@@ -1,62 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="es">
 
-  <title>Bastián Alejandro Rivas Maldonado | Portfolio</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Bastián Alejandro Rivas Maldonado | Portafolio
+  </title>
 
   <meta
     name="description"
-    content="Academic and research portfolio of Bastián Alejandro Rivas Maldonado. Forest Science, Remote Sensing, GIS, Hyperspectral Imaging, Computer Vision, Machine Learning, 3D Reconstruction and Environmental Modelling."
-  />
+    content="Portafolio académico y profesional de Bastián Alejandro Rivas Maldonado. Ciencias Forestales, Hidrología, Teledetección, SIG, Modelación Ambiental, Inteligencia Artificial y Reconstrucción 3D."
+  >
+
 
   <style>
-    /* =========================================================
-       BASTIÁN ALEJANDRO RIVAS MALDONADO
-       PERSONAL ACADEMIC PORTFOLIO
-       ========================================================= */
+
+    /* ============================================================
+       VARIABLES
+       ============================================================ */
 
     :root {
-      --bg: #05090d;
-      --bg-soft: #081017;
-      --bg-card: rgba(12, 24, 33, 0.78);
-      --bg-card-hover: rgba(16, 34, 46, 0.95);
 
-      --text: #f4f8fb;
-      --text-soft: #a7b6c2;
-      --text-muted: #71828f;
+      --bg: #030706;
 
-      --cyan: #56d6ff;
-      --cyan-2: #1ca9e8;
-      --blue: #2979ff;
-      --green: #57e0b5;
-      --purple: #9a7cff;
+      --bg-soft: #07100d;
 
-      --border: rgba(255, 255, 255, 0.09);
-      --border-hover: rgba(86, 214, 255, 0.32);
+      --card: rgba(9, 19, 17, 0.86);
 
-      --shadow:
-        0 20px 70px rgba(0, 0, 0, 0.38);
+      --card-hover: rgba(12, 28, 24, 0.96);
+
+      --white: #f5fbf8;
+
+      --text: #c5d3ce;
+
+      --muted: #758780;
+
+      /* FORESTAL */
+      --forest: #39d98a;
+
+      --forest-dark: #168957;
+
+      /* AGUA / HIDROLOGÍA */
+      --water: #38c8ff;
+
+      --water-dark: #168bd1;
+
+      --border: rgba(255,255,255,0.08);
+
+      --border-green: rgba(57,217,138,0.28);
+
+      --border-blue: rgba(56,200,255,0.28);
 
       --radius: 24px;
-      --radius-small: 14px;
 
-      --max-width: 1220px;
+      --max-width: 1240px;
+
     }
+
+
 
     * {
+
       margin: 0;
+
       padding: 0;
+
       box-sizing: border-box;
+
     }
+
+
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
+
+
     body {
+
       font-family:
+
         Inter,
         ui-sans-serif,
         system-ui,
@@ -66,1603 +99,2115 @@
         sans-serif;
 
       background:
+
         radial-gradient(
-          circle at 15% 5%,
-          rgba(41, 121, 255, 0.10),
+          circle at 10% 0%,
+          rgba(57,217,138,0.08),
           transparent 28%
         ),
+
         radial-gradient(
-          circle at 85% 18%,
-          rgba(86, 214, 255, 0.07),
-          transparent 27%
+          circle at 90% 10%,
+          rgba(56,200,255,0.08),
+          transparent 28%
         ),
+
         var(--bg);
 
-      color: var(--text);
+      color: var(--white);
+
       line-height: 1.6;
+
       overflow-x: hidden;
+
     }
+
+
 
     a {
+
       color: inherit;
+
       text-decoration: none;
+
     }
 
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
+
 
     img {
+
       max-width: 100%;
+
     }
+
+
 
     .container {
-      width: min(calc(100% - 40px), var(--max-width));
+
+      width: min(
+        calc(100% - 40px),
+        var(--max-width)
+      );
+
       margin: 0 auto;
+
     }
 
-    /* =========================================================
-       BACKGROUND
-       ========================================================= */
+
+
+    /* ============================================================
+       FONDO
+       ============================================================ */
 
     .background-grid {
+
       position: fixed;
+
       inset: 0;
+
       z-index: -10;
+
       pointer-events: none;
 
       background-image:
+
         linear-gradient(
-          rgba(255, 255, 255, 0.015) 1px,
+          rgba(255,255,255,0.015) 1px,
           transparent 1px
         ),
+
         linear-gradient(
           90deg,
-          rgba(255, 255, 255, 0.015) 1px,
+          rgba(255,255,255,0.015) 1px,
           transparent 1px
         );
 
-      background-size: 70px 70px;
+      background-size: 72px 72px;
+
       mask-image:
+
         linear-gradient(
           to bottom,
-          rgba(0,0,0,0.95),
+          black,
           transparent 92%
         );
+
     }
 
-    .background-glow {
+
+
+    .glow {
+
       position: fixed;
-      width: 500px;
-      height: 500px;
-      border-radius: 50%;
-      filter: blur(120px);
-      opacity: 0.08;
-      pointer-events: none;
+
       z-index: -20;
+
+      width: 480px;
+
+      height: 480px;
+
+      border-radius: 50%;
+
+      filter: blur(140px);
+
+      pointer-events: none;
+
+      opacity: 0.08;
+
     }
 
-    .glow-1 {
-      background: var(--cyan);
+
+
+    .glow-green {
+
       top: -200px;
-      right: -180px;
+
+      left: -150px;
+
+      background: var(--forest);
+
     }
 
-    .glow-2 {
-      background: var(--blue);
-      bottom: -250px;
-      left: -180px;
+
+
+    .glow-blue {
+
+      bottom: -220px;
+
+      right: -170px;
+
+      background: var(--water);
+
     }
 
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
+
+
+    /* ============================================================
+       NAVEGACIÓN
+       ============================================================ */
 
     .navbar {
+
       position: fixed;
+
       top: 0;
+
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
 
-      backdrop-filter: blur(18px);
-
-      background:
-        rgba(5, 9, 13, 0.72);
+      background: rgba(3,7,6,0.78);
 
       border-bottom:
         1px solid rgba(255,255,255,0.06);
+
+      backdrop-filter: blur(18px);
+
     }
 
+
+
     .nav-inner {
+
       min-height: 76px;
 
       display: flex;
-      align-items: center;
+
       justify-content: space-between;
 
-      gap: 24px;
+      align-items: center;
+
+      gap: 25px;
+
     }
+
+
 
     .brand {
+
       display: flex;
+
       align-items: center;
+
       gap: 12px;
+
       font-weight: 800;
-      letter-spacing: -0.02em;
+
     }
 
+
+
     .brand-symbol {
-      width: 38px;
-      height: 38px;
+
+      width: 40px;
+
+      height: 40px;
 
       display: grid;
+
       place-items: center;
 
       border-radius: 12px;
 
       background:
+
         linear-gradient(
           135deg,
-          var(--cyan),
-          var(--blue)
+          var(--forest),
+          var(--water)
         );
 
-      color: #001018;
-      font-size: 0.85rem;
+      color: #00120c;
+
+      font-size: 0.82rem;
+
       font-weight: 900;
+
     }
 
-    .brand-text {
-      white-space: nowrap;
+
+
+    .brand-name {
+
+      letter-spacing: -0.02em;
+
     }
+
+
 
     .nav-links {
+
       display: flex;
+
       align-items: center;
-      gap: 7px;
+
+      gap: 5px;
+
     }
+
+
 
     .nav-links a {
-      padding: 9px 12px;
 
-      color: var(--text-soft);
+      padding: 9px 11px;
 
-      border-radius: 10px;
+      border-radius: 9px;
 
-      font-size: 0.88rem;
+      font-size: 0.82rem;
+
       font-weight: 600;
 
+      color: var(--text);
+
       transition: 0.25s ease;
+
     }
+
+
 
     .nav-links a:hover,
     .nav-links a.active {
-      background: rgba(86,214,255,0.08);
-      color: var(--cyan);
+
+      color: var(--water);
+
+      background:
+        rgba(56,200,255,0.07);
+
     }
 
+
+
     .menu-button {
+
       display: none;
 
       width: 44px;
+
       height: 44px;
 
-      background: rgba(255,255,255,0.05);
-      color: white;
-
-      border: 1px solid var(--border);
       border-radius: 12px;
 
+      border: 1px solid var(--border);
+
+      background:
+        rgba(255,255,255,0.04);
+
+      color: white;
+
       cursor: pointer;
+
     }
 
-    /* =========================================================
+
+
+    /* ============================================================
        HERO
-       ========================================================= */
+       ============================================================ */
 
     .hero {
+
       min-height: 100vh;
 
+      display: flex;
+
+      align-items: center;
+
       padding-top: 130px;
+
       padding-bottom: 80px;
 
-      display: flex;
-      align-items: center;
     }
+
+
 
     .hero-grid {
+
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 70px;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
       align-items: center;
+
+      gap: 70px;
+
     }
 
-    .eyebrow {
+
+
+    .hero-label {
+
       display: inline-flex;
+
       align-items: center;
+
       gap: 9px;
 
       padding: 8px 13px;
 
-      border: 1px solid rgba(86,214,255,0.22);
+      margin-bottom: 24px;
+
       border-radius: 999px;
 
-      color: var(--cyan);
+      border:
+        1px solid rgba(57,217,138,0.22);
 
       background:
-        rgba(86,214,255,0.05);
+        rgba(57,217,138,0.04);
 
-      font-size: 0.78rem;
+      color: var(--forest);
+
+      font-size: 0.76rem;
+
       font-weight: 800;
+
       letter-spacing: 0.11em;
+
       text-transform: uppercase;
 
-      margin-bottom: 24px;
     }
 
-    .eyebrow-dot {
+
+
+    .status-dot {
+
       width: 7px;
+
       height: 7px;
 
       border-radius: 50%;
 
-      background: var(--green);
+      background: var(--forest);
 
       box-shadow:
-        0 0 14px var(--green);
+        0 0 12px var(--forest);
+
     }
 
-    h1 {
-      font-size:
-        clamp(3rem, 7vw, 6.7rem);
 
-      line-height: 0.94;
+
+    h1 {
+
+      font-size:
+        clamp(3rem, 7vw, 6.6rem);
+
+      line-height: 0.95;
 
       letter-spacing: -0.065em;
 
-      max-width: 900px;
     }
 
+
+
     .name-gradient {
+
       background:
+
         linear-gradient(
           90deg,
           #ffffff 0%,
-          #d7f6ff 35%,
-          var(--cyan) 72%,
-          #6f91ff 100%
+          #dcfff0 35%,
+          var(--forest) 62%,
+          var(--water) 100%
         );
 
       -webkit-background-clip: text;
+
       background-clip: text;
+
       color: transparent;
+
     }
+
+
 
     .hero-description {
-      margin-top: 28px;
 
-      max-width: 760px;
+      max-width: 780px;
+
+      margin-top: 30px;
+
+      color: var(--text);
 
       font-size:
-        clamp(1rem, 1.5vw, 1.25rem);
+        clamp(1rem,1.4vw,1.2rem);
 
-      color: var(--text-soft);
     }
+
+
 
     .hero-description strong {
-      color: #eefbff;
+
+      color: white;
+
       font-weight: 600;
+
     }
+
+
 
     .hero-tags {
-      margin-top: 28px;
 
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 9px;
+
+      margin-top: 27px;
+
     }
 
-    .hero-tag {
+
+
+    .tag {
+
       padding: 8px 12px;
+
+      border-radius: 999px;
 
       border:
         1px solid var(--border);
 
-      border-radius: 999px;
-
       background:
         rgba(255,255,255,0.025);
 
-      color:
-        #bdcad3;
+      color: #bdcbc6;
 
-      font-size:
-        0.82rem;
+      font-size: 0.78rem;
+
     }
+
+
 
     .hero-actions {
+
       display: flex;
+
       flex-wrap: wrap;
-      gap: 12px;
+
+      gap: 11px;
 
       margin-top: 34px;
+
     }
 
+
+
     .button {
+
       min-height: 48px;
 
       display: inline-flex;
+
       align-items: center;
+
       justify-content: center;
-      gap: 9px;
+
+      gap: 8px;
 
       padding: 0 20px;
 
       border-radius: 13px;
 
-      font-weight: 750;
-      font-size: 0.9rem;
+      font-weight: 700;
+
+      font-size: 0.88rem;
 
       transition: 0.25s ease;
+
     }
+
+
 
     .button-primary {
+
       background:
+
         linear-gradient(
           135deg,
-          var(--cyan),
-          var(--blue)
+          var(--forest),
+          var(--water)
         );
 
-      color: #00131e;
+      color: #00110d;
 
-      box-shadow:
-        0 12px 34px rgba(41,121,255,0.18);
     }
+
+
 
     .button-primary:hover {
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
+
       box-shadow:
-        0 18px 45px rgba(41,121,255,0.28);
+        0 16px 45px
+        rgba(57,217,138,0.18);
+
     }
 
+
+
     .button-secondary {
+
       border: 1px solid var(--border);
 
       background:
-        rgba(255,255,255,0.035);
+        rgba(255,255,255,0.03);
 
-      color: var(--text);
     }
+
+
 
     .button-secondary:hover {
-      border-color: var(--border-hover);
+
+      border-color:
+        var(--border-blue);
+
       background:
-        rgba(86,214,255,0.07);
+        rgba(56,200,255,0.06);
+
     }
 
-    /* =========================================================
+
+
+    /* ============================================================
        HERO VISUAL
-       ========================================================= */
+       ============================================================ */
 
     .hero-visual {
+
+      min-height: 540px;
+
       position: relative;
-      min-height: 560px;
 
       display: grid;
+
       place-items: center;
+
     }
 
+
+
     .orb {
+
       width: 390px;
+
       height: 390px;
 
       position: relative;
 
       display: grid;
+
       place-items: center;
 
       border-radius: 50%;
 
       border:
-        1px solid rgba(86,214,255,0.15);
+        1px solid rgba(255,255,255,0.07);
 
       background:
+
         radial-gradient(
-          circle,
-          rgba(86,214,255,0.11),
-          rgba(41,121,255,0.035) 45%,
-          transparent 70%
+          circle at 35% 35%,
+          rgba(57,217,138,0.14),
+          transparent 42%
+        ),
+
+        radial-gradient(
+          circle at 65% 65%,
+          rgba(56,200,255,0.13),
+          transparent 45%
         );
+
     }
 
-    .orb::before,
-    .orb::after {
+
+
+    .orb::before {
+
       content: "";
 
       position: absolute;
 
+      inset: 42px;
+
       border-radius: 50%;
 
       border:
-        1px solid rgba(255,255,255,0.08);
+        1px solid rgba(57,217,138,0.12);
+
     }
 
-    .orb::before {
-      inset: 35px;
-    }
+
 
     .orb::after {
-      inset: 85px;
+
+      content: "";
+
+      position: absolute;
+
+      inset: 92px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(56,200,255,0.13);
+
     }
 
+
+
     .center-core {
-      width: 130px;
-      height: 130px;
+
+      width: 135px;
+
+      height: 135px;
 
       position: relative;
-      z-index: 5;
+
+      z-index: 10;
 
       display: grid;
+
       place-items: center;
 
       border-radius: 30px;
 
       background:
+
         linear-gradient(
-          145deg,
-          rgba(86,214,255,0.18),
-          rgba(41,121,255,0.07)
+          135deg,
+          rgba(57,217,138,0.14),
+          rgba(56,200,255,0.10)
         );
 
       border:
-        1px solid rgba(86,214,255,0.27);
+        1px solid rgba(255,255,255,0.10);
 
-      box-shadow:
-        0 30px 80px rgba(0,0,0,0.35);
+      backdrop-filter: blur(10px);
+
     }
+
+
 
     .core-text {
+
       text-align: center;
-      line-height: 1.15;
+
     }
+
+
 
     .core-text strong {
+
       display: block;
 
-      font-size: 1.7rem;
-      letter-spacing: -0.04em;
+      font-size: 1.8rem;
+
+      letter-spacing: -0.05em;
+
     }
+
+
 
     .core-text span {
-      color: var(--cyan);
-      font-size: 0.75rem;
+
+      color: var(--water);
+
+      font-size: 0.7rem;
+
       font-weight: 700;
+
     }
 
+
+
     .floating-card {
+
       position: absolute;
 
-      min-width: 155px;
+      min-width: 165px;
 
       padding: 15px 17px;
 
+      border-radius: 17px;
+
       border:
         1px solid var(--border);
 
-      border-radius: 17px;
-
       background:
-        rgba(7,15,21,0.88);
+        rgba(5,13,11,0.88);
 
-      backdrop-filter:
-        blur(18px);
+      backdrop-filter: blur(16px);
 
-      box-shadow:
-        var(--shadow);
+      color: var(--muted);
 
-      color:
-        var(--text-soft);
+      font-size: 0.76rem;
 
-      font-size:
-        0.78rem;
     }
+
+
 
     .floating-card strong {
-      display: block;
-      color: white;
 
-      font-size:
-        0.9rem;
+      display: block;
 
       margin-bottom: 3px;
+
+      color: white;
+
+      font-size: 0.9rem;
+
     }
 
-    .fc-1 {
-      top: 70px;
+
+
+    .fc1 {
+
+      top: 60px;
+
       left: 0;
+
     }
 
-    .fc-2 {
+
+
+    .fc2 {
+
       top: 150px;
-      right: -5px;
+
+      right: 0;
+
     }
 
-    .fc-3 {
-      bottom: 90px;
-      left: 35px;
+
+
+    .fc3 {
+
+      bottom: 95px;
+
+      left: 15px;
+
     }
 
-    .fc-4 {
+
+
+    .fc4 {
+
       bottom: 35px;
-      right: 20px;
+
+      right: 15px;
+
     }
 
-    /* =========================================================
-       GENERIC SECTION
-       ========================================================= */
+
+
+    /* ============================================================
+       SECCIONES
+       ============================================================ */
 
     section {
+
       padding: 110px 0;
+
       scroll-margin-top: 70px;
+
     }
 
+
+
     .section-heading {
+
       display: grid;
+
       grid-template-columns:
-        minmax(0, 0.7fr)
-        minmax(0, 1.3fr);
+        0.7fr 1.3fr;
 
       gap: 70px;
+
       align-items: end;
 
       margin-bottom: 52px;
+
     }
+
+
 
     .section-number {
-      color: var(--cyan);
 
-      font-size: 0.75rem;
-      font-weight: 850;
+      margin-bottom: 13px;
+
+      color: var(--forest);
+
+      font-size: 0.72rem;
+
+      font-weight: 800;
 
       letter-spacing: 0.15em;
+
       text-transform: uppercase;
 
-      margin-bottom: 14px;
     }
 
+
+
     h2 {
+
       font-size:
-        clamp(2.2rem, 4.5vw, 4.2rem);
+        clamp(2.2rem,4.6vw,4.3rem);
 
       line-height: 1;
 
-      letter-spacing: -0.05em;
+      letter-spacing: -0.052em;
+
     }
+
+
 
     .section-intro {
+
       max-width: 700px;
 
-      color: var(--text-soft);
+      color: var(--text);
 
-      font-size: 1.02rem;
+      font-size: 1rem;
+
     }
 
-    /* =========================================================
-       ABOUT
-       ========================================================= */
+
+
+    /* ============================================================
+       SOBRE MÍ
+       ============================================================ */
 
     .about-grid {
+
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1.25fr 0.75fr;
+
       gap: 18px;
+
     }
+
+
 
     .about-card {
+
       padding: 36px;
 
-      border: 1px solid var(--border);
       border-radius: var(--radius);
-
-      background:
-        var(--bg-card);
-
-      box-shadow:
-        0 20px 70px rgba(0,0,0,0.16);
-    }
-
-    .about-card.large {
-      grid-column: span 2;
-    }
-
-    .about-card h3 {
-      margin-bottom: 16px;
-
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
-    }
-
-    .about-card p {
-      color: var(--text-soft);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 14px;
-
-      margin-top: 28px;
-    }
-
-    .stat {
-      padding: 20px;
-
-      border: 1px solid var(--border);
-      border-radius: 16px;
-
-      background:
-        rgba(255,255,255,0.02);
-    }
-
-    .stat strong {
-      display: block;
-
-      margin-bottom: 4px;
-
-      font-size: 1.1rem;
-      color: var(--cyan);
-    }
-
-    .stat span {
-      font-size: 0.78rem;
-      color: var(--text-muted);
-    }
-
-    /* =========================================================
-       EXPERTISE
-       ========================================================= */
-
-    .expertise-grid {
-      display: grid;
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px;
-    }
-
-    .expertise-card {
-      min-height: 330px;
-
-      position: relative;
-      overflow: hidden;
-
-      padding: 28px;
 
       border:
         1px solid var(--border);
 
-      border-radius:
-        var(--radius);
+      background: var(--card);
+
+    }
+
+
+
+    .about-card h3 {
+
+      margin-bottom: 15px;
+
+      font-size: 1.3rem;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+
+    .about-card p {
+
+      color: var(--text);
+
+    }
+
+
+
+    .about-small-grid {
+
+      display: grid;
+
+      gap: 18px;
+
+    }
+
+
+
+    .about-highlight {
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .about-highlight::after {
+
+      content: "";
+
+      position: absolute;
+
+      width: 220px;
+
+      height: 220px;
+
+      right: -100px;
+
+      bottom: -100px;
+
+      border-radius: 50%;
+
+      background: var(--forest);
+
+      filter: blur(90px);
+
+      opacity: 0.06;
+
+    }
+
+
+
+    /* ============================================================
+       AREAS OF KNOWLEDGE
+       ============================================================ */
+
+    .expertise-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap: 18px;
+
+    }
+
+
+
+    .expertise-card {
+
+      min-height: 330px;
+
+      padding: 28px;
+
+      border-radius: var(--radius);
+
+      border:
+        1px solid var(--border);
 
       background:
+
         linear-gradient(
           145deg,
-          rgba(12,24,33,0.88),
-          rgba(7,14,20,0.78)
+          rgba(10,22,18,0.9),
+          rgba(5,11,10,0.92)
         );
 
       transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        background 0.3s ease;
+        0.3s ease;
+
     }
 
+
+
     .expertise-card:hover {
+
       transform:
         translateY(-6px);
 
       border-color:
-        var(--border-hover);
+        rgba(57,217,138,0.28);
 
       background:
-        var(--bg-card-hover);
+        var(--card-hover);
+
     }
 
-    .expertise-index {
+
+
+    .expertise-card.water:hover {
+
+      border-color:
+        rgba(56,200,255,0.30);
+
+    }
+
+
+
+    .expertise-number {
+
       width: 42px;
+
       height: 42px;
 
       display: grid;
+
       place-items: center;
 
-      margin-bottom: 32px;
+      margin-bottom: 30px;
 
       border-radius: 13px;
 
       background:
-        rgba(86,214,255,0.075);
+        rgba(57,217,138,0.07);
 
       border:
-        1px solid rgba(86,214,255,0.14);
+        1px solid rgba(57,217,138,0.13);
 
-      color: var(--cyan);
+      color: var(--forest);
 
-      font-weight: 900;
-      font-size: 0.78rem;
+      font-size: 0.76rem;
+
+      font-weight: 850;
+
     }
 
-    .expertise-card h3 {
-      margin-bottom: 9px;
 
-      font-size: 1.25rem;
-      letter-spacing: -0.025em;
-    }
 
-    .expertise-subtitle {
-      min-height: 45px;
-
-      color:
-        var(--text-muted);
-
-      font-size:
-        0.82rem;
-
-      margin-bottom:
-        20px;
-    }
-
-    .skill-list {
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        8px;
-    }
-
-    .skill {
-      padding:
-        7px 10px;
-
-      border-radius:
-        9px;
+    .water .expertise-number {
 
       background:
-        rgba(255,255,255,0.04);
+        rgba(56,200,255,0.07);
 
-      border:
-        1px solid rgba(255,255,255,0.055);
+      border-color:
+        rgba(56,200,255,0.13);
 
-      color:
-        #c5d2db;
+      color: var(--water);
 
-      font-size:
-        0.78rem;
     }
 
-    /* =========================================================
-       RESEARCH
-       ========================================================= */
 
-    .research-feature {
-      position: relative;
-      overflow: hidden;
 
-      min-height: 500px;
+    .expertise-card h3 {
+
+      margin-bottom: 8px;
+
+      font-size: 1.22rem;
+
+      letter-spacing: -0.025em;
+
+    }
+
+
+
+    .expertise-description {
+
+      min-height: 45px;
+
+      margin-bottom: 20px;
+
+      color: var(--muted);
+
+      font-size: 0.81rem;
+
+    }
+
+
+
+    .skills {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+    }
+
+
+
+    .skill {
+
+      padding: 7px 10px;
+
+      border-radius: 9px;
+
+      border:
+        1px solid rgba(255,255,255,0.05);
+
+      background:
+        rgba(255,255,255,0.035);
+
+      color: #c4d0cc;
+
+      font-size: 0.77rem;
+
+    }
+
+
+
+    /* ============================================================
+       INVESTIGACIÓN
+       ============================================================ */
+
+    .research-main {
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 60px;
 
       padding: 50px;
 
+      border-radius: 30px;
+
       border:
-        1px solid rgba(86,214,255,0.16);
-
-      border-radius:
-        30px;
+        1px solid rgba(56,200,255,0.15);
 
       background:
-        linear-gradient(
-          135deg,
-          rgba(17,33,45,0.86),
-          rgba(7,14,20,0.98)
-        );
+
+        radial-gradient(
+          circle at 95% 0%,
+          rgba(56,200,255,0.08),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 0% 100%,
+          rgba(57,217,138,0.07),
+          transparent 30%
+        ),
+
+        rgba(7,16,14,0.92);
+
     }
 
-    .research-feature::after {
-      content: "";
 
-      position: absolute;
-
-      width: 450px;
-      height: 450px;
-
-      right: -160px;
-      top: -180px;
-
-      border-radius: 50%;
-
-      background:
-        var(--cyan);
-
-      filter:
-        blur(130px);
-
-      opacity: 0.08;
-    }
 
     .research-label {
-      color: var(--green);
 
-      font-size: 0.76rem;
+      color: var(--water);
+
+      font-size: 0.72rem;
+
       font-weight: 850;
 
-      letter-spacing: 0.15em;
+      letter-spacing: 0.14em;
+
       text-transform: uppercase;
+
     }
 
-    .research-feature h3 {
-      margin-top: 18px;
+
+
+    .research-main h3 {
+
+      margin-top: 17px;
 
       font-size:
-        clamp(2rem, 4vw, 4rem);
+        clamp(2rem,4vw,3.8rem);
 
-      line-height: 1.04;
+      line-height: 1.03;
 
-      letter-spacing: -0.055em;
+      letter-spacing: -0.05em;
+
     }
 
-    .research-feature p {
-      margin-top: 22px;
 
-      color: var(--text-soft);
+
+    .research-main p {
+
+      margin-top: 21px;
+
+      color: var(--text);
+
     }
+
+
 
     .research-flow {
-      align-self: center;
 
       display: flex;
-      flex-direction: column;
-      gap: 13px;
 
-      position: relative;
-      z-index: 5;
+      flex-direction: column;
+
+      justify-content: center;
+
+      gap: 12px;
+
     }
 
-    .flow-item {
-      padding: 18px 20px;
+
+
+    .flow {
 
       display: flex;
-      align-items: center;
-      gap: 17px;
 
-      border: 1px solid var(--border);
-      border-radius: 15px;
+      gap: 16px;
+
+      align-items: center;
+
+      padding: 17px 19px;
+
+      border-radius: 14px;
+
+      border:
+        1px solid var(--border);
 
       background:
         rgba(255,255,255,0.025);
+
     }
+
+
 
     .flow-number {
-      flex:
-        0 0 34px;
 
-      width:
-        34px;
+      flex: 0 0 34px;
 
-      height:
-        34px;
+      width: 34px;
 
-      display:
-        grid;
+      height: 34px;
 
-      place-items:
-        center;
+      display: grid;
 
-      border-radius:
-        10px;
+      place-items: center;
+
+      border-radius: 10px;
 
       background:
-        rgba(86,214,255,0.09);
+        rgba(56,200,255,0.08);
 
-      color:
-        var(--cyan);
+      color: var(--water);
 
-      font-weight:
-        850;
+      font-size: 0.75rem;
 
-      font-size:
-        0.78rem;
+      font-weight: 850;
+
     }
 
-    .flow-item strong {
-      display:
-        block;
 
-      font-size:
-        0.92rem;
+
+    .flow strong {
+
+      display: block;
+
+      font-size: 0.9rem;
+
     }
 
-    .flow-item span {
-      color:
-        var(--text-muted);
 
-      font-size:
-        0.78rem;
+
+    .flow span {
+
+      color: var(--muted);
+
+      font-size: 0.76rem;
+
     }
 
-    .research-secondary-grid {
-      display:
-        grid;
+
+
+    /* ============================================================
+       PROYECTOS
+       ============================================================ */
+
+    .projects {
+
+      display: grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap:
-        18px;
+      gap: 18px;
 
-      margin-top:
-        18px;
     }
 
-    .research-card {
-      padding:
-        28px;
+
+
+    .project {
+
+      overflow: hidden;
+
+      border-radius: var(--radius);
 
       border:
         1px solid var(--border);
 
-      border-radius:
-        var(--radius);
+      background: var(--card);
 
-      background:
-        var(--bg-card);
+      transition: 0.3s ease;
+
     }
 
-    .research-card h4 {
-      font-size:
-        1.1rem;
 
-      margin-bottom:
-        10px;
-    }
 
-    .research-card p {
-      color:
-        var(--text-soft);
+    .project:hover {
 
-      font-size:
-        0.88rem;
-    }
-
-    /* =========================================================
-       PROJECTS
-       ========================================================= */
-
-    .projects-grid {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3,1fr);
-
-      gap:
-        18px;
-    }
-
-    .project-card {
-      overflow:
-        hidden;
-
-      border:
-        1px solid var(--border);
-
-      border-radius:
-        var(--radius);
-
-      background:
-        var(--bg-card);
-
-      transition:
-        0.3s ease;
-    }
-
-    .project-card:hover {
       transform:
         translateY(-6px);
 
       border-color:
-        var(--border-hover);
+        var(--border-blue);
+
     }
 
-    .project-visual {
-      height:
-        190px;
 
-      display:
-        flex;
 
-      align-items:
-        flex-end;
+    .project-header {
 
-      padding:
-        24px;
+      height: 175px;
 
-      position:
-        relative;
+      display: flex;
 
-      overflow:
-        hidden;
+      align-items: flex-end;
+
+      padding: 24px;
 
       background:
-        linear-gradient(
-          145deg,
-          rgba(86,214,255,0.11),
-          rgba(41,121,255,0.035)
-        );
+
+        radial-gradient(
+          circle at 85% 10%,
+          rgba(56,200,255,0.12),
+          transparent 40%
+        ),
+
+        radial-gradient(
+          circle at 15% 90%,
+          rgba(57,217,138,0.10),
+          transparent 40%
+        ),
+
+        rgba(255,255,255,0.015);
+
     }
 
-    .project-visual::after {
-      content: "";
 
-      position:
-        absolute;
-
-      width:
-        180px;
-
-      height:
-        180px;
-
-      right:
-        -40px;
-
-      top:
-        -50px;
-
-      border-radius:
-        50%;
-
-      border:
-        1px solid rgba(255,255,255,0.08);
-    }
 
     .project-code {
-      color:
-        var(--cyan);
 
-      font-weight:
-        900;
+      font-size: 2.4rem;
 
-      font-size:
-        2.4rem;
+      font-weight: 900;
 
-      letter-spacing:
-        -0.06em;
+      letter-spacing: -0.07em;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          var(--forest),
+          var(--water)
+        );
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+
     }
 
-    .project-content {
-      padding:
-        26px;
+
+
+    .project-body {
+
+      padding: 25px;
+
     }
+
+
 
     .project-type {
-      display:
-        inline-block;
 
-      margin-bottom:
-        12px;
+      margin-bottom: 10px;
 
-      color:
-        var(--green);
+      color: var(--forest);
 
-      font-size:
-        0.7rem;
+      font-size: 0.67rem;
 
-      font-weight:
-        800;
+      font-weight: 800;
 
-      letter-spacing:
-        0.12em;
+      letter-spacing: 0.13em;
 
-      text-transform:
-        uppercase;
+      text-transform: uppercase;
+
     }
 
-    .project-card h3 {
-      font-size:
-        1.12rem;
 
-      line-height:
-        1.3;
 
-      margin-bottom:
-        12px;
+    .project h3 {
+
+      margin-bottom: 11px;
+
+      font-size: 1.08rem;
+
     }
 
-    .project-card p {
-      color:
-        var(--text-soft);
 
-      font-size:
-        0.86rem;
+
+    .project p {
+
+      color: var(--text);
+
+      font-size: 0.84rem;
+
     }
 
-    /* =========================================================
-       PUBLICATIONS
-       ========================================================= */
 
-    .publication-list {
-      border-top:
-        1px solid var(--border);
-    }
 
-    .publication {
-      display:
-        grid;
+    /* ============================================================
+       TOOLS
+       ============================================================ */
+
+    .tools-grid {
+
+      display: grid;
 
       grid-template-columns:
-        110px 1fr auto;
+        repeat(4,1fr);
 
-      gap:
-        25px;
+      gap: 14px;
 
-      align-items:
-        start;
+    }
 
-      padding:
-        27px 0;
+
+
+    .tool-card {
+
+      min-height: 120px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+      padding: 21px;
+
+      border-radius: 18px;
+
+      border:
+        1px solid var(--border);
+
+      background:
+        rgba(8,17,15,0.78);
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+
+    }
+
+
+
+    .tool-card:hover {
+
+      transform:
+        translateY(-4px);
+
+      border-color:
+        var(--border-blue);
+
+      background:
+        rgba(10,25,22,0.94);
+
+    }
+
+
+
+    .tool-top {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: start;
+
+      gap: 10px;
+
+    }
+
+
+
+    .tool-icon {
+
+      width: 37px;
+
+      height: 37px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 10px;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          rgba(57,217,138,0.11),
+          rgba(56,200,255,0.09)
+        );
+
+      color: var(--water);
+
+      font-size: 0.68rem;
+
+      font-weight: 900;
+
+    }
+
+
+
+    .external {
+
+      color: var(--muted);
+
+      font-size: 0.8rem;
+
+    }
+
+
+
+    .tool-card strong {
+
+      display: block;
+
+      margin-top: 17px;
+
+      font-size: 0.9rem;
+
+    }
+
+
+
+    .tool-card span {
+
+      color: var(--muted);
+
+      font-size: 0.72rem;
+
+    }
+
+
+
+    /* ============================================================
+       PUBLICACIONES
+       ============================================================ */
+
+    .publication-list {
+
+      border-top:
+        1px solid var(--border);
+
+    }
+
+
+
+    .publication {
+
+      display: grid;
+
+      grid-template-columns:
+        100px 1fr auto;
+
+      gap: 25px;
+
+      padding: 26px 0;
 
       border-bottom:
         1px solid var(--border);
+
     }
+
+
 
     .publication-year {
-      color:
-        var(--cyan);
 
-      font-weight:
-        800;
+      color: var(--water);
+
+      font-weight: 800;
+
     }
+
+
 
     .publication-title {
-      font-size:
-        1rem;
 
-      margin-bottom:
-        6px;
+      margin-bottom: 4px;
+
+      color: white;
+
     }
 
-    .publication-authors {
-      color:
-        var(--text-muted);
 
-      font-size:
-        0.84rem;
+
+    .publication-detail {
+
+      color: var(--muted);
+
+      font-size: 0.82rem;
+
     }
+
+
 
     .publication-link {
-      color:
-        var(--text-soft);
 
-      font-size:
-        0.82rem;
+      color: var(--forest);
 
-      white-space:
-        nowrap;
+      font-size: 0.8rem;
+
     }
 
-    /* =========================================================
-       TOOLBOX
-       ========================================================= */
 
-    .toolbox {
-      display:
-        flex;
 
-      flex-wrap:
-        wrap;
-
-      gap:
-        10px;
-    }
-
-    .tool {
-      padding:
-        12px 16px;
-
-      border-radius:
-        13px;
-
-      border:
-        1px solid var(--border);
-
-      background:
-        rgba(255,255,255,0.025);
-
-      color:
-        var(--text-soft);
-
-      font-size:
-        0.87rem;
-
-      transition:
-        0.25s ease;
-    }
-
-    .tool:hover {
-      color:
-        var(--cyan);
-
-      border-color:
-        var(--border-hover);
-
-      transform:
-        translateY(-2px);
-    }
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
+    /* ============================================================
+       CONTACTO
+       ============================================================ */
 
     .contact-panel {
-      padding:
-        70px 55px;
+
+      padding: 70px 55px;
+
+      text-align: center;
+
+      border-radius: 30px;
 
       border:
-        1px solid rgba(86,214,255,0.17);
-
-      border-radius:
-        30px;
+        1px solid rgba(57,217,138,0.16);
 
       background:
-        radial-gradient(
-          circle at 90% 10%,
-          rgba(86,214,255,0.10),
-          transparent 30%
-        ),
-        linear-gradient(
-          145deg,
-          rgba(14,28,38,0.95),
-          rgba(7,14,20,0.95)
-        );
 
-      text-align:
-        center;
+        radial-gradient(
+          circle at 15% 100%,
+          rgba(57,217,138,0.09),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 90% 0%,
+          rgba(56,200,255,0.09),
+          transparent 32%
+        ),
+
+        rgba(7,16,14,0.94);
+
     }
+
+
 
     .contact-panel h2 {
-      max-width:
-        800px;
 
-      margin:
-        0 auto;
+      max-width: 850px;
+
+      margin: 0 auto;
+
     }
+
+
 
     .contact-panel p {
-      max-width:
-        650px;
 
-      margin:
-        24px auto 0;
+      max-width: 650px;
 
-      color:
-        var(--text-soft);
+      margin: 23px auto 0;
+
+      color: var(--text);
+
     }
 
-    .contact-actions {
-      margin-top:
-        30px;
 
-      display:
-        flex;
 
-      flex-wrap:
-        wrap;
+    .contact-links {
 
-      justify-content:
-        center;
+      display: flex;
 
-      gap:
-        12px;
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 11px;
+
+      margin-top: 30px;
+
     }
 
-    /* =========================================================
+
+
+    /* ============================================================
        FOOTER
-       ========================================================= */
+       ============================================================ */
 
     footer {
-      padding:
-        35px 0 55px;
 
-      color:
-        var(--text-muted);
+      padding: 30px 0 50px;
 
-      font-size:
-        0.8rem;
+      color: var(--muted);
+
+      font-size: 0.78rem;
+
     }
 
+
+
     .footer-inner {
-      display:
-        flex;
 
-      justify-content:
-        space-between;
+      display: flex;
 
-      gap:
-        20px;
+      justify-content: space-between;
 
-      padding-top:
-        25px;
+      gap: 20px;
+
+      padding-top: 24px;
 
       border-top:
         1px solid var(--border);
+
     }
 
-    /* =========================================================
-       REVEAL ANIMATION
-       ========================================================= */
+
+
+    /* ============================================================
+       ANIMACIONES
+       ============================================================ */
 
     .reveal {
-      opacity:
-        0;
+
+      opacity: 0;
 
       transform:
-        translateY(25px);
+        translateY(22px);
 
       transition:
         opacity 0.75s ease,
         transform 0.75s ease;
+
     }
 
+
+
     .reveal.visible {
-      opacity:
-        1;
+
+      opacity: 1;
 
       transform:
         translateY(0);
+
     }
 
-    /* =========================================================
-       MOBILE
-       ========================================================= */
 
-    @media (max-width: 1000px) {
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+
+    @media(max-width:1050px) {
 
       .hero-grid,
-      .section-heading,
-      .research-feature {
-        grid-template-columns:
-          1fr;
+      .research-main,
+      .section-heading {
+
+        grid-template-columns: 1fr;
+
       }
 
-      .hero-visual {
-        min-height:
-          480px;
-      }
+
 
       .expertise-grid,
-      .projects-grid {
+      .projects {
+
         grid-template-columns:
           repeat(2,1fr);
+
       }
 
-      .research-secondary-grid {
+
+
+      .tools-grid {
+
         grid-template-columns:
-          1fr;
+          repeat(3,1fr);
+
       }
+
+
+
+      .about-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
 
       .section-heading {
-        gap:
-          20px;
+
+        gap: 20px;
+
       }
 
-      .research-feature {
-        gap:
-          40px;
-      }
     }
 
-    @media (max-width: 780px) {
+
+
+    @media(max-width:780px) {
 
       .nav-links {
-        position:
-          absolute;
 
-        top:
-          76px;
+        position: absolute;
 
-        left:
-          20px;
+        top: 76px;
 
-        right:
-          20px;
+        left: 20px;
 
-        display:
-          none;
+        right: 20px;
 
-        flex-direction:
-          column;
+        display: none;
 
-        align-items:
-          stretch;
+        flex-direction: column;
 
-        padding:
-          15px;
+        align-items: stretch;
+
+        padding: 15px;
+
+        background:
+          rgba(5,13,11,0.98);
 
         border:
           1px solid var(--border);
 
-        border-radius:
-          18px;
+        border-radius: 18px;
 
-        background:
-          rgba(7,14,20,0.98);
-
-        box-shadow:
-          var(--shadow);
       }
+
+
 
       .nav-links.open {
-        display:
-          flex;
+
+        display: flex;
+
       }
+
+
 
       .menu-button {
-        display:
-          block;
+
+        display: block;
+
       }
 
-      .hero {
-        padding-top:
-          120px;
+
+
+      .expertise-grid,
+      .projects {
+
+        grid-template-columns: 1fr;
+
       }
 
-      .hero-grid {
-        gap:
-          30px;
+
+
+      .tools-grid {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
       }
+
+
 
       .hero-visual {
-        min-height:
-          430px;
+
+        min-height: 450px;
 
         transform:
           scale(0.88);
+
       }
 
-      .expertise-grid,
-      .projects-grid,
-      .about-grid,
-      .stats-grid {
-        grid-template-columns:
-          1fr;
+
+
+      .research-main {
+
+        padding: 30px;
+
       }
 
-      .about-card.large {
-        grid-column:
-          span 1;
-      }
+
 
       .publication {
-        grid-template-columns:
-          1fr;
 
-        gap:
-          8px;
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+
       }
 
-      .research-feature {
-        padding:
-          30px;
-      }
-
-      .contact-panel {
-        padding:
-          50px 25px;
-      }
-
-      .footer-inner {
-        flex-direction:
-          column;
-      }
     }
 
-    @media (max-width: 520px) {
+
+
+    @media(max-width:520px) {
 
       .container {
+
         width:
-          min(calc(100% - 28px), var(--max-width));
+          calc(100% - 28px);
+
       }
+
+
 
       section {
-        padding:
-          85px 0;
+
+        padding: 85px 0;
+
       }
+
+
 
       h1 {
-        font-size:
-          3.4rem;
+
+        font-size: 3.25rem;
+
       }
 
-      .hero-visual {
-        display:
-          none;
-      }
+
 
       .hero {
-        min-height:
-          auto;
 
-        padding-bottom:
-          100px;
+        min-height: auto;
+
+        padding-bottom: 95px;
+
       }
 
-      .expertise-grid {
-        grid-template-columns:
-          1fr;
+
+
+      .hero-visual {
+
+        display: none;
+
       }
+
+
+
+      .tools-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+      .contact-panel {
+
+        padding: 50px 24px;
+
+      }
+
+
+
+      .footer-inner {
+
+        flex-direction: column;
+
+      }
+
     }
 
   </style>
+
 </head>
+
 
 <body>
 
+
   <div class="background-grid"></div>
-  <div class="background-glow glow-1"></div>
-  <div class="background-glow glow-2"></div>
+
+  <div class="glow glow-green"></div>
+
+  <div class="glow glow-blue"></div>
 
 
-  <!-- =======================================================
-       NAVIGATION
-       ======================================================= -->
+
+  <!-- ==========================================================
+       NAVEGACIÓN
+       ========================================================== -->
 
   <nav class="navbar">
 
     <div class="container nav-inner">
 
-      <a href="#home" class="brand">
-        <div class="brand-symbol">BR</div>
 
-        <div class="brand-text">
+      <a
+        href="#inicio"
+        class="brand"
+      >
+
+        <div class="brand-symbol">
+          BR
+        </div>
+
+        <div class="brand-name">
           Bastián Rivas
         </div>
+
       </a>
 
 
-      <div class="nav-links" id="navLinks">
 
-        <a href="#about">About</a>
+      <div
+        class="nav-links"
+        id="navLinks"
+      >
 
-        <a href="#expertise">Expertise</a>
+        <a href="#sobre-mi">
+          Sobre mí
+        </a>
 
-        <a href="#research">Research</a>
+        <a href="#conocimientos">
+          Conocimientos
+        </a>
 
-        <a href="#projects">Projects</a>
+        <a href="#investigacion">
+          Investigación
+        </a>
 
-        <a href="#publications">Publications</a>
+        <a href="#proyectos">
+          Proyectos
+        </a>
 
-        <a href="#contact">Contact</a>
+        <a href="#publicaciones">
+          Publicaciones
+        </a>
+
+        <a href="#herramientas">
+          Herramientas
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
 
       </div>
+
 
 
       <button
         class="menu-button"
         id="menuButton"
-        aria-label="Open menu"
+        aria-label="Abrir menú"
       >
         ☰
       </button>
+
 
     </div>
 
@@ -1670,22 +2215,32 @@
 
 
 
-  <!-- =======================================================
-       HERO
-       ======================================================= -->
+  <!-- ==========================================================
+       PORTADA
+       ========================================================== -->
 
   <main>
 
-    <section class="hero" id="home">
+
+    <section
+      class="hero"
+      id="inicio"
+    >
 
       <div class="container hero-grid">
 
+
         <div>
 
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Forest Science · Remote Sensing · Computational Methods
+
+          <div class="hero-label">
+
+            <span class="status-dot"></span>
+
+            Ciencias Forestales · Teledetección · Métodos Computacionales
+
           </div>
+
 
 
           <h1>
@@ -1699,101 +2254,129 @@
           </h1>
 
 
+
           <p class="hero-description">
 
-            Research-oriented profile connecting
+            Perfil académico y científico orientado a la integración
+            de las
 
-            <strong>forest science</strong>,
+            <strong>
+              ciencias forestales
+            </strong>,
 
-            <strong>remote sensing</strong>,
+            la
 
-            <strong>geospatial analysis</strong>,
+            <strong>
+              hidrología
+            </strong>,
 
-            <strong>computer vision</strong> and
+            la
 
-            <strong>3D reconstruction</strong>
+            <strong>
+              percepción remota
+            </strong>,
 
-            to study environmental systems and develop new
-            approaches for digital plant phenotyping.
+            los
+
+            <strong>
+              métodos computacionales
+            </strong>
+
+            y las nuevas tecnologías de
+
+            <strong>
+              reconstrucción tridimensional
+            </strong>.
 
           </p>
 
 
+
           <div class="hero-tags">
 
-            <span class="hero-tag">
-              Forest Hydrology
+            <span class="tag">
+              Hidrología Forestal
             </span>
 
-            <span class="hero-tag">
+            <span class="tag">
+              SIG
+            </span>
+
+            <span class="tag">
               Hyperspectral Imaging
             </span>
 
-            <span class="hero-tag">
+            <span class="tag">
               LiDAR
             </span>
 
-            <span class="hero-tag">
+            <span class="tag">
               Computer Vision
             </span>
 
-            <span class="hero-tag">
+            <span class="tag">
               Machine Learning
             </span>
 
-            <span class="hero-tag">
+            <span class="tag">
               3D Gaussian Splatting
             </span>
 
           </div>
 
 
+
           <div class="hero-actions">
 
             <a
-              href="#research"
+              href="#investigacion"
               class="button button-primary"
             >
-              Explore my research →
+              Explorar investigación →
             </a>
 
 
             <a
-              href="#expertise"
+              href="#conocimientos"
               class="button button-secondary"
             >
-              Technical expertise
+              Áreas de conocimiento
             </a>
 
-
-            <!--
-            Reemplazar # por el enlace real al CV
-            -->
 
             <a
               href="#"
               class="button button-secondary"
             >
-              Download CV ↓
+              Descargar CV ↓
             </a>
 
           </div>
+
 
         </div>
 
 
 
-        <!-- VISUAL -->
+        <!-- VISUAL DERECHO -->
 
         <div class="hero-visual">
+
 
           <div class="orb">
 
             <div class="center-core">
 
               <div class="core-text">
-                <strong>BR</strong>
-                <span>Research Portfolio</span>
+
+                <strong>
+                  BR
+                </strong>
+
+                <span>
+                  Research Portfolio
+                </span>
+
               </div>
 
             </div>
@@ -1801,30 +2384,56 @@
           </div>
 
 
-          <div class="floating-card fc-1">
-            <strong>Forest Science</strong>
-            Ecosystems · Hydrology
+
+          <div class="floating-card fc1">
+
+            <strong>
+              Ciencias Forestales
+            </strong>
+
+            Bosques · Ecosistemas
+
           </div>
 
 
-          <div class="floating-card fc-2">
-            <strong>Remote Sensing</strong>
-            UAV · LiDAR · Hyperspectral
+
+          <div class="floating-card fc2">
+
+            <strong>
+              Hidrología
+            </strong>
+
+            Cuencas · Modelación
+
           </div>
 
 
-          <div class="floating-card fc-3">
-            <strong>AI & Vision</strong>
-            ML · Computer Vision
+
+          <div class="floating-card fc3">
+
+            <strong>
+              Teledetección
+            </strong>
+
+            UAV · LiDAR · HSI
+
           </div>
 
 
-          <div class="floating-card fc-4">
-            <strong>3D Research</strong>
-            3DGS · Point Clouds
+
+          <div class="floating-card fc4">
+
+            <strong>
+              3D + AI
+            </strong>
+
+            3DGS · Computer Vision
+
           </div>
+
 
         </div>
+
 
       </div>
 
@@ -1832,38 +2441,42 @@
 
 
 
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
+    <!-- ==========================================================
+         SOBRE MÍ
+         ========================================================== -->
 
-    <section id="about">
+    <section id="sobre-mi">
 
       <div class="container">
 
+
         <div class="section-heading reveal">
+
 
           <div>
 
             <div class="section-number">
-              01 · About
+              01 · Sobre mí
             </div>
 
             <h2>
-              Science meets computation.
+              Ciencia ambiental y métodos computacionales.
             </h2>
 
           </div>
 
 
+
           <p class="section-intro">
 
-            My work is positioned at the intersection of
-            environmental science and emerging computational
-            technologies, integrating field-based understanding
-            with remote sensing, modelling, artificial intelligence
-            and three-dimensional data.
+            Mi trabajo e intereses se sitúan en la intersección entre
+            las ciencias ambientales y las nuevas tecnologías,
+            integrando conocimiento forestal, análisis espacial,
+            teledetección, modelación, programación y reconstrucción
+            tridimensional.
 
           </p>
+
 
         </div>
 
@@ -1871,97 +2484,77 @@
 
         <div class="about-grid">
 
-          <div class="about-card large reveal">
+
+          <article class="about-card about-highlight reveal">
 
             <h3>
-              Research profile
+              Perfil
             </h3>
 
             <p>
 
-              I am interested in developing and applying
-              computational methodologies to understand forests,
-              watersheds, vegetation and environmental processes.
+              Mi formación e intereses abarcan distintos niveles del
+              análisis ambiental, desde procesos asociados a bosques,
+              cuencas e hidrología hasta el procesamiento de
+              información espacial, espectral y tridimensional.
 
-              My work combines traditional knowledge from forest
-              science with geospatial information, remote sensing,
-              hyperspectral data, machine learning and
-              three-dimensional reconstruction techniques.
+              <br><br>
 
-            </p>
-
-
-            <div class="stats-grid">
-
-              <div class="stat">
-                <strong>Forest</strong>
-                <span>
-                  Science & ecosystems
-                </span>
-              </div>
-
-              <div class="stat">
-                <strong>Geo</strong>
-                <span>
-                  Spatial analysis
-                </span>
-              </div>
-
-              <div class="stat">
-                <strong>AI</strong>
-                <span>
-                  Machine learning
-                </span>
-              </div>
-
-              <div class="stat">
-                <strong>3D</strong>
-                <span>
-                  Reconstruction
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-
-          <div class="about-card reveal">
-
-            <h3>
-              Environmental perspective
-            </h3>
-
-            <p>
-
-              Forest hydrology, climatology, watershed processes,
-              silviculture and environmental modelling provide the
-              ecological foundation of my research.
+              Me interesa especialmente desarrollar metodologías que
+              permitan integrar observaciones ambientales con
+              herramientas computacionales modernas para estudiar
+              vegetación, recursos naturales y procesos
+              ecohidrológicos.
 
             </p>
 
+          </article>
+
+
+
+          <div class="about-small-grid">
+
+
+            <article class="about-card reveal">
+
+              <h3>
+                Enfoque ambiental
+              </h3>
+
+              <p>
+
+                Ciencias Forestales, hidrología forestal,
+                climatología, cuencas, silvicultura y modelación
+                ambiental.
+
+              </p>
+
+            </article>
+
+
+
+            <article class="about-card reveal">
+
+              <h3>
+                Enfoque tecnológico
+              </h3>
+
+              <p>
+
+                SIG, programación científica, teledetección,
+                aprendizaje automático, visión computacional,
+                datos hiperespectrales y reconstrucción 3D.
+
+              </p>
+
+            </article>
+
+
           </div>
 
-
-          <div class="about-card reveal">
-
-            <h3>
-              Computational perspective
-            </h3>
-
-            <p>
-
-              Python, R, MATLAB, GIS, machine learning and computer
-              vision provide the analytical framework used to
-              process environmental, spectral and three-dimensional
-              information.
-
-            </p>
-
-          </div>
 
         </div>
+
 
       </div>
 
@@ -1969,20 +2562,22 @@
 
 
 
-    <!-- =====================================================
-         EXPERTISE
-         ===================================================== -->
+    <!-- ==========================================================
+         AREAS OF KNOWLEDGE
+         ========================================================== -->
 
-    <section id="expertise">
+    <section id="conocimientos">
 
       <div class="container">
 
+
         <div class="section-heading reveal">
+
 
           <div>
 
             <div class="section-number">
-              02 · Expertise
+              02 · Conocimientos
             </div>
 
             <h2>
@@ -1992,14 +2587,16 @@
           </div>
 
 
+
           <p class="section-intro">
 
-            A multidisciplinary technical profile covering
-            environmental sciences, Earth observation,
-            programming, geospatial analysis and emerging
-            three-dimensional technologies.
+            Un perfil interdisciplinario que combina ciencias
+            forestales, análisis ambiental, información geoespacial,
+            programación y tecnologías emergentes para el análisis
+            tridimensional.
 
           </p>
+
 
         </div>
 
@@ -2008,50 +2605,50 @@
         <div class="expertise-grid">
 
 
-          <!-- FOREST SCIENCE -->
+          <!-- 01 -->
 
           <article class="expertise-card reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               01
             </div>
 
             <h3>
-              Forest Science
+              Ciencias Forestales
             </h3>
 
-            <div class="expertise-subtitle">
-              Forest ecosystems and environmental processes.
+            <div class="expertise-description">
+              Estructura, manejo y funcionamiento de ecosistemas forestales.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
-                Dendrometry
+                Dendrometría
               </span>
 
               <span class="skill">
-                Silviculture
+                Silvicultura
               </span>
 
               <span class="skill">
-                Forest Hydrology
+                Hidrología Forestal
               </span>
 
               <span class="skill">
-                Climatology
+                Climatología
               </span>
 
               <span class="skill">
-                Watersheds
+                Cuencas
               </span>
 
               <span class="skill">
-                Wildfire
+                Incendios Forestales
               </span>
 
               <span class="skill">
-                Nursery
+                Viveros
               </span>
 
             </div>
@@ -2060,26 +2657,26 @@
 
 
 
-          <!-- REMOTE SENSING -->
+          <!-- 02 -->
 
-          <article class="expertise-card reveal">
+          <article class="expertise-card water reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               02
             </div>
 
             <h3>
-              Remote Sensing & Geospatial
+              Teledetección & Geoespacial
             </h3>
 
-            <div class="expertise-subtitle">
-              Earth observation and spatial environmental analysis.
+            <div class="expertise-description">
+              Observación de la Tierra y análisis espacial ambiental.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
-                GIS
+                GIS / SIG
               </span>
 
               <span class="skill">
@@ -2112,23 +2709,23 @@
 
 
 
-          <!-- COMPUTATIONAL -->
+          <!-- 03 -->
 
-          <article class="expertise-card reveal">
+          <article class="expertise-card water reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               03
             </div>
 
             <h3>
-              Computational Methods
+              Métodos Computacionales
             </h3>
 
-            <div class="expertise-subtitle">
-              Scientific programming and data-driven approaches.
+            <div class="expertise-description">
+              Programación científica y análisis de datos.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
                 Python
@@ -2160,30 +2757,30 @@
 
 
 
-          <!-- 3D -->
+          <!-- 04 -->
 
           <article class="expertise-card reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               04
             </div>
 
             <h3>
-              3D & Digital Phenotyping
+              3D & Fenotipado Digital
             </h3>
 
-            <div class="expertise-subtitle">
-              Three-dimensional representations of biological objects.
+            <div class="expertise-description">
+              Representación tridimensional de objetos biológicos.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
                 3D Gaussian Splatting
               </span>
 
               <span class="skill">
-                3D Reconstruction
+                Reconstrucción 3D
               </span>
 
               <span class="skill">
@@ -2204,30 +2801,30 @@
 
 
 
-          <!-- ENVIRONMENTAL MODELLING -->
+          <!-- 05 -->
 
-          <article class="expertise-card reveal">
+          <article class="expertise-card water reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               05
             </div>
 
             <h3>
-              Environmental Modelling
+              Modelación Ambiental
             </h3>
 
-            <div class="expertise-subtitle">
-              Quantitative representation of hydrological systems.
+            <div class="expertise-description">
+              Representación cuantitativa de procesos hidrológicos.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
-                Hydrological Modelling
+                Modelación Hidrológica
               </span>
 
               <span class="skill">
-                Runoff Modelling
+                Modelación de Escorrentía
               </span>
 
               <span class="skill">
@@ -2244,23 +2841,23 @@
 
 
 
-          <!-- CURRENT RESEARCH -->
+          <!-- 06 -->
 
           <article class="expertise-card reveal">
 
-            <div class="expertise-index">
+            <div class="expertise-number">
               06
             </div>
 
             <h3>
-              Current Research
+              Investigación Actual
             </h3>
 
-            <div class="expertise-subtitle">
-              Emerging methodologies for digital plant analysis.
+            <div class="expertise-description">
+              Nuevas metodologías para caracterización digital vegetal.
             </div>
 
-            <div class="skill-list">
+            <div class="skills">
 
               <span class="skill">
                 Digital Plant Phenotyping
@@ -2275,7 +2872,7 @@
               </span>
 
               <span class="skill">
-                Spectral–Spatial Integration
+                Integración Espectral–3D
               </span>
 
             </div>
@@ -2285,30 +2882,32 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
 
-    <!-- =====================================================
-         RESEARCH
-         ===================================================== -->
+    <!-- ==========================================================
+         INVESTIGACIÓN
+         ========================================================== -->
 
-    <section id="research">
+    <section id="investigacion">
 
       <div class="container">
+
 
         <div class="section-heading reveal">
 
           <div>
 
             <div class="section-number">
-              03 · Research
+              03 · Investigación
             </div>
 
             <h2>
-              Current research direction.
+              Investigación actual.
             </h2>
 
           </div>
@@ -2316,10 +2915,10 @@
 
           <p class="section-intro">
 
-            My current interests explore how new representations
-            of three-dimensional geometry can be combined with
-            spectral information to improve the digital
-            characterization of vegetation.
+            Actualmente me interesa estudiar cómo nuevas
+            representaciones tridimensionales pueden integrarse con
+            información espectral y métodos de visión computacional
+            para mejorar la caracterización digital de plantas.
 
           </p>
 
@@ -2327,56 +2926,61 @@
 
 
 
-        <div class="research-feature reveal">
+        <div class="research-main reveal">
+
 
           <div>
 
+
             <div class="research-label">
-              Current Focus
+              Línea actual
             </div>
 
+
             <h3>
-              Digital Plant Phenotyping with 3DGS + Hyperspectral Data
+              Fenotipado Digital + 3DGS + Información Hiperespectral
             </h3>
+
 
             <p>
 
-              Exploring the integration of 3D Gaussian Splatting,
-              object-centric reconstruction, segmentation,
-              hyperspectral information and computer vision for the
-              development of new approaches to digital plant
-              phenotyping.
+              Desarrollo y evaluación de metodologías para combinar
+              reconstrucción tridimensional, segmentación,
+              correspondencias entre imágenes, Gaussian Splatting e
+              información hiperespectral en aplicaciones de
+              fenotipado digital vegetal.
 
             </p>
 
 
             <div class="hero-tags">
 
-              <span class="hero-tag">
+              <span class="tag">
                 3DGS
               </span>
 
-              <span class="hero-tag">
-                Plant Phenotyping
+              <span class="tag">
+                Fenotipado Vegetal
               </span>
 
-              <span class="hero-tag">
-                Hyperspectral
+              <span class="tag">
+                Hiperespectral
               </span>
 
-              <span class="hero-tag">
-                Segmentation
+              <span class="tag">
+                Segmentación
               </span>
 
-              <span class="hero-tag">
+              <span class="tag">
                 Feature Matching
               </span>
 
-              <span class="hero-tag">
+              <span class="tag">
                 Computer Vision
               </span>
 
             </div>
+
 
           </div>
 
@@ -2385,159 +2989,120 @@
           <div class="research-flow">
 
 
-            <div class="flow-item">
+            <div class="flow">
 
               <div class="flow-number">
                 01
               </div>
 
               <div>
+
                 <strong>
-                  Image acquisition
+                  Adquisición
                 </strong>
 
                 <span>
-                  RGB and hyperspectral observations
+                  Información RGB e hiperespectral
                 </span>
+
               </div>
 
             </div>
 
 
-            <div class="flow-item">
+
+            <div class="flow">
 
               <div class="flow-number">
                 02
               </div>
 
               <div>
+
                 <strong>
-                  Object segmentation
+                  Segmentación
                 </strong>
 
                 <span>
-                  Object-centric image processing
+                  Extracción del objeto de interés
                 </span>
+
               </div>
 
             </div>
 
 
-            <div class="flow-item">
+
+            <div class="flow">
 
               <div class="flow-number">
                 03
               </div>
 
               <div>
+
                 <strong>
-                  Camera reconstruction
+                  Correspondencias y poses
                 </strong>
 
                 <span>
-                  Features, matching and pose estimation
+                  Features · Matching · Camera pose
                 </span>
+
               </div>
 
             </div>
 
 
-            <div class="flow-item">
+
+            <div class="flow">
 
               <div class="flow-number">
                 04
               </div>
 
               <div>
+
                 <strong>
-                  3D Gaussian Splatting
+                  Reconstrucción 3D
                 </strong>
 
                 <span>
-                  Geometric and radiometric reconstruction
+                  3D Gaussian Splatting
                 </span>
+
               </div>
 
             </div>
 
 
-            <div class="flow-item">
+
+            <div class="flow">
 
               <div class="flow-number">
                 05
               </div>
 
               <div>
+
                 <strong>
-                  Spectral integration
+                  Integración espectral
                 </strong>
 
                 <span>
-                  Connecting geometry and hyperspectral information
+                  Geometría + información hiperespectral
                 </span>
+
               </div>
 
             </div>
 
+
           </div>
+
 
         </div>
 
-
-
-        <div class="research-secondary-grid">
-
-          <div class="research-card reveal">
-
-            <h4>
-              Object Reconstruction
-            </h4>
-
-            <p>
-
-              Evaluation of feature extraction, feature matching,
-              segmentation and camera-pose estimation strategies
-              for object-centric reconstruction.
-
-            </p>
-
-          </div>
-
-
-          <div class="research-card reveal">
-
-            <h4>
-              Hyperspectral + 3D
-            </h4>
-
-            <p>
-
-              Study of approaches for combining spectral signatures
-              with explicit three-dimensional representations of
-              biological and environmental objects.
-
-            </p>
-
-          </div>
-
-
-          <div class="research-card reveal">
-
-            <h4>
-              Environmental AI
-            </h4>
-
-            <p>
-
-              Application of machine learning and computer vision
-              to extract information from remote sensing and
-              environmental datasets.
-
-            </p>
-
-          </div>
-
-        </div>
 
       </div>
 
@@ -2545,24 +3110,25 @@
 
 
 
-    <!-- =====================================================
-         PROJECTS
-         ===================================================== -->
+    <!-- ==========================================================
+         PROYECTOS
+         ========================================================== -->
 
-    <section id="projects">
+    <section id="proyectos">
 
       <div class="container">
+
 
         <div class="section-heading reveal">
 
           <div>
 
             <div class="section-number">
-              04 · Projects
+              04 · Proyectos
             </div>
 
             <h2>
-              Research & development.
+              Investigación y desarrollo.
             </h2>
 
           </div>
@@ -2570,9 +3136,9 @@
 
           <p class="section-intro">
 
-            This section can contain research projects,
-            methodological developments, software,
-            experiments and collaborative initiatives.
+            Espacio destinado a proyectos científicos, desarrollos
+            metodológicos, aplicaciones, software y trabajos
+            experimentales.
 
           </p>
 
@@ -2580,32 +3146,35 @@
 
 
 
-        <div class="projects-grid">
+        <div class="projects">
 
 
-          <article class="project-card reveal">
+          <article class="project reveal">
 
-            <div class="project-visual">
+            <div class="project-header">
+
               <div class="project-code">
                 3DGS
               </div>
+
             </div>
 
-            <div class="project-content">
+
+            <div class="project-body">
 
               <div class="project-type">
-                Research
+                Investigación
               </div>
 
               <h3>
-                Object-centric 3D Gaussian Splatting
+                Reconstrucción 3D centrada en objetos
               </h3>
 
               <p>
 
-                Reconstruction workflows combining masks,
-                feature matching and three-dimensional Gaussian
-                representations.
+                Evaluación de segmentación, correspondencias,
+                estimación de poses y Gaussian Splatting para
+                reconstrucción tridimensional de objetos.
 
               </p>
 
@@ -2615,28 +3184,31 @@
 
 
 
-          <article class="project-card reveal">
+          <article class="project reveal">
 
-            <div class="project-visual">
+            <div class="project-header">
+
               <div class="project-code">
                 HSI
               </div>
+
             </div>
 
-            <div class="project-content">
+
+            <div class="project-body">
 
               <div class="project-type">
-                Spectral Imaging
+                Teledetección
               </div>
 
               <h3>
-                Hyperspectral information processing
+                Procesamiento hiperespectral
               </h3>
 
               <p>
 
-                Processing and analysis of spectral information
-                for vegetation and environmental applications.
+                Procesamiento y análisis de información espectral
+                orientada a vegetación y aplicaciones ambientales.
 
               </p>
 
@@ -2646,28 +3218,32 @@
 
 
 
-          <article class="project-card reveal">
+          <article class="project reveal">
 
-            <div class="project-visual">
+            <div class="project-header">
+
               <div class="project-code">
                 HYD
               </div>
+
             </div>
 
-            <div class="project-content">
+
+            <div class="project-body">
 
               <div class="project-type">
-                Environmental Modelling
+                Hidrología
               </div>
 
               <h3>
-                Hydrological and runoff modelling
+                Modelación hidrológica
               </h3>
 
               <p>
 
-                Analysis and simulation of hydrological processes
-                at watershed scale.
+                Análisis, representación y simulación de procesos
+                hidrológicos y generación de escorrentía a escala
+                de cuenca.
 
               </p>
 
@@ -2678,30 +3254,32 @@
 
         </div>
 
+
       </div>
 
     </section>
 
 
 
-    <!-- =====================================================
-         PUBLICATIONS
-         ===================================================== -->
+    <!-- ==========================================================
+         PUBLICACIONES
+         ========================================================== -->
 
-    <section id="publications">
+    <section id="publicaciones">
 
       <div class="container">
+
 
         <div class="section-heading reveal">
 
           <div>
 
             <div class="section-number">
-              05 · Publications
+              05 · Publicaciones
             </div>
 
             <h2>
-              Scientific work.
+              Producción científica.
             </h2>
 
           </div>
@@ -2709,8 +3287,8 @@
 
           <p class="section-intro">
 
-            Add journal articles, conference papers,
-            theses, datasets and technical publications here.
+            Artículos científicos, trabajos de congresos, tesis,
+            datasets y otras contribuciones académicas.
 
           </p>
 
@@ -2730,48 +3308,24 @@
             <div>
 
               <div class="publication-title">
-                Publication title
+                Próximamente
               </div>
 
-              <div class="publication-authors">
-                Bastián A. Rivas Maldonado et al.
-              </div>
-
-            </div>
-
-            <a href="#" class="publication-link">
-              DOI / PDF ↗
-            </a>
-
-          </div>
-
-
-          <div class="publication">
-
-            <div class="publication-year">
-              2025
-            </div>
-
-            <div>
-
-              <div class="publication-title">
-                Add your scientific publications here
-              </div>
-
-              <div class="publication-authors">
-                Journal / Conference / Thesis
+              <div class="publication-detail">
+                Publicaciones y trabajos científicos.
               </div>
 
             </div>
 
-            <a href="#" class="publication-link">
-              View ↗
-            </a>
+            <div class="publication-link">
+                —
+            </div>
 
           </div>
 
 
         </div>
+
 
       </div>
 
@@ -2779,20 +3333,21 @@
 
 
 
-    <!-- =====================================================
-         TOOLS
-         ===================================================== -->
+    <!-- ==========================================================
+         TOOLS & TECHNOLOGIES
+         ========================================================== -->
 
-    <section>
+    <section id="herramientas">
 
       <div class="container">
+
 
         <div class="section-heading reveal">
 
           <div>
 
             <div class="section-number">
-              06 · Technical Stack
+              06 · Herramientas
             </div>
 
             <h2>
@@ -2804,8 +3359,9 @@
 
           <p class="section-intro">
 
-            Software, platforms and computational environments
-            commonly used across my research workflows.
+            Lenguajes, plataformas, software y herramientas que
+            forman parte de mis flujos de trabajo científicos,
+            geoespaciales, computacionales y tridimensionales.
 
           </p>
 
@@ -2813,69 +3369,454 @@
 
 
 
-        <div class="toolbox reveal">
+        <div class="tools-grid reveal">
 
-          <span class="tool">
-            Python
-          </span>
 
-          <span class="tool">
-            R
-          </span>
+          <!-- R -->
 
-          <span class="tool">
-            MATLAB
-          </span>
+          <a
+            href="https://www.r-project.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
 
-          <span class="tool">
-            QGIS
-          </span>
+            <div class="tool-top">
 
-          <span class="tool">
-            ArcGIS
-          </span>
+              <div class="tool-icon">
+                R
+              </div>
 
-          <span class="tool">
-            Google Earth Engine
-          </span>
+              <div class="external">
+                ↗
+              </div>
 
-          <span class="tool">
-            GitHub
-          </span>
+            </div>
 
-          <span class="tool">
-            LiDAR
-          </span>
+            <div>
 
-          <span class="tool">
-            UAV / RPA
-          </span>
+              <strong>
+                R
+              </strong>
 
-          <span class="tool">
-            Hyperspectral Imaging
-          </span>
+              <span>
+                Estadística y ciencia de datos
+              </span>
 
-          <span class="tool">
-            Point Clouds
-          </span>
+            </div>
 
-          <span class="tool">
-            3D Gaussian Splatting
-          </span>
+          </a>
 
-          <span class="tool">
-            Computer Vision
-          </span>
 
-          <span class="tool">
-            Machine Learning
-          </span>
 
-          <span class="tool">
-            Data Science
-          </span>
+          <!-- PYTHON -->
+
+          <a
+            href="https://www.python.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                PY
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Python
+              </strong>
+
+              <span>
+                Programación científica
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- MATLAB -->
+
+          <a
+            href="https://la.mathworks.com/products/matlab.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                M
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                MATLAB
+              </strong>
+
+              <span>
+                Computación numérica
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- QGIS -->
+
+          <a
+            href="https://qgis.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                Q
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                QGIS
+              </strong>
+
+              <span>
+                Sistema de Información Geográfica
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- ARCGIS -->
+
+          <a
+            href="https://www.esri.com/en-us/arcgis/geospatial-platform/overview"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                GIS
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                ArcGIS
+              </strong>
+
+              <span>
+                Plataforma geoespacial
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- GEE -->
+
+          <a
+            href="https://earthengine.google.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                GEE
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Google Earth Engine
+              </strong>
+
+              <span>
+                Procesamiento geoespacial en la nube
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- 3DGS -->
+
+          <a
+            href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                3D
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                3D Gaussian Splatting
+              </strong>
+
+              <span>
+                Representación y reconstrucción 3D
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- ENVI -->
+
+          <a
+            href="https://www.esri.cl/es-cl/imagenes/capabilities/content/envi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                ENVI
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                ENVI
+              </strong>
+
+              <span>
+                Procesamiento de imágenes y datos
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- CLOUDCOMPARE -->
+
+          <a
+            href="https://www.cloudcompare.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                CC
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                CloudCompare
+              </strong>
+
+              <span>
+                Nubes de puntos y datos 3D
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- POWER BI -->
+
+          <a
+            href="https://app.powerbi.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                BI
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Power BI
+              </strong>
+
+              <span>
+                Visualización y análisis de datos
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- APPSHEET -->
+
+          <a
+            href="https://about.appsheet.com/home/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                AS
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Google AppSheet
+              </strong>
+
+              <span>
+                Desarrollo de aplicaciones
+              </span>
+
+            </div>
+
+          </a>
+
+
+
+          <!-- APPS SCRIPT -->
+
+          <a
+            href="https://developers.google.com/apps-script"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tool-card"
+          >
+
+            <div class="tool-top">
+
+              <div class="tool-icon">
+                GS
+              </div>
+
+              <div class="external">
+                ↗
+              </div>
+
+            </div>
+
+            <div>
+
+              <strong>
+                Google Apps Script
+              </strong>
+
+              <span>
+                Automatización e integración
+              </span>
+
+            </div>
+
+          </a>
+
 
         </div>
+
 
       </div>
 
@@ -2883,116 +3824,109 @@
 
 
 
-    <!-- =====================================================
-         CONTACT
-         ===================================================== -->
+    <!-- ==========================================================
+         CONTACTO
+         ========================================================== -->
 
-    <section id="contact">
+    <section id="contacto">
 
       <div class="container">
 
+
         <div class="contact-panel reveal">
 
+
           <div class="section-number">
-            Contact
+            Contacto
           </div>
 
+
           <h2>
-            Research, collaboration and new ideas.
+            Investigación, colaboración y nuevas ideas.
           </h2>
+
 
           <p>
 
-            I am interested in interdisciplinary research involving
-            forest science, remote sensing, hyperspectral imaging,
-            computer vision, environmental modelling and
-            three-dimensional reconstruction.
+            Interesado en investigación interdisciplinaria asociada
+            a ciencias forestales, hidrología, percepción remota,
+            información hiperespectral, visión computacional,
+            modelación ambiental y reconstrucción tridimensional.
 
           </p>
 
 
-          <div class="contact-actions">
+
+          <div class="contact-links">
 
 
-            <!--
-            CAMBIAR POR TU CORREO
-            -->
+            <!-- CAMBIAR CORREO -->
 
             <a
-              href="mailto:YOUR_EMAIL@EMAIL.COM"
+              href="mailto:TU_CORREO@EMAIL.COM"
               class="button button-primary"
             >
-              Email me →
+              Correo →
             </a>
 
 
-            <!--
-            CAMBIAR POR TU LINKEDIN
-            -->
+
+            <!-- LINKEDIN -->
 
             <a
-              href="#"
+              href="https://www.linkedin.com/in/barm-bastian"
               target="_blank"
+              rel="noopener noreferrer"
               class="button button-secondary"
             >
               LinkedIn ↗
             </a>
 
 
-            <!--
-            CAMBIAR POR TU RESEARCHGATE
-            -->
+
+            <!-- RESEARCHGATE -->
 
             <a
-              href="#"
+              href="https://www.researchgate.net/profile/Bastian-Rivas-Maldonado"
               target="_blank"
+              rel="noopener noreferrer"
               class="button button-secondary"
             >
               ResearchGate ↗
             </a>
 
 
-            <!--
-            CAMBIAR POR TU ORCID
-            -->
+
+            <!-- WEB ACTUAL -->
 
             <a
-              href="#"
+              href="https://barm2000.github.io/Bastian-Rivas/"
               target="_blank"
+              rel="noopener noreferrer"
               class="button button-secondary"
             >
-              ORCID ↗
-            </a>
-
-
-            <!--
-            CAMBIAR POR TU GITHUB
-            -->
-
-            <a
-              href="#"
-              target="_blank"
-              class="button button-secondary"
-            >
-              GitHub ↗
+              Sitio web ↗
             </a>
 
 
           </div>
 
+
         </div>
+
 
       </div>
 
     </section>
 
+
   </main>
 
 
 
-  <!-- =======================================================
+  <!-- ==========================================================
        FOOTER
-       ======================================================= -->
+       ========================================================== -->
 
   <footer>
 
@@ -3000,13 +3934,17 @@
 
       <div>
 
-        © <span id="year"></span>
+        ©
+        <span id="year"></span>
+
         Bastián Alejandro Rivas Maldonado
 
       </div>
 
       <div>
-        Forest Science · Remote Sensing · AI · 3D
+
+        Forestal · Agua · Teledetección · AI · 3D
+
       </div>
 
     </div>
@@ -3015,24 +3953,21 @@
 
 
 
-  <!-- =======================================================
+  <!-- ==========================================================
        JAVASCRIPT
-       ======================================================= -->
+       ========================================================== -->
 
   <script>
 
-    /* -------------------------------------------------------
-       CURRENT YEAR
-       ------------------------------------------------------- */
+
+    /* AÑO ACTUAL */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
 
 
-    /* -------------------------------------------------------
-       MOBILE MENU
-       ------------------------------------------------------- */
+    /* MENÚ MÓVIL */
 
     const menuButton =
       document.getElementById("menuButton");
@@ -3068,9 +4003,7 @@
 
 
 
-    /* -------------------------------------------------------
-       REVEAL ANIMATION
-       ------------------------------------------------------- */
+    /* ANIMACIÓN AL APARECER */
 
     const revealElements =
       document.querySelectorAll(".reveal");
@@ -3112,9 +4045,7 @@
 
 
 
-    /* -------------------------------------------------------
-       ACTIVE NAVIGATION SECTION
-       ------------------------------------------------------- */
+    /* MENÚ ACTIVO */
 
     const sections =
       document.querySelectorAll(
@@ -3131,25 +4062,28 @@
       "scroll",
       () => {
 
-        let currentSection = "";
+        let current = "";
 
 
         sections.forEach(section => {
 
-          const sectionTop =
-            section.offsetTop - 130;
+          const top =
+            section.offsetTop - 150;
 
-          const sectionHeight =
+          const height =
             section.offsetHeight;
 
 
           if (
-            window.scrollY >= sectionTop &&
+
+            window.scrollY >= top &&
+
             window.scrollY <
-            sectionTop + sectionHeight
+              top + height
+
           ) {
 
-            currentSection =
+            current =
               section.getAttribute("id");
 
           }
@@ -3159,15 +4093,21 @@
 
         navigationLinks.forEach(link => {
 
-          link.classList.remove("active");
+          link.classList.remove(
+            "active"
+          );
 
 
           if (
+
             link.getAttribute("href") ===
-            "#" + currentSection
+            "#" + current
+
           ) {
 
-            link.classList.add("active");
+            link.classList.add(
+              "active"
+            );
 
           }
 
@@ -3176,7 +4116,9 @@
       }
     );
 
+
   </script>
+
 
 </body>
 </html>
