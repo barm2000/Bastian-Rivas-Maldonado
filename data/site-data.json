@@ -1,0 +1,253 @@
+{
+  "projects": [
+    {
+      "title": "HydroGeoAI Lab",
+      "label": "Desarrollo web · Ciencia",
+      "summary": "Diseño y desarrollo del sitio web del laboratorio, organizado para comunicar proyectos, equipo, servicios, publicaciones, equipamiento y recursos.",
+      "technologies": "GitHub Pages · HTML · CSS · JavaScript · Automatización",
+      "link": "https://syepez14.github.io/HydroGeoAI-Lab/",
+      "linkText": "Visitar HydroGeoAI Lab",
+      "order": 1,
+      "placeholder": "LAB",
+      "folder": "01-hydrogeoai-lab",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Hyperion Explorer",
+      "label": "Google Earth Engine · Hiperespectral",
+      "summary": "Aplicación desarrollada en Google Earth Engine para explorar y analizar información hiperespectral de EO-1 Hyperion mediante una interfaz web interactiva.",
+      "technologies": "Google Earth Engine · Hyperion · JavaScript · Visualización",
+      "link": "https://batyrivas2000.users.earthengine.app/view/hyperion-explorer",
+      "linkText": "Abrir Hyperion Explorer",
+      "order": 2,
+      "placeholder": "HYP",
+      "folder": "02-hyperion-explorer",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Modelación hidrológica mediante SRM y modelos GRxJ",
+      "label": "Hidrología",
+      "summary": "Comparación del desempeño de SRM y la familia GRxJ, con y sin CemaNeige, para simulación diaria de caudales en cuencas chilenas con regímenes hidrológicos contrastantes.",
+      "technologies": "SRM · GRxJ · CemaNeige · QSWAT · R-SWAT",
+      "link": "https://doi.org/10.3390/w17233413",
+      "linkText": "Ver publicación asociada",
+      "order": 3,
+      "placeholder": "HYD",
+      "folder": "03-modelacion-hidrologica",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Reconstrucción tridimensional de plantas",
+      "label": "Reconstrucción 3D",
+      "summary": "Desarrollo y comparación de flujos de reconstrucción mediante Structure from Motion, Multi-View Stereo y 3D Gaussian Splatting.",
+      "technologies": "SfM · MVS · 3DGS · Nubes de puntos",
+      "order": 4,
+      "placeholder": "3D",
+      "cover": {
+        "src": "content/projects/04-reconstruccion-3d/3dgs.gif",
+        "type": "image",
+        "name": "3dgs.gif"
+      },
+      "folder": "04-reconstruccion-3d",
+      "media": [
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgs.gif",
+          "type": "image",
+          "name": "3dgs.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgs_nube1.gif",
+          "type": "image",
+          "name": "3dgs_nube1.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgsae.gif",
+          "type": "image",
+          "name": "3dgsae.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/mvs.gif",
+          "type": "image",
+          "name": "mvs.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/sfm.gif",
+          "type": "image",
+          "name": "sfm.gif"
+        }
+      ]
+    },
+    {
+      "title": "Fenotipado digital de plantas",
+      "label": "Fenotipado digital",
+      "summary": "Uso de imágenes y reconstrucciones 3D para caracterizar estructuras vegetales y obtener variables morfológicas, arquitectónicas y biométricas.",
+      "technologies": "Visión computacional · 3D · Segmentación · Morfometría",
+      "order": 5,
+      "placeholder": "FEN",
+      "cover": {
+        "src": "content/projects/05-fenotipado-digital/3dgs_nube.gif",
+        "type": "image",
+        "name": "3dgs_nube.gif"
+      },
+      "folder": "05-fenotipado-digital",
+      "media": [
+        {
+          "src": "content/projects/05-fenotipado-digital/3dgs_nube.gif",
+          "type": "image",
+          "name": "3dgs_nube.gif"
+        }
+      ]
+    },
+    {
+      "title": "Análisis de vegetación mediante LiDAR",
+      "label": "LiDAR · Gestión de vegetación",
+      "summary": "Procesamiento de nubes de puntos para caracterizar vegetación en torno a redes eléctricas y derivar altura, densidad, proximidad, prioridad y potenciales plazos de intervención.",
+      "technologies": "LiDAR · Point Clouds · CHM · Análisis espacial",
+      "order": 6,
+      "placeholder": "LID",
+      "cover": {
+        "src": "content/projects/06-lidar-vegetacion/lineas.png",
+        "type": "image",
+        "name": "lineas.png"
+      },
+      "folder": "06-lidar-vegetacion",
+      "media": [
+        {
+          "src": "content/projects/06-lidar-vegetacion/lineas.png",
+          "type": "image",
+          "name": "lineas.png"
+        }
+      ]
+    },
+    {
+      "title": "Aprendizaje automático para variables ambientales",
+      "label": "Machine Learning",
+      "summary": "Exploración de modelos como LSTM, GRU y XGBoost para estimar variables de interés a partir de información climática, hidrológica y ambiental.",
+      "technologies": "LSTM · GRU · XGBoost · Series temporales",
+      "order": 7,
+      "placeholder": "ML",
+      "folder": "07-ml-variables-ambientales",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Predicción espacio-temporal con imágenes",
+      "label": "Deep Learning geoespacial",
+      "summary": "Flujos orientados a utilizar variables ambientales representadas como raster para modelar su evolución espacial y temporal.",
+      "technologies": "Raster · Sentinel-2 · MODIS · CNN · ConvLSTM",
+      "order": 8,
+      "placeholder": "ST",
+      "folder": "08-prediccion-espacio-temporal",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Detección de estrés y condición vegetal",
+      "label": "Hiperespectral",
+      "summary": "Investigación del uso de información hiperespectral y redes neuronales para clasificar condiciones fisiológicas de plantas, incluyendo estrés hídrico.",
+      "technologies": "Hiperespectral · 3D-CNN · Clasificación",
+      "order": 9,
+      "placeholder": "HSI",
+      "cover": {
+        "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
+        "type": "video",
+        "name": "hsi.mp4"
+      },
+      "folder": "09-estres-condicion-vegetal",
+      "media": [
+        {
+          "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
+          "type": "video",
+          "name": "hsi.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Fenotipado estructural automatizado",
+      "label": "3D vegetal",
+      "summary": "Proyección de métodos para identificar y cuantificar hojas, tallos, ramas y flores directamente sobre modelos tridimensionales.",
+      "technologies": "3D · Segmentación · Deep Learning · Morfometría",
+      "order": 10,
+      "placeholder": "PH",
+      "folder": "10-fenotipado-estructural",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "production": [
+    {
+      "title": "Performance Evaluation of the SRM and GRxJ—CemaNeige Models for Daily Streamflow Simulation in Two Catchments with Snow and Rain Dominated Hydrological Regimes",
+      "type": "Publicación",
+      "role": "Autor",
+      "year": "2025",
+      "date": "2025-12",
+      "authors": "Bastián Rivas · Víctor Osores · David González · Carlo Gualtieri · Santiago Yépez",
+      "source": "Water 2025, 17(23), 3413",
+      "link": "https://doi.org/10.3390/w17233413",
+      "linkText": "DOI",
+      "order": 1,
+      "folder": "2025-water-srm-grxj",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "formation": [
+    {
+      "title": "EVALUACIÓN RADIOMÉTRICA DE IMÁGENES SENTINEL-2 DEEP RESOLUTION 3.0 (S2DR3) MEDIANTE COMPARACIÓN CON SENTINEL-2 Y PLANETSCOPE",
+      "role": "Co-guía",
+      "year": "2026",
+      "date": "2026-06",
+      "dateText": "Junio 2026",
+      "student": "Francisco Ignacio Oñate Vidal",
+      "degree": "Ingeniero en Biotecnología Vegetal",
+      "institution": "Facultad de Ciencias Forestales · Universidad de Concepción",
+      "guide": "David González Lanteri",
+      "coGuide": "Bastián Alejandro Rivas Maldonado",
+      "order": 1,
+      "folder": "2026-francisco-onate",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "courses": [
+    {
+      "title": "Teledetección y análisis geoespacial",
+      "status": "Próximamente",
+      "summary": "Cursos orientados al procesamiento, interpretación y análisis de información espacial aplicada a recursos naturales y ambiente.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 1,
+      "placeholder": "GEO",
+      "folder": "01-teledeteccion-geoespacial",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Programación aplicada a datos ambientales",
+      "status": "Próximamente",
+      "summary": "Formación práctica para automatizar análisis y trabajar con datos ambientales mediante herramientas computacionales.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 2,
+      "placeholder": "DATA",
+      "folder": "02-programacion-ambiental",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "3D, visión computacional y nuevas tecnologías",
+      "status": "Próximamente",
+      "summary": "Contenidos enfocados en reconstrucción 3D, procesamiento de imágenes y metodologías emergentes aplicadas a investigación.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 3,
+      "placeholder": "3D",
+      "folder": "03-3d-vision",
+      "media": [],
+      "cover": null
+    }
+  ]
+}

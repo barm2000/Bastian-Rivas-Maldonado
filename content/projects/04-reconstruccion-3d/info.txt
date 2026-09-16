@@ -1,0 +1,7 @@
+Title: Reconstrucción tridimensional de plantas
+Label: Reconstrucción 3D
+Summary: Desarrollo y comparación de flujos de reconstrucción mediante Structure from Motion, Multi-View Stereo y 3D Gaussian Splatting.
+Technologies: SfM · MVS · 3DGS · Nubes de puntos
+Order: 4
+Placeholder: 3D
+Cover: 3dgs.gif

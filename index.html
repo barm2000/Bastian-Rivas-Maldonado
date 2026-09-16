@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portafolio académico y profesional de Bastián Alejandro Rivas Maldonado. Ciencias Forestales, hidrología, teledetección, modelación, inteligencia artificial y reconstrucción 3D." name="description"/>
+<meta content="Ciencias Forestales, hidrología, teledetección, LiDAR, hiperespectral, GIS, QGIS, ArcGIS, Google Earth Engine, machine learning, 3D Gaussian Splatting, fenotipado digital" name="keywords"/>
+<meta content="Bastián Alejandro Rivas Maldonado" name="author"/>
+<meta content="#081a13" name="theme-color"/>
+<title>Bastián Alejandro Rivas Maldonado | Portafolio</title>
+<style>
+    :root {
+      --black: #071812;
+      --black-soft: #0a2118;
+      --card: #0d261c;
+      --white: #f5fbf8;
+      --text: #c4d1cb;
+      --muted: #7e9088;
+      --forest: #39d98a;
+      --water: #38c8ff;
+      --border: rgba(255,255,255,.085);
+      --border-green: rgba(57,217,138,.28);
+      --border-blue: rgba(56,200,255,.28);
+      --shadow: 0 18px 52px rgba(0,16,8,.28);
+      --radius: 20px;
+      --max: 1760px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(57,217,138,.15), transparent 28%),
+        radial-gradient(circle at 92% 10%, rgba(56,200,255,.07), transparent 26%),
+        linear-gradient(135deg, #103423 0%, #0b281d 34%, #071c15 68%, #04110c 100%);
+      background-attachment: fixed;
+      line-height: 1.58;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+      opacity: .38;
+      background-image:
+        linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.016) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 90%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { display: block; max-width: 100%; }
+    button { font: inherit; }
+    .container { width: min(calc(100% - 34px), var(--max)); margin: 0 auto; }
+
+    /* NAV */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(7,24,17,.88);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      backdrop-filter: blur(16px);
+    }
+    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: .98rem; letter-spacing: -.02em; }
+    .brand-home {
+      display: inline-flex; align-items: center; min-height: 35px; color: var(--white);
+      font-size: 1rem; font-weight: 900; letter-spacing: .055em; transition: .2s;
+    }
+    .brand-home:hover { color: var(--forest); }
+    .brand-labs { display: flex; align-items: center; gap: 6px; margin-left: 2px; padding-left: 8px; border-left: 1px solid var(--border); }
+    .brand-lab-logo {
+      width: 31px; height: 31px; display: grid; place-items: center; overflow: hidden; border-radius: 8px;
+      border: 1px solid var(--border); background: rgba(255,255,255,.96); transition: .2s;
+    }
+    .brand-lab-logo:hover { transform: translateY(-1px); border-color: var(--border-blue); }
+    .brand-lab-logo img { width: 100%; height: 100%; object-fit: contain; padding: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-links a { padding: 8px 10px; border-radius: 8px; color: var(--text); font-size: .82rem; font-weight: 650; transition: .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--water); background: rgba(56,200,255,.065); }
+    .menu { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.035); color: white; cursor: pointer; }
+
+    /* HERO */
+    .hero { min-height: 72vh; display: flex; align-items: center; padding: 116px 0 70px; }
+    .hero-layout {
+      width: 100%; display: grid; grid-template-columns: minmax(0, 1.58fr) minmax(360px, .62fr);
+      align-items: center; gap: clamp(38px, 4.6vw, 82px);
+    }
+    .hero-content { max-width: 1120px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 7px 11px;
+      border: 1px solid var(--border-green); border-radius: 999px; background: rgba(57,217,138,.045);
+      color: var(--forest); font-size: .68rem; font-weight: 850; letter-spacing: .105em; text-transform: uppercase;
+    }
+    .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--forest); box-shadow: 0 0 11px var(--forest); }
+    h1 { font-size: clamp(3rem, 5.35vw, 5.35rem); line-height: .98; letter-spacing: -.055em; }
+    .gradient-name {
+      display: block;
+      background: linear-gradient(90deg, #fff 0%, #e3fff0 30%, var(--forest) 62%, var(--water) 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero-subtitle { margin-top: 20px; color: #e2ece7; font-size: clamp(1.03rem, 1.35vw, 1.24rem); font-weight: 650; }
+    .hero-copy { max-width: 980px; margin-top: 14px; color: var(--text); font-size: 1.02rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 21px; }
+    .tag { padding: 7px 10px; border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.023); color: #c6d2cc; font-size: .76rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 27px; }
+
+    .hero-members-panel {
+      min-width: 0; padding: 25px; border: 1px solid var(--border); border-radius: 24px;
+      background: linear-gradient(145deg, rgba(18,48,34,.90), rgba(8,26,18,.82));
+      box-shadow: 0 24px 70px rgba(0,18,9,.20);
+    }
+    .hero-members-title { color: #dfeae5; font-size: .94rem; font-weight: 820; letter-spacing: -.015em; }
+    .hero-members-copy { margin-top: 4px; color: var(--muted); font-size: .78rem; }
+    .memberships { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 18px; }
+    .membership-card {
+      min-height: 178px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+      padding: 17px 13px; border: 1px solid var(--border); border-radius: 17px; background: rgba(255,255,255,.025);
+      color: #e4eee9; font-weight: 760; font-size: .82rem; text-align: center; transition: .2s;
+    }
+    .membership-card:hover { border-color: var(--border-green); color: var(--forest); transform: translateY(-2px); background: rgba(57,217,138,.035); }
+    .membership-card img {
+      width: 102px; height: 102px; object-fit: contain; border-radius: 14px; background: rgba(255,255,255,.97); padding: 7px;
+    }
+    .membership-card.image-missing img, .brand-lab-logo.image-missing img { display: none !important; }
+
+    .button { min-height: 42px; display: inline-flex; align-items: center; justify-content: center; padding: 0 16px; border-radius: 11px; font-size: .78rem; font-weight: 750; transition: .2s; }
+    .button-primary { background: linear-gradient(135deg, var(--forest), var(--water)); color: #00140e; }
+    .button-secondary { border: 1px solid var(--border); background: rgba(255,255,255,.03); }
+    .button:hover { transform: translateY(-2px); }
+    .button-secondary:hover { border-color: var(--border-blue); background: rgba(56,200,255,.05); }
+
+    /* GLOBAL SECTIONS */
+    section { padding: 82px 0; }
+    .section-head { display: grid; grid-template-columns: .62fr 1.38fr; gap: 64px; align-items: end; margin-bottom: 38px; }
+    .section-head.single { grid-template-columns: 1fr; }
+    .section-kicker { margin-bottom: 9px; color: var(--forest); font-size: .64rem; font-weight: 850; letter-spacing: .14em; text-transform: uppercase; }
+    .section-kicker.blue { color: var(--water); }
+    h2 { font-size: clamp(2rem, 3.35vw, 3.25rem); line-height: 1.04; letter-spacing: -.043em; }
+    .section-intro { max-width: 860px; color: var(--text); font-size: .98rem; }
+
+    /* CONTADORES DE SECCIÓN */
+    .section-head.has-count { position: relative; padding-right: 150px; }
+    .section-head.has-count.multi-count { padding-right: 300px; }
+    .section-count-group {
+      position: absolute; right: 0; bottom: 0; display: flex; align-items: stretch; gap: 8px;
+    }
+    .section-count-group .section-count { position: static; right: auto; bottom: auto; }
+    .section-count {
+      position: absolute; right: 0; bottom: 0; min-width: 116px; min-height: 52px;
+      display: flex; align-items: center; justify-content: center; gap: 7px; padding: 8px 12px;
+      border: 1px solid var(--border-green); border-radius: 13px;
+      background: linear-gradient(135deg, rgba(57,217,138,.08), rgba(56,200,255,.045));
+      color: var(--text); white-space: nowrap;
+    }
+    .section-count strong { color: var(--forest); font-size: 1.15rem; line-height: 1; font-weight: 900; }
+    .section-count span { color: var(--muted); font-size: .68rem; font-weight: 760; text-transform: lowercase; }
+
+    /* KNOWLEDGE */
+    .knowledge-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .knowledge-card {
+      min-height: 258px; padding: 23px; border: 1px solid var(--border); border-radius: var(--radius);
+      background: linear-gradient(145deg, rgba(17,44,31,.94), rgba(7,24,17,.96)); transition: .22s;
+    }
+    .knowledge-card:hover { transform: translateY(-4px); border-color: var(--border-green); }
+    .knowledge-card.water:hover { border-color: var(--border-blue); }
+    .knowledge-index {
+      width: 35px; height: 35px; display: grid; place-items: center; margin-bottom: 21px; border-radius: 10px;
+      background: rgba(57,217,138,.07); border: 1px solid rgba(57,217,138,.13); color: var(--forest); font-size: .66rem; font-weight: 850;
+    }
+    .water .knowledge-index { color: var(--water); background: rgba(56,200,255,.07); border-color: rgba(56,200,255,.13); }
+    .knowledge-card h3 { margin-bottom: 7px; font-size: 1.1rem; }
+    .knowledge-card p { min-height: 42px; color: var(--muted); font-size: .82rem; margin-bottom: 15px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { padding: 6px 9px; border: 1px solid rgba(255,255,255,.05); border-radius: 7px; background: rgba(255,255,255,.033); color: #c5d2cc; font-size: .74rem; }
+
+    /* APPLIED AREAS */
+    .problem-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .problem { padding: 21px; border: 1px solid var(--border); border-radius: 17px; background: rgba(12,34,24,.86); }
+    .problem small { color: var(--water); font-size: .62rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+    .problem h3 { margin: 10px 0 7px; font-size: 1rem; }
+    .problem p { color: var(--muted); font-size: .81rem; }
+
+    /* PROJECT CAROUSEL */
+    .projects-shell { position: relative; }
+    .projects-viewport { overflow: hidden; border-radius: var(--radius); }
+    .projects-track {
+      display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      scrollbar-width: none; -ms-overflow-style: none; padding: 2px 1px 9px;
+    }
+    .projects-track::-webkit-scrollbar { display: none; }
+    .project {
+      flex: 0 0 calc((100% - 28px) / 3); min-width: 0; height: 430px; overflow: hidden; scroll-snap-align: start;
+      display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius);
+      background: rgba(12,35,25,.90); transition: border-color .2s, transform .2s;
+    }
+    .project:hover { border-color: rgba(56,200,255,.22); transform: translateY(-2px); }
+    .project-media { height: 168px; flex: 0 0 168px; overflow: hidden; background: #092118; border-bottom: 1px solid var(--border); }
+    .project-media img, .project-media video { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
+    .project-body { padding: 21px; display: flex; flex-direction: column; flex: 1; }
+    .project-label { margin-bottom: 8px; color: var(--forest); font-size: .61rem; font-weight: 850; letter-spacing: .11em; text-transform: uppercase; }
+    .project h3 { margin-bottom: 9px; font-size: 1.08rem; line-height: 1.28; }
+    .project p { color: var(--text); font-size: .82rem; }
+    .project-tech { margin-top: auto; padding-top: 13px; color: var(--water) !important; font-size: .73rem !important; font-weight: 650; }
+    .project-link { display: inline-flex; margin-top: 10px; color: var(--forest); font-size: .77rem; font-weight: 750; }
+    .project-placeholder {
+      height: 168px; flex: 0 0 168px; display: flex; align-items: flex-end; padding: 20px;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(circle at 80% 10%, rgba(56,200,255,.10), transparent 38%), radial-gradient(circle at 15% 90%, rgba(57,217,138,.14), transparent 40%), #092118;
+    }
+    .project-placeholder span { font-size: 1.7rem; font-weight: 900; letter-spacing: -.05em; color: rgba(245,251,248,.72); }
+    .carousel-controls { display: flex; justify-content: flex-end; gap: 8px; margin: 0; }
+    .carousel-btn {
+      width: 38px; height: 38px; display: grid; place-items: center; border-radius: 10px; border: 1px solid var(--border);
+      background: rgba(255,255,255,.035); color: var(--white); cursor: pointer; transition: .2s;
+    }
+    .carousel-btn:hover { border-color: var(--border-blue); background: rgba(56,200,255,.06); }
+
+    .projects-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+    .project-filter { position: relative; min-width: 0; }
+    .project-filter-button {
+      min-height: 40px; max-width: min(520px, 72vw); display: inline-flex; align-items: center; gap: 8px;
+      padding: 0 13px; border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.035);
+      color: var(--white); cursor: pointer; font-size: .8rem; font-weight: 720; text-align: left;
+    }
+    .project-filter-button:hover { border-color: var(--border-blue); }
+    .project-filter-label { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .project-filter-menu {
+      position: absolute; left: 0; top: calc(100% + 7px); z-index: 70; width: min(560px, 88vw); max-height: 360px; overflow-y: auto;
+      display: none; padding: 7px; border: 1px solid var(--border); border-radius: 12px; background: #0b251a; box-shadow: var(--shadow);
+    }
+    .project-filter-menu.open { display: grid; gap: 4px; }
+    .project-option { border: 0; border-radius: 8px; padding: 9px 10px; text-align: left; background: transparent; color: var(--text); cursor: pointer; font-size: .79rem; line-height: 1.35; }
+    .project-option:hover { background: rgba(56,200,255,.07); color: var(--water); }
+
+    .project-modal {
+      position: fixed; inset: 0; z-index: 4900; display: none; align-items: center; justify-content: center;
+      padding: 34px; background: rgba(2,14,9,.91); backdrop-filter: blur(10px);
+    }
+    .project-modal.open { display: flex; }
+    .project-modal-dialog { width: min(94vw, 1120px); max-height: 88vh; position: relative; }
+    .project-modal-dialog > .project {
+      width: 100%; height: auto; max-height: 86vh; display: grid; grid-template-columns: minmax(330px,.82fr) minmax(0,1.18fr);
+      flex: none; overflow: auto; border-color: rgba(56,200,255,.24); box-shadow: 0 28px 90px rgba(0,0,0,.55);
+    }
+    .project-modal-dialog .project-media, .project-modal-dialog .project-placeholder {
+      width: 100%; height: 100%; min-height: 430px; flex-basis: auto; border-bottom: 0; border-right: 1px solid var(--border);
+    }
+    .project-modal-dialog .project-body { padding: 34px; }
+    .project-modal-dialog .project-label { font-size: .69rem; }
+    .project-modal-dialog .project h3 { font-size: 1.55rem; margin-bottom: 14px; }
+    .project-modal-dialog .project p { font-size: .96rem; line-height: 1.65; }
+    .project-modal-dialog .project-tech { font-size: .84rem !important; padding-top: 22px; }
+    .project-modal-dialog .project-link { font-size: .88rem; margin-top: 15px; }
+    .project-modal-close {
+      position: absolute; top: -16px; right: -16px; z-index: 4; width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.18); background: rgba(8,29,20,.95); color: white; font-size: 1.4rem; cursor: pointer;
+    }
+
+    /* MODAL DE CURSOS: mismo concepto de tarjeta ampliada que Proyectos */
+    .course-modal {
+      position: fixed; inset: 0; z-index: 4920; display: none; align-items: center; justify-content: center;
+      padding: 34px; background: rgba(2,14,9,.91); backdrop-filter: blur(10px);
+    }
+    .course-modal.open { display: flex; }
+    .course-modal-dialog { width: min(94vw, 920px); max-height: 88vh; position: relative; }
+    .course-modal-dialog > .course-card {
+      width: 100%; min-height: 360px; max-height: 86vh; flex: none; overflow-y: auto;
+      border-color: rgba(56,200,255,.24); box-shadow: 0 28px 90px rgba(0,0,0,.55);
+    }
+    .course-modal-dialog .course-media, .course-modal-dialog .course-placeholder {
+      width: 100%; height: 300px; flex-basis: 300px;
+    }
+    .course-modal-dialog .course-body { padding: 32px; }
+    .course-modal-dialog .course-topline { margin-bottom: 20px; }
+    .course-modal-dialog .course-status, .course-modal-dialog .course-participants { font-size: .70rem; }
+    .course-modal-dialog .course-card h3 { font-size: 1.6rem; margin-bottom: 16px; }
+    .course-modal-dialog .course-card p { font-size: .98rem; line-height: 1.68; }
+    .course-modal-dialog .course-platforms { font-size: .86rem; padding-top: 26px; }
+    .course-modal-close {
+      position: absolute; top: -16px; right: -16px; z-index: 4; width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.18); background: rgba(8,29,20,.95); color: white; font-size: 1.4rem; cursor: pointer;
+    }
+
+    /* PUBLICATIONS */
+    .publication { display: grid; grid-template-columns: 78px 1fr auto; gap: 20px; align-items: start; padding: 21px 0; border-top: 1px solid var(--border); }
+    .publication:last-child { border-bottom: 1px solid var(--border); }
+    .pub-year { color: var(--water); font-size: .92rem; font-weight: 850; }
+    .pub-title { margin-bottom: 4px; font-size: 1rem; }
+    .pub-copy { color: var(--muted); font-size: .82rem; }
+    .publication-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 9px; }
+    .pub-role, .pub-type {
+      display: inline-flex; align-items: center; min-height: 28px; padding: 0 9px; border-radius: 999px;
+      font-size: .66rem; font-weight: 800; white-space: nowrap;
+    }
+    .pub-role { border: 1px solid var(--border-green); color: var(--forest); background: rgba(57,217,138,.04); }
+    .pub-type { border: 1px solid var(--border-blue); color: var(--water); background: rgba(56,200,255,.04); }
+    .pub-link { color: var(--forest); font-size: .8rem; font-weight: 750; white-space: nowrap; }
+    .demo-badge {
+      display: inline-flex; align-items: center; margin-left: 7px; padding: 2px 7px; border: 1px dashed rgba(56,200,255,.34);
+      border-radius: 999px; color: var(--water); background: rgba(56,200,255,.045); font-size: .62rem; font-weight: 760; white-space: nowrap;
+    }
+
+    /* LISTAS COMPACTAS: muestran las entradas más recientes y permiten expandir */
+    .list-toggle-wrap { display: flex; justify-content: center; margin-top: 16px; }
+    .list-toggle {
+      min-height: 40px; padding: 0 15px; border: 1px solid var(--border); border-radius: 10px;
+      background: rgba(255,255,255,.035); color: var(--text); cursor: pointer; font-size: .78rem; font-weight: 760; transition: .2s;
+    }
+    .list-toggle:hover { color: var(--white); border-color: var(--border-blue); background: rgba(56,200,255,.055); }
+    .list-toggle[hidden], .list-toggle-wrap[hidden] { display: none; }
+
+    /* FORMACIÓN DE CAPITAL HUMANO */
+    .mentoring-toolbar {
+      position: relative; z-index: 80; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin: -10px 0 16px;
+    }
+    .mentoring-filter { position: relative; }
+    .mentoring-filter-button {
+      min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 1px solid var(--border);
+      border-radius: 10px; background: rgba(255,255,255,.035); color: var(--white); cursor: pointer; font-size: .8rem; font-weight: 720;
+    }
+    .mentoring-filter-button:hover { border-color: var(--border-blue); }
+    .mentoring-filter-menu {
+      position: absolute; right: 0; top: calc(100% + 7px); z-index: 40; min-width: 155px; display: none; padding: 7px;
+      border: 1px solid var(--border); border-radius: 11px; background: #10251d; box-shadow: var(--shadow);
+    }
+    .mentoring-filter-menu.open { display: grid; gap: 4px; }
+    .mentoring-option { border: 0; border-radius: 8px; padding: 8px 10px; text-align: left; background: transparent; color: var(--text); cursor: pointer; font-size: .78rem; }
+    .mentoring-option:hover, .mentoring-option.active { background: rgba(56,200,255,.07); color: var(--water); }
+    .mentoring-list { border-top: 1px solid var(--border); }
+    .mentoring-item {
+      display: grid; grid-template-columns: 92px 1fr auto; gap: 20px; align-items: start; padding: 24px 0; border-bottom: 1px solid var(--border);
+    }
+    .mentoring-year { color: var(--water); font-size: .92rem; font-weight: 850; }
+    .mentoring-title { margin-bottom: 8px; font-size: 1.02rem; line-height: 1.42; font-weight: 400; color: var(--white); }
+    .mentoring-meta { color: var(--muted); font-size: .82rem; line-height: 1.65; }
+    .mentoring-role {
+      display: inline-flex; align-items: center; min-height: 30px; padding: 0 10px; border: 1px solid var(--border-green); border-radius: 999px;
+      color: var(--forest); background: rgba(57,217,138,.04); font-size: .7rem; font-weight: 800; white-space: nowrap;
+    }
+    .mentoring-item[hidden] { display: none; }
+
+    /* TOOLS */
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(125px, 1fr)); gap: 8px; }
+    .tool {
+      min-height: 43px; display: grid; place-items: center; padding: 7px 9px; text-align: center;
+      border: 1px solid var(--border); border-radius: 11px; background: rgba(12,34,24,.84);
+      color: #e5efea; font-size: .73rem; font-weight: 730; transition: .2s;
+    }
+    .tool:hover { transform: translateY(-2px); border-color: var(--border-blue); background: linear-gradient(135deg, rgba(57,217,138,.06), rgba(56,200,255,.055)); color: white; }
+
+    /* CURSOS: carrusel horizontal */
+    .courses-shell { position: relative; }
+    .courses-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 13px; }
+    .courses-viewport { overflow: hidden; border-radius: 18px; }
+    .courses-grid {
+      display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+      scrollbar-width: none; -ms-overflow-style: none; padding: 2px 1px 9px;
+    }
+    .courses-grid::-webkit-scrollbar { display: none; }
+    .course-card {
+      flex: 0 0 calc((100% - 12px) / 2); min-width: 0; min-height: 210px; display: flex; flex-direction: column; overflow: hidden;
+      scroll-snap-align: start; border: 1px solid var(--border); border-radius: 18px;
+      background: linear-gradient(145deg, rgba(15,40,28,.90), rgba(8,25,18,.96)); transition: border-color .2s, transform .2s, box-shadow .2s;
+    }
+    .course-card:hover { transform: translateY(-2px); border-color: rgba(56,200,255,.22); }
+    .course-card.course-focus { border-color: var(--water); box-shadow: 0 0 0 2px rgba(56,200,255,.10), 0 16px 46px rgba(0,0,0,.18); }
+    .course-media {
+      height: 152px; flex: 0 0 152px; overflow: hidden; background: #0a2118; border-bottom: 1px solid var(--border);
+    }
+    .course-media img, .course-media video { width: 100%; height: 100%; object-fit: cover; cursor: zoom-in; }
+    .course-placeholder {
+      display: flex; align-items: flex-end; padding: 18px;
+      background: radial-gradient(circle at 82% 12%, rgba(56,200,255,.10), transparent 38%), radial-gradient(circle at 15% 88%, rgba(57,217,138,.14), transparent 40%), #092118;
+    }
+    .course-placeholder span { font-size: 1.45rem; font-weight: 900; letter-spacing: -.05em; color: rgba(245,251,248,.74); }
+    .course-body { padding: 23px; display: flex; flex-direction: column; flex: 1; }
+    .course-topline { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 18px; }
+    .course-status { align-self: flex-start; margin: 0; padding: 5px 9px; border: 1px solid var(--border-blue); border-radius: 999px; color: var(--water); font-size: .62rem; font-weight: 820; letter-spacing: .08em; text-transform: uppercase; }
+    .course-participants {
+      display: inline-flex; align-items: center; min-height: 28px; padding: 0 9px; border: 1px solid var(--border-green); border-radius: 999px;
+      color: var(--forest); background: rgba(57,217,138,.04); font-size: .66rem; font-weight: 800; white-space: nowrap;
+    }
+    .course-card h3 { margin-bottom: 8px; font-size: 1.08rem; }
+    .course-card p { color: var(--muted); font-size: .82rem; }
+    .course-platforms { margin-top: auto; padding-top: 18px; color: var(--forest); font-size: .73rem; font-weight: 720; }
+
+    /* CONTACT */
+    .contact {
+      padding: 36px; border: 1px solid var(--border-green); border-radius: 22px;
+      background: radial-gradient(circle at 10% 100%, rgba(57,217,138,.12), transparent 31%), radial-gradient(circle at 92% 0%, rgba(56,200,255,.08), transparent 32%), rgba(9,29,20,.95);
+    }
+    .contact-layout { display: grid; grid-template-columns: minmax(0,1fr) 205px; gap: 34px; align-items: center; }
+    .contact-main { text-align: left; }
+    .contact h2 { max-width: 700px; margin: 0; }
+    .contact p { max-width: 720px; margin: 15px 0 0; color: var(--text); font-size: .92rem; }
+    .socials { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 8px; margin-top: 20px; }
+    .social-link {
+      min-height: 40px; display: inline-flex; align-items: center; justify-content: center; padding: 0 15px;
+      border: 1px solid var(--border); border-radius: 10px; background: rgba(255,255,255,.03); color: #e6f0eb; font-size: .8rem; font-weight: 720; transition: .2s;
+    }
+    .social-link:hover { border-color: var(--border-blue); background: rgba(56,200,255,.05); }
+    .qr-card {
+      justify-self: end; width: 205px; padding: 14px; border: 1px solid var(--border-blue); border-radius: 17px;
+      background: rgba(56,200,255,.035); text-align: center;
+    }
+    .qr-card img { width: 158px; height: 158px; margin: 0 auto 10px; object-fit: contain; padding: 7px; border-radius: 12px; background: #fff; cursor: zoom-in; }
+    .qr-card strong { display: block; color: var(--white); font-size: .82rem; }
+    .qr-card span { display: block; margin-top: 3px; color: var(--muted); font-size: .68rem; line-height: 1.35; }
+    .qr-card.image-missing { display: none; }
+
+    /* MEDIA / LIGHTBOX */
+    .project-media { position: relative; }
+    .project-media-logo { display: grid; place-items: center; padding: 18px; }
+    .project-media-logo img { object-fit: contain; background: rgba(255,255,255,.96); border-radius: 12px; padding: 8px; }
+    .media-fallback { display: none; color: rgba(245,251,248,.72); font-size: 1.35rem; font-weight: 900; letter-spacing: -.04em; text-align: center; }
+    .project-media.missing .media-fallback { display: block; }
+    .zoomable-media { cursor: zoom-in; }
+    .media-lightbox {
+      position: fixed; inset: 0; z-index: 5000; display: none; align-items: center; justify-content: center;
+      padding: 34px; background: rgba(2,14,9,.91); backdrop-filter: blur(10px);
+    }
+    .media-lightbox.open { display: flex; }
+    .lightbox-content { max-width: min(94vw, 1500px); max-height: 90vh; display: grid; place-items: center; }
+    .lightbox-content img, .lightbox-content video { max-width: 94vw; max-height: 88vh; width: auto; height: auto; object-fit: contain; border-radius: 10px; box-shadow: 0 26px 80px rgba(0,0,0,.55); }
+    .lightbox-close {
+      position: absolute; top: 18px; right: 22px; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%; background: rgba(8,29,20,.90); color: white; font-size: 1.45rem; cursor: pointer;
+    }
+
+    /* PUBLICATION FILTERS */
+    .publication-toolbar { position: relative; z-index: 90; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin: -10px 0 16px; }
+    .publication-filter { position: relative; }
+    .year-filter-button {
+      min-height: 40px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border: 1px solid var(--border);
+      border-radius: 10px; background: rgba(255,255,255,.035); color: var(--white); cursor: pointer; font-size: .8rem; font-weight: 720;
+    }
+    .year-filter-button:hover { border-color: var(--border-blue); }
+    .year-filter-menu {
+      position: absolute; right: 0; top: calc(100% + 7px); z-index: 120; min-width: 145px; display: none; padding: 7px; pointer-events: auto;
+      border: 1px solid var(--border); border-radius: 11px; background: #0b251a; box-shadow: var(--shadow);
+    }
+    .year-filter-menu.open { display: grid; gap: 4px; }
+    .year-option { position: relative; z-index: 1; width: 100%; border: 0; border-radius: 8px; padding: 8px 10px; text-align: left; background: transparent; color: var(--text); cursor: pointer; font-size: .78rem; pointer-events: auto; }
+    .year-option:hover, .year-option.active { background: rgba(56,200,255,.07); color: var(--water); }
+    .publication[hidden] { display: none; }
+
+    footer { padding: 24px 0 36px; color: var(--muted); font-size: .7rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 16px; padding-top: 20px; border-top: 1px solid var(--border); }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .58s ease, transform .58s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ESCRITORIO: aprovechar mejor el ancho sin alterar la versión móvil */
+    @media (min-width: 1041px) {
+      html { font-size: 17.2px; }
+      .nav-links a { font-size: .87rem; padding: 9px 12px; }
+      .brand { font-size: 1.04rem; }
+      .hero { min-height: 76vh; padding: 122px 0 78px; }
+      .hero-layout { grid-template-columns: minmax(0, 1.58fr) minmax(390px, .62fr); }
+      h1 { font-size: clamp(3.5rem, 5vw, 5.95rem); }
+      .hero-subtitle { font-size: clamp(1.12rem, 1.25vw, 1.34rem); }
+      .hero-copy { max-width: 1080px; font-size: 1.08rem; }
+      .tag { font-size: .80rem; padding: 7px 11px; }
+      section { padding: 90px 0; }
+      .section-head { grid-template-columns: minmax(330px, .58fr) minmax(0, 1.42fr); gap: 54px; margin-bottom: 42px; }
+      h2 { font-size: clamp(2.25rem, 3vw, 3.55rem); }
+      .section-intro { max-width: 1050px; font-size: 1.04rem; }
+      .knowledge-card { min-height: 270px; padding: 26px; }
+      .knowledge-card h3 { font-size: 1.18rem; }
+      .knowledge-card p { font-size: .87rem; }
+      .chip { font-size: .77rem; }
+      .problem { padding: 24px; }
+      .problem h3 { font-size: 1.08rem; }
+      .problem p { font-size: .86rem; }
+      .project { height: 455px; }
+      .project-media, .project-placeholder { height: 182px; flex-basis: 182px; }
+      .project h3 { font-size: 1.14rem; }
+      .project p { font-size: .86rem; }
+      .publication { grid-template-columns: 90px 1fr auto; padding: 24px 0; }
+      .pub-title { font-size: 1.06rem; }
+      .pub-copy { font-size: .87rem; }
+    }
+
+    @media (max-width: 1040px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 26px; }
+      .hero-content { max-width: none; }
+      .hero-members-panel { max-width: 680px; }
+      .section-head { grid-template-columns: 1fr; gap: 13px; }
+      .section-head.has-count, .section-head.has-count.multi-count { padding-right: 0; }
+      .section-count { position: static; justify-self: start; margin-top: 4px; }
+      .section-count-group { position: static; justify-self: start; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+      .section-count-group .section-count { margin-top: 0; }
+      .knowledge-grid { grid-template-columns: repeat(2,1fr); }
+      .problem-grid { grid-template-columns: repeat(2,1fr); }
+      .project { flex-basis: calc((100% - 14px) / 2); }
+      .tools-grid { grid-template-columns: repeat(5,1fr); }
+      .course-card { flex-basis: calc((100% - 12px) / 2); }
+    }
+
+    @media (max-width: 760px) {
+      .section-count { min-width: 104px; min-height: 44px; padding: 7px 10px; }
+      .section-count strong { font-size: 1.02rem; }
+      .section-count span { font-size: .63rem; }
+      .mentoring-toolbar { justify-content: flex-start; }
+      .mentoring-filter { flex: 1 1 150px; }
+      .mentoring-filter-button { width: 100%; justify-content: space-between; }
+      .mentoring-filter-menu { left: 0; right: auto; min-width: 100%; }
+      .mentoring-item { grid-template-columns: 1fr; gap: 7px; }
+      .mentoring-role { justify-self: start; }
+      /* Modal de proyectos optimizado para celular */
+      .project-modal {
+        padding: 12px;
+        align-items: center;
+      }
+      .project-modal-dialog {
+        width: 100%;
+        max-height: calc(100dvh - 24px);
+      }
+      .project-modal-dialog > .project {
+        width: 100%;
+        max-height: calc(100dvh - 24px);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        border-radius: 17px;
+      }
+      .project-modal-dialog .project-media,
+      .project-modal-dialog .project-placeholder {
+        width: 100%;
+        height: min(31vh, 210px);
+        min-height: 155px;
+        flex: 0 0 min(31vh, 210px);
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+      .project-modal-dialog .project-body { padding: 19px 18px 22px; }
+      .project-modal-dialog .project-label { font-size: .60rem; }
+      .project-modal-dialog .project h3 { font-size: 1.16rem; margin-bottom: 9px; }
+      .project-modal-dialog .project p { font-size: .84rem; line-height: 1.52; }
+      .project-modal-dialog .project-tech { font-size: .73rem !important; padding-top: 12px; }
+      .project-modal-dialog .project-link { font-size: .78rem; margin-top: 10px; }
+      .project-modal-close {
+        top: 8px;
+        right: 8px;
+        width: 38px;
+        height: 38px;
+        background: rgba(7,28,19,.96);
+        box-shadow: 0 8px 26px rgba(0,0,0,.28);
+      }
+
+      /* Modal de cursos optimizado para celular */
+      .course-modal { padding: 12px; }
+      .course-modal-dialog { width: 100%; max-height: calc(100dvh - 24px); }
+      .course-modal-dialog > .course-card {
+        width: 100%; min-height: 0; max-height: calc(100dvh - 24px);
+        overflow-y: auto; overscroll-behavior: contain; border-radius: 17px;
+      }
+      .course-modal-dialog .course-media,
+      .course-modal-dialog .course-placeholder {
+        height: 190px; flex-basis: 190px;
+      }
+      .course-modal-dialog .course-body { padding: 20px 18px 22px; }
+      .course-modal-dialog .course-topline { margin-bottom: 18px; }
+      .course-modal-dialog .course-status, .course-modal-dialog .course-participants { font-size: .62rem; }
+      .course-modal-dialog .course-card h3 { font-size: 1.22rem; margin-bottom: 10px; }
+      .course-modal-dialog .course-card p { font-size: .84rem; line-height: 1.55; }
+      .course-modal-dialog .course-platforms { font-size: .76rem; padding-top: 18px; }
+      .course-modal-close {
+        top: 8px; right: 8px; width: 38px; height: 38px; background: rgba(7,28,19,.96);
+        box-shadow: 0 8px 26px rgba(0,0,0,.28);
+      }
+
+      .nav-links {
+        position: absolute; top: 68px; left: 18px; right: 18px; display: none; flex-direction: column; align-items: stretch;
+        padding: 12px; border: 1px solid var(--border); border-radius: 15px; background: rgba(6,24,16,.98); box-shadow: var(--shadow);
+      }
+      .nav-links.open { display: flex; }
+      .menu { display: block; }
+      .projects-toolbar { align-items: stretch; }
+      .project-filter { flex: 1; }
+      .project-filter-button { width: 100%; max-width: none; justify-content: flex-start; }
+      .project-filter-label { flex: 1; }
+      .hero { min-height: 70vh; padding-top: 100px; }
+      .hero-members-panel { padding: 18px; }
+      .membership-card { min-height: 142px; }
+      .membership-card img { width: 76px; height: 76px; }
+      .project { flex-basis: 82%; height: 420px; }
+      .tools-grid { grid-template-columns: repeat(3,1fr); }
+      .publication-toolbar { justify-content: flex-start; }
+      .publication-filter { flex: 1 1 145px; }
+      .publication-filter .year-filter-button { width: 100%; justify-content: space-between; }
+      .publication-filter .year-filter-menu { left: 0; right: auto; min-width: 100%; }
+      .publication { grid-template-columns: 1fr; gap: 6px; }
+      .publication-actions { align-items: flex-start; flex-direction: row; }
+      .course-card { flex-basis: 86%; }
+    }
+
+    @media (max-width: 560px) {
+      .project-modal { padding: 8px; }
+      .project-modal-dialog { max-height: calc(100dvh - 16px); }
+      .project-modal-dialog > .project { max-height: calc(100dvh - 16px); }
+      .project-modal-dialog .project-media,
+      .project-modal-dialog .project-placeholder {
+        height: 170px;
+        min-height: 145px;
+        flex-basis: 170px;
+      }
+      .project-modal-dialog .project-body { padding: 16px 15px 18px; }
+      .project-modal-dialog .project h3 { font-size: 1.06rem; }
+      .project-modal-dialog .project p { font-size: .80rem; line-height: 1.47; }
+      .course-modal { padding: 8px; }
+      .course-modal-dialog { max-height: calc(100dvh - 16px); }
+      .course-modal-dialog > .course-card { max-height: calc(100dvh - 16px); }
+      .course-modal-dialog .course-media,
+      .course-modal-dialog .course-placeholder {
+        height: 170px;
+        flex-basis: 170px;
+      }
+      .course-modal-dialog .course-body { padding: 18px 15px 18px; }
+      .course-modal-dialog .course-card h3 { font-size: 1.08rem; }
+      .course-modal-dialog .course-card p { font-size: .80rem; line-height: 1.48; }
+
+      .container { width: calc(100% - 26px); }
+      section { padding: 58px 0; }
+      .hero { min-height: auto; padding: 96px 0 62px; }
+      .hero-layout { gap: 20px; }
+      .hero-members-panel { padding: 15px; border-radius: 18px; }
+      .hero-members-title { font-size: .86rem; }
+      .hero-members-copy { font-size: .72rem; }
+      .memberships { gap: 9px; margin-top: 13px; }
+      .membership-card { min-height: 118px; padding: 12px 8px; font-size: .72rem; }
+      .membership-card img { width: 58px; height: 58px; border-radius: 10px; padding: 4px; }
+      h1 { font-size: clamp(2.75rem, 12vw, 3.7rem); }
+      h2 { font-size: clamp(1.82rem, 8vw, 2.25rem); }
+      .hero-copy { font-size: .94rem; }
+      .knowledge-grid, .problem-grid { grid-template-columns: 1fr; }
+      .knowledge-card { min-height: 0; }
+      .project { flex-basis: 92%; height: 410px; }
+      .project-media, .project-placeholder { height: 150px; flex-basis: 150px; }
+      .tools-grid { grid-template-columns: repeat(2,1fr); gap: 7px; }
+      .tool { min-height: 41px; font-size: .7rem; }
+      .course-card { flex-basis: 92%; min-height: 360px; }
+      .courses-toolbar { align-items: stretch; }
+      .courses-toolbar .project-filter { flex: 1; }
+      .courses-toolbar .project-filter-button { width: 100%; max-width: none; justify-content: flex-start; }
+      .contact { padding: 28px 18px; }
+      .contact-layout { grid-template-columns: 1fr; gap: 24px; }
+      .contact-main { text-align: center; }
+      .contact h2 { margin: 0 auto; }
+      .contact p { margin: 15px auto 0; }
+      .socials { justify-content: center; }
+      .qr-card { justify-self: center; width: min(205px, 100%); }
+      .footer-inner { flex-direction: column; }
+    }
+  
+
+    /* CONTENIDO AUTOMÁTICO */
+    .dynamic-empty {
+      padding: 18px; border: 1px dashed var(--border); border-radius: 14px;
+      color: var(--muted); background: rgba(255,255,255,.018); font-size: .82rem;
+    }
+    .brand-fallback { display: none; width: 100%; height: 100%; place-items: center; color: #0b281d; font-size: .66rem; font-weight: 900; }
+    .brand-lab-logo.image-missing .brand-fallback { display: grid; }
+</style>
+</head>
+<body>
+<nav class="navbar">
+<div class="container nav-inner">
+<div class="brand">
+<a aria-label="Ir al inicio" class="brand-home" href="#inicio">BARM</a>
+<span aria-label="Laboratorios de los que soy miembro" class="brand-labs">
+<a class="brand-lab-logo" href="https://syepez14.github.io/HydroGeoAI-Lab/" rel="noopener noreferrer" target="_blank" title="HydroGeoAI Lab">
+<img alt="Logo HydroGeoAI Lab" src="gifs/logo.jpeg"/>
+<span class="brand-fallback">HGAI</span></a>
+<a class="brand-lab-logo" href="https://www.instagram.com/biospequdec/" rel="noopener noreferrer" target="_blank" title="BioSpeQ">
+<img alt="Logo BioSpeQ" src="gifs/biospeq.png"/>
+<span class="brand-fallback">BQ</span></a>
+</span>
+</div>
+<div class="nav-links" id="navLinks">
+<a href="#conocimientos">Conocimientos</a>
+<a href="#enfoque">Enfoque</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#publicaciones">Producción</a>
+<a href="#formacion">Formación</a>
+<a href="#herramientas">Herramientas</a>
+<a href="#cursos">Cursos</a>
+<a href="#contacto">Contacto</a>
+</div>
+<button aria-label="Abrir menú" class="menu" id="menuButton">☰</button>
+</div>
+</nav>
+<main>
+<!-- PORTADA -->
+<section class="hero" id="inicio">
+<div class="container">
+<div class="hero-layout">
+<div class="hero-content">
+<div class="eyebrow"><span class="dot"></span> Portafolio académico y profesional</div>
+<h1>
+              Bastián Alejandro
+              <span class="gradient-name">Rivas Maldonado</span>
+</h1>
+<div class="hero-subtitle">Ingeniero Forestal · Estudiante de Magíster en Ciencias Forestales</div>
+<p class="hero-copy">
+              Desarrollo y aplico herramientas computacionales para estudiar sistemas forestales y ambientales mediante información espacial, temporal, espectral y tridimensional.
+            </p>
+<div class="tags">
+<span class="tag">Ciencias Forestales</span>
+<span class="tag">Hidrología</span>
+<span class="tag">Teledetección</span>
+<span class="tag">LiDAR</span>
+<span class="tag">Hiperespectral</span>
+<span class="tag">Machine Learning</span>
+<span class="tag">3D Gaussian Splatting</span>
+</div>
+<div class="hero-actions">
+<a class="button button-primary" href="#proyectos">Explorar proyectos</a>
+<a class="button button-secondary" href="#contacto">Contacto</a>
+</div>
+</div>
+<aside aria-label="Laboratorios de los que soy miembro" class="hero-members-panel">
+<div class="hero-members-title">Miembro de</div>
+<div class="memberships">
+<a class="membership-card" href="https://syepez14.github.io/HydroGeoAI-Lab/" rel="noopener noreferrer" target="_blank">
+<img alt="Logo HydroGeoAI Lab" src="gifs/logo.jpeg"/>
+<span>HydroGeoAI Lab</span>
+</a>
+<a class="membership-card" href="https://www.instagram.com/biospequdec/" rel="noopener noreferrer" target="_blank">
+<img alt="Logo BioSpeQ" src="gifs/biospeq.png"/>
+<span>BioSpeQ</span>
+</a>
+</div>
+</aside>
+</div>
+</div>
+</section>
+<!-- AREAS OF KNOWLEDGE -->
+<section id="conocimientos">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker">01 · Conocimientos</div>
+<h2>Áreas de conocimiento.</h2>
+</div>
+<p class="section-intro">
+            Un perfil interdisciplinario que integra ciencias forestales, hidrología, información geoespacial, programación, inteligencia artificial y tecnologías tridimensionales.
+          </p>
+</div>
+<div class="knowledge-grid">
+<article class="knowledge-card reveal">
+<div class="knowledge-index">01</div>
+<h3>Ciencias Forestales</h3>
+<p>Estructura, manejo y funcionamiento de ecosistemas forestales.</p>
+<div class="chips">
+<span class="chip">Dendrometría</span><span class="chip">Silvicultura</span><span class="chip">Hidrología Forestal</span><span class="chip">Climatología</span><span class="chip">Cuencas</span><span class="chip">Incendios Forestales</span><span class="chip">Viveros</span>
+</div>
+</article>
+<article class="knowledge-card water reveal">
+<div class="knowledge-index">02</div>
+<h3>Teledetección &amp; Geoespacial</h3>
+<p>Observación de la Tierra y análisis espacial ambiental.</p>
+<div class="chips">
+<span class="chip">GIS / SIG</span><span class="chip">QGIS</span><span class="chip">ArcGIS</span><span class="chip">Google Earth Engine</span><span class="chip">LiDAR</span><span class="chip">Hyperspectral Imaging</span><span class="chip">UAV / RPA</span>
+</div>
+</article>
+<article class="knowledge-card water reveal">
+<div class="knowledge-index">03</div>
+<h3>Métodos Computacionales</h3>
+<p>Programación científica y análisis de datos ambientales.</p>
+<div class="chips">
+<span class="chip">Python</span><span class="chip">R</span><span class="chip">MATLAB</span><span class="chip">Data Science</span><span class="chip">Computer Vision</span><span class="chip">Machine Learning</span>
+</div>
+</article>
+<article class="knowledge-card reveal">
+<div class="knowledge-index">04</div>
+<h3>3D &amp; Fenotipado Digital</h3>
+<p>Representación tridimensional y caracterización digital de plantas.</p>
+<div class="chips">
+<span class="chip">3DGS</span><span class="chip">Reconstrucción 3D</span><span class="chip">Point Clouds</span><span class="chip">Hyperspectral</span><span class="chip">3D Spectral Data</span>
+</div>
+</article>
+<article class="knowledge-card water reveal">
+<div class="knowledge-index">05</div>
+<h3>Modelación Ambiental</h3>
+<p>Representación cuantitativa de procesos hidrológicos y respuesta de cuencas.</p>
+<div class="chips">
+<span class="chip">Modelación Hidrológica</span><span class="chip">Modelación de Escorrentía</span><span class="chip">GRxJ</span><span class="chip">SRM</span><span class="chip">CemaNeige</span><span class="chip">SWAT</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- ENFOQUE APLICADO -->
+<section id="enfoque">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker blue">02 · Enfoque aplicado</div>
+<h2>¿Qué tipo de problemas puedo abordar?</h2>
+</div>
+<p class="section-intro">
+            Flujos de trabajo que integran adquisición y preparación de datos, procesamiento, modelación, validación y generación de información útil para investigación o gestión.
+          </p>
+</div>
+<div class="problem-grid">
+<article class="problem reveal"><small>Agua</small><h3>Predicción hidrológica</h3><p>Modelos tradicionales y aprendizaje automático para estimación y predicción de caudales y respuesta de cuencas.</p></article>
+<article class="problem reveal"><small>Espacio + tiempo</small><h3>Modelación espacio-temporal</h3><p>Procesamiento de información raster y series temporales preservando la distribución espacial de las variables.</p></article>
+<article class="problem reveal"><small>Espectro</small><h3>Información hiperespectral</h3><p>Análisis espacial y espectral para estudiar condición, estrés y respuestas fisiológicas de plantas.</p></article>
+<article class="problem reveal"><small>3D</small><h3>Fenotipado 3D</h3><p>Reconstrucción tridimensional y extracción de características morfológicas, arquitectónicas y biométricas.</p></article>
+</div>
+</div>
+</section>
+<!-- PROYECTOS -->
+<section id="proyectos">
+<div class="container">
+<div class="section-head has-count reveal">
+<div>
+<div class="section-kicker">03 · Proyectos</div>
+<h2>Investigación y desarrollo.</h2>
+</div>
+<p class="section-intro">Selección de trabajos, desarrollos y líneas que representan mi trayectoria y proyección actual.</p>
+<div aria-label="Cantidad de proyectos" class="section-count"><strong id="projectCount">0</strong><span id="projectCountLabel">proyectos</span></div>
+</div>
+<div class="projects-shell reveal" id="projectsCarousel">
+<div class="projects-toolbar">
+<div class="project-filter">
+<button aria-expanded="false" aria-haspopup="menu" class="project-filter-button" id="projectFilterButton" type="button">
+<span>Proyecto:</span>
+<span class="project-filter-label">Seleccionar</span>
+<span aria-hidden="true">▾</span>
+</button>
+<div aria-label="Seleccionar proyecto" class="project-filter-menu" id="projectFilterMenu" role="menu"></div>
+</div>
+<div aria-label="Controles de proyectos" class="carousel-controls">
+<button aria-label="Proyecto anterior" class="carousel-btn" id="projectsPrev" type="button">←</button>
+<button aria-label="Proyecto siguiente" class="carousel-btn" id="projectsNext" type="button">→</button>
+</div>
+</div>
+<div class="projects-viewport">
+<div class="projects-track" id="projectsTrack"><noscript><div class="dynamic-empty">Activa JavaScript para cargar proyectos.</div></noscript></div>
+</div>
+</div>
+</div>
+</section>
+<!-- PUBLICACIONES -->
+<section id="publicaciones">
+<div class="container">
+<div class="section-head has-count reveal">
+<div>
+<div class="section-kicker">04 · Publicaciones</div>
+<h2>Producción científica y colaboraciones.</h2>
+</div>
+<p class="section-intro">Publicaciones, resultados y colaboraciones en proyectos de investigación y desarrollo.</p>
+<div aria-label="Cantidad de contribuciones" class="section-count"><strong id="publicationCount">0</strong><span id="publicationCountLabel">contribuciones</span></div>
+</div>
+<div class="publication-toolbar reveal">
+<div class="publication-filter">
+<button aria-expanded="false" class="year-filter-button" id="publicationTypeFilterButton" type="button">Tipo: <span id="activePublicationTypeLabel">Todos</span> ▾</button>
+<div class="year-filter-menu" id="publicationTypeFilterMenu" role="menu"></div>
+</div>
+<div class="publication-filter">
+<button aria-expanded="false" class="year-filter-button" id="publicationRoleFilterButton" type="button">Rol: <span id="activePublicationRoleLabel">Todos</span> ▾</button>
+<div class="year-filter-menu" id="publicationRoleFilterMenu" role="menu"></div>
+</div>
+<div class="publication-filter">
+<button aria-expanded="false" class="year-filter-button" id="yearFilterButton" type="button">Año: <span id="activeYearLabel">Todos</span> ▾</button>
+<div class="year-filter-menu" id="yearFilterMenu" role="menu"></div>
+</div>
+</div>
+<div class="reveal" id="publicationList"><noscript><div class="dynamic-empty">Activa JavaScript para cargar producción científica.</div></noscript></div>
+<div class="list-toggle-wrap reveal" hidden="" id="publicationListToggleWrap">
+<button class="list-toggle" id="publicationListToggle" type="button">Ver todas</button>
+</div>
+</div>
+</section>
+<!-- FORMACIÓN DE CAPITAL HUMANO -->
+<section id="formacion">
+<div class="container">
+<div class="section-head has-count reveal">
+<div>
+<div class="section-kicker blue">05 · Formación</div>
+<h2>Formación de capital humano.</h2>
+</div>
+<p class="section-intro">Participación en guía y co-guía de tesis, memorias y trabajos de titulación.</p>
+<div aria-label="Cantidad de participaciones en formación" class="section-count"><strong id="mentoringCount">0</strong><span id="mentoringCountLabel">participaciones</span></div>
+</div>
+<div class="mentoring-toolbar reveal">
+<div class="mentoring-filter">
+<button aria-expanded="false" class="mentoring-filter-button" id="roleFilterButton" type="button">Rol: <span id="activeRoleLabel">Todos</span> ▾</button>
+<div class="mentoring-filter-menu" id="roleFilterMenu" role="menu"></div>
+</div>
+<div class="mentoring-filter">
+<button aria-expanded="false" class="mentoring-filter-button" id="mentoringYearFilterButton" type="button">Año: <span id="activeMentoringYearLabel">Todos</span> ▾</button>
+<div class="mentoring-filter-menu" id="mentoringYearFilterMenu" role="menu"></div>
+</div>
+</div>
+<div class="mentoring-list reveal" id="mentoringList"><noscript><div class="dynamic-empty">Activa JavaScript para cargar formación.</div></noscript></div>
+<div class="list-toggle-wrap reveal" hidden="" id="mentoringListToggleWrap">
+<button class="list-toggle" id="mentoringListToggle" type="button">Ver todas</button>
+</div>
+</div>
+</section>
+<!-- TOOLS -->
+<section id="herramientas">
+<div class="container">
+<div class="section-head reveal">
+<div>
+<div class="section-kicker blue">06 · Herramientas</div>
+<h2>Herramientas y tecnologías.</h2>
+</div>
+<p class="section-intro">Software, lenguajes y plataformas utilizados en mis flujos de trabajo.</p>
+</div>
+<div class="tools-grid reveal">
+<a class="tool" href="https://www.r-project.org/" rel="noopener noreferrer" target="_blank">R</a>
+<a class="tool" href="https://www.python.org/" rel="noopener noreferrer" target="_blank">Python</a>
+<a class="tool" href="https://la.mathworks.com/products/matlab.html" rel="noopener noreferrer" target="_blank">MATLAB</a>
+<a class="tool" href="https://qgis.org/" rel="noopener noreferrer" target="_blank">QGIS</a>
+<a class="tool" href="https://www.esri.com/en-us/arcgis/geospatial-platform/overview" rel="noopener noreferrer" target="_blank">ArcGIS</a>
+<a class="tool" href="https://earthengine.google.com/" rel="noopener noreferrer" target="_blank">Google Earth Engine</a>
+<a class="tool" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" rel="noopener noreferrer" target="_blank">3D Gaussian Splatting</a>
+<a class="tool" href="https://www.esri.cl/es-cl/imagenes/capabilities/content/envi" rel="noopener noreferrer" target="_blank">ENVI</a>
+<a class="tool" href="https://www.cloudcompare.org/" rel="noopener noreferrer" target="_blank">CloudCompare</a>
+<a class="tool" href="https://app.powerbi.com" rel="noopener noreferrer" target="_blank">Power BI</a>
+<a class="tool" href="https://about.appsheet.com/home/" rel="noopener noreferrer" target="_blank">Google AppSheet</a>
+<a class="tool" href="https://developers.google.com/apps-script" rel="noopener noreferrer" target="_blank">Google Apps Script</a>
+</div>
+</div>
+</section>
+<!-- CURSOS -->
+<section id="cursos">
+<div class="container">
+<div class="section-head single has-count multi-count reveal">
+<div>
+<div class="section-kicker">07 · Cursos</div>
+<h2>Cursos y formación.</h2>
+</div>
+<div aria-label="Resumen de cursos y participantes" class="section-count-group">
+<div aria-label="Cantidad de cursos" class="section-count"><strong id="courseCount">0</strong><span id="courseCountLabel">cursos</span></div>
+<div aria-label="Total de participantes" class="section-count"><strong id="courseParticipantsTotal">0</strong><span id="courseParticipantsTotalLabel">participantes</span></div>
+</div>
+</div>
+<div class="courses-shell reveal" id="coursesCarousel">
+<div class="courses-toolbar">
+<div class="project-filter course-filter">
+<button aria-expanded="false" aria-haspopup="menu" class="project-filter-button" id="courseFilterButton" type="button">
+<span>Curso:</span>
+<span class="project-filter-label" id="courseFilterLabel">Seleccionar</span>
+<span aria-hidden="true">▾</span>
+</button>
+<div aria-label="Seleccionar curso" class="project-filter-menu" id="courseFilterMenu" role="menu"></div>
+</div>
+<div aria-label="Controles de cursos" class="carousel-controls">
+<button aria-label="Curso anterior" class="carousel-btn" id="coursesPrev" type="button">←</button>
+<button aria-label="Curso siguiente" class="carousel-btn" id="coursesNext" type="button">→</button>
+</div>
+</div>
+<div class="courses-viewport">
+<div class="courses-grid" id="coursesTrack"><noscript><div class="dynamic-empty">Activa JavaScript para cargar cursos.</div></noscript></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTACTO -->
+<section id="contacto">
+<div class="container">
+<div class="contact reveal">
+<div class="contact-layout">
+<div class="contact-main">
+<div class="section-kicker">08 · Contacto</div>
+<h2>Contacto y perfiles.</h2>
+<p>Perfiles académicos, profesionales y repositorios de código.</p>
+<div class="socials">
+<a class="social-link" href="https://github.com/barm2000" rel="noopener noreferrer" target="_blank">GitHub</a>
+<a class="social-link" href="https://www.linkedin.com/in/barm-bastian" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a class="social-link" href="https://orcid.org/0009-0002-2931-9683" rel="noopener noreferrer" target="_blank">ORCID</a>
+<a class="social-link" href="https://www.researchgate.net/profile/Bastian-Rivas-Maldonado?ev=prf_overview" rel="noopener noreferrer" target="_blank">ResearchGate</a>
+</div>
+</div>
+<div aria-label="Código QR del portafolio" class="qr-card">
+<img alt="Código QR para abrir el portafolio de Bastián Rivas" src="gifs/qr.png"/>
+<strong>Abrir portafolio</strong>
+<span>Escanea el código QR desde otro dispositivo.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div aria-hidden="true" aria-label="Proyecto ampliado" aria-modal="true" class="project-modal" id="projectModal" role="dialog">
+<div class="project-modal-dialog" id="projectModalDialog">
+<button aria-label="Cerrar proyecto" class="project-modal-close" id="projectModalClose" type="button">×</button>
+</div>
+</div>
+<div aria-hidden="true" aria-label="Curso ampliado" aria-modal="true" class="course-modal" id="courseModal" role="dialog">
+<div class="course-modal-dialog" id="courseModalDialog">
+<button aria-label="Cerrar curso" class="course-modal-close" id="courseModalClose" type="button">×</button>
+</div>
+</div>
+<div aria-hidden="true" aria-label="Visor multimedia" aria-modal="true" class="media-lightbox" id="mediaLightbox" role="dialog">
+<button aria-label="Cerrar visor" class="lightbox-close" id="lightboxClose" type="button">×</button>
+<div class="lightbox-content" id="lightboxContent"></div>
+</div>
+<footer>
+<div class="container footer-inner">
+<div>© <span id="year"></span> Bastián Alejandro Rivas Maldonado</div>
+<div>Forestal · Agua · Teledetección · Computación · 3D</div>
+</div>
+</footer>
+<script src="data/site-data.js"></script><script>
+    /* =========================================================
+       CONTENIDO AUTOMÁTICO
+       Los datos se generan desde /content mediante scripts/build_data.py
+       ========================================================= */
+    const portfolioData = window.PORTFOLIO_DATA || { projects: [], production: [], formation: [], courses: [] };
+
+    function escapeHtml(value = '') {
+      return String(value).replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
+    }
+
+    function safeUrl(value = '') {
+      const raw = String(value || '').trim();
+      if (!raw) return '';
+      if (/^(https?:|mailto:|#|\.\.?\/)/i.test(raw)) return raw;
+      return raw.replace(/^\/+/, '');
+    }
+
+    function isVideoPath(src = '') { return /\.(mp4|webm|mov)(?:[?#].*)?$/i.test(src); }
+
+    function mediaMarkup(record, mediaClass, placeholderClass) {
+      const cover = record?.cover;
+      if (cover?.src) {
+        const src = escapeHtml(safeUrl(cover.src));
+        const alt = escapeHtml(record.title || 'Recurso multimedia');
+        if (cover.type === 'video' || isVideoPath(cover.src)) {
+          return `<div class="${mediaClass}"><video autoplay muted loop playsinline preload="metadata" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback"><source src="${src}"></video></div>`;
+        }
+        return `<div class="${mediaClass}"><img src="${src}" alt="${alt}" loading="lazy"></div>`;
+      }
+      const ph = escapeHtml(record?.placeholder || String(record?.title || '').slice(0,3).toUpperCase() || '—');
+      return `<div class="${placeholderClass}"><span>${ph}</span></div>`;
+    }
+
+    function renderProjects() {
+      const container = document.getElementById('projectsTrack');
+      if (!container) return;
+      const items = Array.isArray(portfolioData.projects) ? portfolioData.projects : [];
+      if (!items.length) { container.innerHTML = '<div class="dynamic-empty">Aún no hay proyectos cargados.</div>'; return; }
+      container.innerHTML = items.map(item => {
+        const link = safeUrl(item.link);
+        const linkHtml = link ? `<a class="project-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.linkText || 'Ver proyecto')}</a>` : '';
+        return `<article class="project">
+          ${mediaMarkup(item, 'project-media', 'project-placeholder')}
+          <div class="project-body">
+            <div class="project-label">${escapeHtml(item.label || 'Proyecto')}</div>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.summary)}</p>
+            ${item.technologies ? `<p class="project-tech">${escapeHtml(item.technologies)}</p>` : '<p class="project-tech"></p>'}
+            ${linkHtml}
+          </div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderProduction() {
+      const container = document.getElementById('publicationList');
+      if (!container) return;
+      const items = Array.isArray(portfolioData.production) ? portfolioData.production : [];
+      if (!items.length) { container.innerHTML = '<div class="dynamic-empty">Aún no hay contribuciones cargadas.</div>'; return; }
+      container.innerHTML = items.map(item => {
+        const pieces = [item.authors, item.source, item.details].filter(Boolean).map(escapeHtml);
+        const copy = pieces.join(' · ');
+        const link = safeUrl(item.link);
+        return `<article class="publication" data-role="${escapeHtml(item.role || 'Colaborador')}" data-type="${escapeHtml(item.type || 'Publicación')}" data-year="${escapeHtml(item.year || '')}" data-date="${escapeHtml(item.date || item.year || '')}">
+          <div class="pub-year">${escapeHtml(item.year || '')}</div>
+          <div>
+            <div class="pub-title">${escapeHtml(item.title)}</div>
+            ${copy ? `<div class="pub-copy">${copy}</div>` : ''}
+          </div>
+          <div class="publication-actions">
+            <span class="pub-type">${escapeHtml(item.type || 'Publicación')}</span>
+            <span class="pub-role">${escapeHtml(item.role || 'Colaborador')}</span>
+            ${link ? `<a class="pub-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.linkText || 'Enlace')}</a>` : ''}
+          </div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderFormation() {
+      const container = document.getElementById('mentoringList');
+      if (!container) return;
+      const items = Array.isArray(portfolioData.formation) ? portfolioData.formation : [];
+      if (!items.length) { container.innerHTML = '<div class="dynamic-empty">Aún no hay registros de formación cargados.</div>'; return; }
+      container.innerHTML = items.map(item => {
+        const line1 = [
+          item.student ? `<strong>Estudiante:</strong> ${escapeHtml(item.student)}` : '',
+          item.degree ? `<strong>Título profesional:</strong> ${escapeHtml(item.degree)}` : ''
+        ].filter(Boolean).join(' · ');
+        const line2 = [item.institution, item.dateText].filter(Boolean).map(escapeHtml).join(' · ');
+        const line3 = [
+          item.guide ? `<strong>Profesor guía:</strong> ${escapeHtml(item.guide)}` : '',
+          item.coGuide ? `<strong>Co-guía:</strong> ${escapeHtml(item.coGuide)}` : ''
+        ].filter(Boolean).join(' · ');
+        const lines = [line1, line2, line3, item.details ? escapeHtml(item.details) : ''].filter(Boolean).join('<br>');
+        return `<article class="mentoring-item" data-role="${escapeHtml(item.role || 'Co-guía')}" data-year="${escapeHtml(item.year || '')}" data-date="${escapeHtml(item.date || item.year || '')}">
+          <div class="mentoring-year">${escapeHtml(item.year || '')}</div>
+          <div>
+            <div class="mentoring-title">${escapeHtml(item.title)}</div>
+            ${lines ? `<div class="mentoring-meta">${lines}</div>` : ''}
+          </div>
+          <div class="mentoring-role">${escapeHtml(item.role || 'Co-guía')}</div>
+        </article>`;
+      }).join('');
+    }
+
+    function renderCourses() {
+      const container = document.getElementById('coursesTrack');
+      if (!container) return;
+      const items = Array.isArray(portfolioData.courses) ? portfolioData.courses : [];
+      if (!items.length) { container.innerHTML = '<div class="dynamic-empty">Aún no hay cursos cargados.</div>'; return; }
+      container.innerHTML = items.map(item => {
+        const participants = Number.isFinite(Number(item.participants)) ? Number(item.participants) : 0;
+        const participantLabel = participants === 1 ? '1 participante' : `${participants} participantes`;
+        const link = safeUrl(item.link);
+        return `<article class="course-card" data-participants="${participants}">
+          ${mediaMarkup(item, 'course-media', 'course-media course-placeholder')}
+          <div class="course-body">
+            <div class="course-topline">
+              <span class="course-status">${escapeHtml(item.status || 'Próximamente')}</span>
+              <span class="course-participants" aria-label="Cantidad de participantes"></span>
+            </div>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.summary)}</p>
+            ${item.platforms ? `<div class="course-platforms">${escapeHtml(item.platforms)}</div>` : ''}
+            ${link ? `<a class="project-link" href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.linkText || 'Ver curso')}</a>` : ''}
+          </div>
+        </article>`;
+      }).join('');
+    }
+
+    renderProjects();
+    renderProduction();
+    renderFormation();
+    renderCourses();
+
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuButton = document.getElementById('menuButton');
+    const navLinks = document.getElementById('navLinks');
+    menuButton.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .07 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    const sections = [...document.querySelectorAll('section[id]')];
+    const links = [...document.querySelectorAll('.nav-links a')];
+
+    function activateNavLink(sectionId) {
+      links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + sectionId));
+    }
+
+    function setActive() {
+      if (!sections.length) return;
+
+      // El punto de lectura se sitúa dentro de la ventana y no solo en el borde superior.
+      // Esto permite detectar correctamente secciones cortas, especialmente Contacto.
+      const marker = window.scrollY + Math.min(260, Math.max(125, window.innerHeight * 0.32));
+      let current = sections[0].id;
+
+      for (const section of sections) {
+        if (marker >= section.offsetTop) current = section.id;
+        else break;
+      }
+
+      // Cuando llegamos al final del documento, la última sección debe quedar activa
+      // aunque no exista espacio suficiente para alinearla debajo de la navbar.
+      const atPageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+      if (atPageBottom) current = sections[sections.length - 1].id;
+
+      activateNavLink(current);
+    }
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        const targetId = link.getAttribute('href')?.replace('#', '');
+        if (targetId) activateNavLink(targetId);
+      });
+    });
+
+    window.addEventListener('scroll', setActive, { passive: true });
+    window.addEventListener('resize', setActive, { passive: true });
+    window.addEventListener('hashchange', setActive);
+    setActive();
+
+    function setSectionCounter(valueId, labelId, count, singular, plural) {
+      const value = document.getElementById(valueId);
+      const label = document.getElementById(labelId);
+      if (value) value.textContent = String(count);
+      if (label) label.textContent = count === 1 ? singular : plural;
+    }
+
+    /* CARRUSEL DE PROYECTOS: autoplay en PC y móvil; las flechas pasan a control manual */
+    const track = document.getElementById('projectsTrack');
+    const prev = document.getElementById('projectsPrev');
+    const next = document.getElementById('projectsNext');
+    const cards = [...track.querySelectorAll('.project')];
+    setSectionCounter('projectCount', 'projectCountLabel', cards.length, 'proyecto', 'proyectos');
+    let autoplayTimer = null;
+    let autoplayStopped = false;
+
+    function cardStep() {
+      if (!cards.length) return 0;
+      const gap = parseFloat(getComputedStyle(track).gap) || 0;
+      return cards[0].getBoundingClientRect().width + gap;
+    }
+
+    function maxScrollLeft() {
+      return Math.max(0, track.scrollWidth - track.clientWidth);
+    }
+
+    function currentCarouselIndex() {
+      const step = cardStep();
+      return step ? Math.round(track.scrollLeft / step) : 0;
+    }
+
+    function lastProjectIndex() {
+      const step = cardStep();
+      return step ? Math.max(0, Math.round(maxScrollLeft() / step)) : 0;
+    }
+
+    function goToProject(index, manual = false) {
+      if (manual) stopProjectsAutoplay();
+      const step = cardStep();
+      if (!step) return;
+      const maxIndex = lastProjectIndex();
+      let targetIndex = index;
+      if (targetIndex > maxIndex) targetIndex = 0;
+      if (targetIndex < 0) targetIndex = maxIndex;
+      const targetLeft = targetIndex === maxIndex ? maxScrollLeft() : Math.min(targetIndex * step, maxScrollLeft());
+      track.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    }
+
+    function autoplayAdvance() {
+      if (autoplayStopped || document.hidden) return;
+      if (track.scrollLeft >= maxScrollLeft() - 2) goToProject(0, false);
+      else goToProject(currentCarouselIndex() + 1, false);
+    }
+
+    function startProjectsAutoplay() {
+      if (autoplayStopped) return;
+      clearInterval(autoplayTimer);
+      autoplayTimer = setInterval(autoplayAdvance, 2800);
+    }
+
+    function stopProjectsAutoplay() {
+      autoplayStopped = true;
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+
+    prev.addEventListener('click', () => {
+      if (track.scrollLeft <= 2) goToProject(lastProjectIndex(), true);
+      else goToProject(currentCarouselIndex() - 1, true);
+    });
+    next.addEventListener('click', () => {
+      if (track.scrollLeft >= maxScrollLeft() - 2) goToProject(0, true);
+      else goToProject(currentCarouselIndex() + 1, true);
+    });
+    window.addEventListener('resize', () => {
+      const idx = currentCarouselIndex();
+      requestAnimationFrame(() => goToProject(idx, false));
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && !autoplayStopped) startProjectsAutoplay();
+    });
+    startProjectsAutoplay();
+
+    /* SELECTOR DE PROYECTOS: lista automática + vista ampliada de la tarjeta */
+    const projectFilterButton = document.getElementById('projectFilterButton');
+    const projectFilterMenu = document.getElementById('projectFilterMenu');
+    const projectModal = document.getElementById('projectModal');
+    const projectModalDialog = document.getElementById('projectModalDialog');
+    const projectModalClose = document.getElementById('projectModalClose');
+
+    function closeProjectModal() {
+      if (!projectModal || !projectModalDialog) return;
+      projectModal.classList.remove('open');
+      projectModal.setAttribute('aria-hidden', 'true');
+      projectModalDialog.querySelector('.project')?.remove();
+      document.body.style.overflow = '';
+    }
+
+    function openProjectModal(card, index) {
+      if (!projectModal || !projectModalDialog || !card) return;
+      const clone = card.cloneNode(true);
+      clone.classList.remove('reveal');
+      clone.classList.add('visible');
+      projectModalDialog.querySelector('.project')?.remove();
+      projectModalDialog.appendChild(clone);
+      goToProject(index, false);
+      projectModal.classList.add('open');
+      projectModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    if (projectFilterButton && projectFilterMenu) {
+      const projectFilterLabel = projectFilterButton.querySelector('.project-filter-label');
+      cards.forEach((card, index) => {
+        const title = card.querySelector('h3')?.textContent.trim() || `Proyecto ${index + 1}`;
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'project-option';
+        option.textContent = title;
+        option.addEventListener('click', () => {
+          projectFilterMenu.classList.remove('open');
+          projectFilterButton.setAttribute('aria-expanded', 'false');
+          if (projectFilterLabel) projectFilterLabel.textContent = title;
+          openProjectModal(card, index);
+        });
+        projectFilterMenu.appendChild(option);
+      });
+
+      projectFilterButton.addEventListener('click', event => {
+        event.stopPropagation();
+        const open = projectFilterMenu.classList.toggle('open');
+        projectFilterButton.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    projectModalClose?.addEventListener('click', closeProjectModal);
+    projectModal?.addEventListener('click', event => {
+      if (event.target === projectModal) closeProjectModal();
+    });
+
+    /* Fallback para imágenes que todavía no estén presentes en la carpeta */
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', () => {
+        img.style.display = 'none';
+        img.closest('.project-media')?.classList.add('missing');
+        img.closest('.course-media')?.classList.add('missing');
+        img.closest('.membership-card')?.classList.add('image-missing');
+        img.closest('.brand-lab-logo')?.classList.add('image-missing');
+        img.closest('.qr-card')?.classList.add('image-missing');
+      });
+    });
+
+    /* VISOR GRANDE PARA IMÁGENES Y VIDEOS DE LA PÁGINA */
+    const lightbox = document.getElementById('mediaLightbox');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(media) {
+      if (!lightbox || !lightboxContent || !media) return;
+      lightboxContent.innerHTML = '';
+      let expanded;
+      if (media.tagName === 'VIDEO') {
+        expanded = document.createElement('video');
+        expanded.src = media.currentSrc || media.querySelector('source')?.src || '';
+        expanded.controls = true;
+        expanded.autoplay = true;
+        expanded.loop = true;
+        expanded.playsInline = true;
+      } else {
+        expanded = document.createElement('img');
+        expanded.src = media.currentSrc || media.src;
+        expanded.alt = media.alt || 'Imagen ampliada';
+      }
+      lightboxContent.appendChild(expanded);
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      if (!lightbox || !lightboxContent) return;
+      lightboxContent.querySelector('video')?.pause();
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxContent.innerHTML = '';
+      document.body.style.overflow = (projectModal?.classList.contains('open') || courseModal?.classList.contains('open')) ? 'hidden' : '';
+    }
+
+    document.addEventListener('click', event => {
+      const media = event.target.closest('.project-media img, .project-media video, .course-media img, .course-media video, .qr-card img, .membership-card img, .brand-lab-logo img');
+      if (!media) return;
+      event.preventDefault();
+      event.stopPropagation();
+      openLightbox(media);
+    });
+
+    lightboxClose?.addEventListener('click', closeLightbox);
+    lightbox?.addEventListener('click', event => {
+      if (event.target === lightbox) closeLightbox();
+    });
+
+    /* PUBLICACIONES: filtros de rol + año y vista compacta de las 4 más recientes */
+    const publicationTypeFilterButton = document.getElementById('publicationTypeFilterButton');
+    const publicationTypeFilterMenu = document.getElementById('publicationTypeFilterMenu');
+    const activePublicationTypeLabel = document.getElementById('activePublicationTypeLabel');
+    const publicationRoleFilterButton = document.getElementById('publicationRoleFilterButton');
+    const publicationRoleFilterMenu = document.getElementById('publicationRoleFilterMenu');
+    const activePublicationRoleLabel = document.getElementById('activePublicationRoleLabel');
+    const yearFilterButton = document.getElementById('yearFilterButton');
+    const yearFilterMenu = document.getElementById('yearFilterMenu');
+    const activeYearLabel = document.getElementById('activeYearLabel');
+    const publicationList = document.getElementById('publicationList');
+    const publicationListToggleWrap = document.getElementById('publicationListToggleWrap');
+    const publicationListToggle = document.getElementById('publicationListToggle');
+    const publications = [...document.querySelectorAll('.publication[data-role][data-type][data-year]')];
+    const publicationLimit = 4;
+    let activePublicationType = 'Todos';
+    let activePublicationRole = 'Todos';
+    let activePublicationYear = 'Todos';
+    let publicationsExpanded = false;
+
+    function sortNewestFirst(items, container) {
+      if (!container) return;
+      items.sort((a, b) => {
+        const da = a.dataset.date || a.dataset.year || '';
+        const db = b.dataset.date || b.dataset.year || '';
+        return db.localeCompare(da);
+      });
+      items.forEach(item => container.appendChild(item));
+    }
+    sortNewestFirst(publications, publicationList);
+
+    const publicationTypes = [...new Set(publications.map(item => item.dataset.type).filter(Boolean))].sort();
+    const publicationRoles = [...new Set(publications.map(item => item.dataset.role).filter(Boolean))].sort();
+    const publicationYears = [...new Set(publications.map(item => item.dataset.year).filter(Boolean))].sort((a,b) => b.localeCompare(a));
+
+    function buildPublicationMenu(menu, values, onSelect) {
+      if (!menu) return;
+      values.forEach(value => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'year-option' + (value === 'Todos' ? ' active' : '');
+        button.dataset.value = value;
+        button.textContent = value;
+        button.addEventListener('click', event => {
+          event.stopPropagation();
+          onSelect(value);
+        });
+        menu.appendChild(button);
+      });
+    }
+
+    function refreshPublications() {
+      const matches = publications.filter(item => {
+        const typeOK = activePublicationType === 'Todos' || item.dataset.type === activePublicationType;
+        const roleOK = activePublicationRole === 'Todos' || item.dataset.role === activePublicationRole;
+        const yearOK = activePublicationYear === 'Todos' || item.dataset.year === activePublicationYear;
+        return typeOK && roleOK && yearOK;
+      });
+
+      publications.forEach(item => item.hidden = true);
+      const itemsToShow = publicationsExpanded ? matches : matches.slice(0, publicationLimit);
+      itemsToShow.forEach(item => item.hidden = false);
+
+      setSectionCounter('publicationCount', 'publicationCountLabel', matches.length, 'contribución', 'contribuciones');
+      if (activePublicationTypeLabel) activePublicationTypeLabel.textContent = activePublicationType;
+      if (activePublicationRoleLabel) activePublicationRoleLabel.textContent = activePublicationRole;
+      if (activeYearLabel) activeYearLabel.textContent = activePublicationYear;
+
+      publicationTypeFilterMenu?.querySelectorAll('.year-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.value === activePublicationType);
+      });
+      publicationRoleFilterMenu?.querySelectorAll('.year-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.value === activePublicationRole);
+      });
+      yearFilterMenu?.querySelectorAll('.year-option').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.value === activePublicationYear);
+      });
+
+      const hasMore = matches.length > publicationLimit;
+      if (publicationListToggleWrap) publicationListToggleWrap.hidden = !hasMore;
+      if (publicationListToggle) {
+        publicationListToggle.textContent = publicationsExpanded ? 'Mostrar menos' : `Ver todas (${matches.length})`;
+      }
+    }
+
+    buildPublicationMenu(publicationTypeFilterMenu, ['Todos', 'Publicación', 'Proyecto'], value => {
+      activePublicationType = value;
+      publicationsExpanded = false;
+      publicationTypeFilterMenu?.classList.remove('open');
+      publicationTypeFilterButton?.setAttribute('aria-expanded', 'false');
+      refreshPublications();
+    });
+
+    buildPublicationMenu(publicationRoleFilterMenu, ['Todos', 'Autor', 'Colaborador'], value => {
+      activePublicationRole = value;
+      publicationsExpanded = false;
+      publicationRoleFilterMenu?.classList.remove('open');
+      publicationRoleFilterButton?.setAttribute('aria-expanded', 'false');
+      refreshPublications();
+    });
+
+    buildPublicationMenu(yearFilterMenu, ['Todos', ...publicationYears], value => {
+      activePublicationYear = value;
+      publicationsExpanded = false;
+      yearFilterMenu?.classList.remove('open');
+      yearFilterButton?.setAttribute('aria-expanded', 'false');
+      refreshPublications();
+    });
+
+    publicationTypeFilterButton?.addEventListener('click', event => {
+      event.stopPropagation();
+      publicationRoleFilterMenu?.classList.remove('open');
+      publicationRoleFilterButton?.setAttribute('aria-expanded', 'false');
+      yearFilterMenu?.classList.remove('open');
+      yearFilterButton?.setAttribute('aria-expanded', 'false');
+      const open = publicationTypeFilterMenu?.classList.toggle('open');
+      publicationTypeFilterButton.setAttribute('aria-expanded', String(Boolean(open)));
+    });
+
+    publicationRoleFilterButton?.addEventListener('click', event => {
+      event.stopPropagation();
+      publicationTypeFilterMenu?.classList.remove('open');
+      publicationTypeFilterButton?.setAttribute('aria-expanded', 'false');
+      yearFilterMenu?.classList.remove('open');
+      yearFilterButton?.setAttribute('aria-expanded', 'false');
+      const open = publicationRoleFilterMenu?.classList.toggle('open');
+      publicationRoleFilterButton.setAttribute('aria-expanded', String(Boolean(open)));
+    });
+
+    yearFilterButton?.addEventListener('click', event => {
+      event.stopPropagation();
+      publicationTypeFilterMenu?.classList.remove('open');
+      publicationTypeFilterButton?.setAttribute('aria-expanded', 'false');
+      publicationRoleFilterMenu?.classList.remove('open');
+      publicationRoleFilterButton?.setAttribute('aria-expanded', 'false');
+      const open = yearFilterMenu?.classList.toggle('open');
+      yearFilterButton.setAttribute('aria-expanded', String(Boolean(open)));
+    });
+
+    publicationListToggle?.addEventListener('click', () => {
+      publicationsExpanded = !publicationsExpanded;
+      refreshPublications();
+      if (!publicationsExpanded) document.getElementById('publicaciones')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    refreshPublications();
+
+    /* FILTROS DE FORMACIÓN DE CAPITAL HUMANO: rol + año */
+    const roleFilterButton = document.getElementById('roleFilterButton');
+    const roleFilterMenu = document.getElementById('roleFilterMenu');
+    const activeRoleLabel = document.getElementById('activeRoleLabel');
+    const mentoringYearFilterButton = document.getElementById('mentoringYearFilterButton');
+    const mentoringYearFilterMenu = document.getElementById('mentoringYearFilterMenu');
+    const activeMentoringYearLabel = document.getElementById('activeMentoringYearLabel');
+    const mentoringList = document.getElementById('mentoringList');
+    const mentoringListToggleWrap = document.getElementById('mentoringListToggleWrap');
+    const mentoringListToggle = document.getElementById('mentoringListToggle');
+    const mentoringItems = [...document.querySelectorAll('.mentoring-item[data-role][data-year]')];
+    const mentoringLimit = 4;
+    let activeMentoringRole = 'Todos';
+    let activeMentoringYear = 'Todos';
+    let mentoringExpanded = false;
+    sortNewestFirst(mentoringItems, mentoringList);
+
+    function applyMentoringFilters() {
+      const matches = mentoringItems.filter(item => {
+        const roleOK = activeMentoringRole === 'Todos' || item.dataset.role === activeMentoringRole;
+        const yearOK = activeMentoringYear === 'Todos' || item.dataset.year === activeMentoringYear;
+        return roleOK && yearOK;
+      });
+
+      mentoringItems.forEach(item => item.hidden = true);
+      const itemsToShow = mentoringExpanded ? matches : matches.slice(0, mentoringLimit);
+      itemsToShow.forEach(item => item.hidden = false);
+
+      setSectionCounter('mentoringCount', 'mentoringCountLabel', matches.length, 'participación', 'participaciones');
+      if (activeRoleLabel) activeRoleLabel.textContent = activeMentoringRole;
+      if (activeMentoringYearLabel) activeMentoringYearLabel.textContent = activeMentoringYear;
+      roleFilterMenu?.querySelectorAll('.mentoring-option').forEach(btn => btn.classList.toggle('active', btn.dataset.value === activeMentoringRole));
+      mentoringYearFilterMenu?.querySelectorAll('.mentoring-option').forEach(btn => btn.classList.toggle('active', btn.dataset.value === activeMentoringYear));
+
+      const hasMore = matches.length > mentoringLimit;
+      if (mentoringListToggleWrap) mentoringListToggleWrap.hidden = !hasMore;
+      if (mentoringListToggle) mentoringListToggle.textContent = mentoringExpanded ? 'Mostrar menos' : `Ver todas (${matches.length})`;
+    }
+
+    function buildMentoringMenu(menu, values, onSelect) {
+      if (!menu) return;
+      values.forEach(value => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'mentoring-option' + (value === 'Todos' ? ' active' : '');
+        button.dataset.value = value;
+        button.textContent = value;
+        button.addEventListener('click', () => onSelect(value));
+        menu.appendChild(button);
+      });
+    }
+
+    const mentoringRoles = [...new Set(mentoringItems.map(item => item.dataset.role).filter(Boolean))].sort();
+    const mentoringYears = [...new Set(mentoringItems.map(item => item.dataset.year).filter(Boolean))].sort((a,b) => b.localeCompare(a));
+
+    buildMentoringMenu(roleFilterMenu, ['Todos', 'Guía', 'Co-guía'], value => {
+      activeMentoringRole = value;
+      mentoringExpanded = false;
+      roleFilterMenu?.classList.remove('open');
+      roleFilterButton?.setAttribute('aria-expanded', 'false');
+      applyMentoringFilters();
+    });
+
+    buildMentoringMenu(mentoringYearFilterMenu, ['Todos', ...mentoringYears], value => {
+      activeMentoringYear = value;
+      mentoringExpanded = false;
+      mentoringYearFilterMenu?.classList.remove('open');
+      mentoringYearFilterButton?.setAttribute('aria-expanded', 'false');
+      applyMentoringFilters();
+    });
+
+    roleFilterButton?.addEventListener('click', event => {
+      event.stopPropagation();
+      mentoringYearFilterMenu?.classList.remove('open');
+      mentoringYearFilterButton?.setAttribute('aria-expanded', 'false');
+      const open = roleFilterMenu?.classList.toggle('open');
+      roleFilterButton.setAttribute('aria-expanded', String(Boolean(open)));
+    });
+
+    mentoringYearFilterButton?.addEventListener('click', event => {
+      event.stopPropagation();
+      roleFilterMenu?.classList.remove('open');
+      roleFilterButton?.setAttribute('aria-expanded', 'false');
+      const open = mentoringYearFilterMenu?.classList.toggle('open');
+      mentoringYearFilterButton.setAttribute('aria-expanded', String(Boolean(open)));
+    });
+
+    mentoringListToggle?.addEventListener('click', () => {
+      mentoringExpanded = !mentoringExpanded;
+      applyMentoringFilters();
+      if (!mentoringExpanded) document.getElementById('formacion')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    applyMentoringFilters();
+
+    /* CURSOS: selector + flechas + desplazamiento automático */
+    const coursesTrack = document.getElementById('coursesTrack');
+    const coursesPrev = document.getElementById('coursesPrev');
+    const coursesNext = document.getElementById('coursesNext');
+    const courseFilterButton = document.getElementById('courseFilterButton');
+    const courseFilterMenu = document.getElementById('courseFilterMenu');
+    const courseFilterLabel = document.getElementById('courseFilterLabel');
+    const courseCards = coursesTrack ? [...coursesTrack.querySelectorAll('.course-card')] : [];
+    const courseModal = document.getElementById('courseModal');
+    const courseModalDialog = document.getElementById('courseModalDialog');
+    const courseModalClose = document.getElementById('courseModalClose');
+    setSectionCounter('courseCount', 'courseCountLabel', courseCards.length, 'curso', 'cursos');
+    let totalCourseParticipants = 0;
+    courseCards.forEach(card => {
+      const count = Math.max(0, Number(card.dataset.participants || 0) || 0);
+      totalCourseParticipants += count;
+      const badge = card.querySelector('.course-participants');
+      if (badge) badge.textContent = `${count} ${count === 1 ? 'participante' : 'participantes'}`;
+    });
+    setSectionCounter('courseParticipantsTotal', 'courseParticipantsTotalLabel', totalCourseParticipants, 'participante', 'participantes');
+
+    function closeCourseModal() {
+      if (!courseModal || !courseModalDialog) return;
+      courseModal.classList.remove('open');
+      courseModal.setAttribute('aria-hidden', 'true');
+      courseModalDialog.querySelector('.course-card')?.remove();
+      document.body.style.overflow = '';
+    }
+
+    function openCourseModal(card, index) {
+      if (!courseModal || !courseModalDialog || !card) return;
+      const clone = card.cloneNode(true);
+      clone.classList.remove('course-focus', 'reveal');
+      clone.classList.add('visible');
+      courseModalDialog.querySelector('.course-card')?.remove();
+      courseModalDialog.appendChild(clone);
+      goToCourse(index, false);
+      courseModal.classList.add('open');
+      courseModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    let coursesAutoplayTimer = null;
+    let coursesAutoplayStopped = false;
+
+    function courseStep() {
+      if (!coursesTrack || !courseCards.length) return 0;
+      const gap = parseFloat(getComputedStyle(coursesTrack).gap) || 0;
+      return courseCards[0].getBoundingClientRect().width + gap;
+    }
+
+    function maxCourseScrollLeft() {
+      return coursesTrack ? Math.max(0, coursesTrack.scrollWidth - coursesTrack.clientWidth) : 0;
+    }
+
+    function currentCourseIndex() {
+      const step = courseStep();
+      return step && coursesTrack ? Math.round(coursesTrack.scrollLeft / step) : 0;
+    }
+
+    function stopCoursesAutoplay() {
+      coursesAutoplayStopped = true;
+      clearInterval(coursesAutoplayTimer);
+      coursesAutoplayTimer = null;
+    }
+
+    function lastCourseIndex() {
+      const step = courseStep();
+      return step ? Math.max(0, Math.round(maxCourseScrollLeft() / step)) : 0;
+    }
+
+    function goToCourse(index, manual = false) {
+      if (!coursesTrack) return;
+      if (manual) stopCoursesAutoplay();
+      const step = courseStep();
+      if (!step) return;
+      const maxIndex = lastCourseIndex();
+      let targetIndex = index;
+      if (targetIndex > maxIndex) targetIndex = 0;
+      if (targetIndex < 0) targetIndex = maxIndex;
+      const targetLeft = targetIndex === maxIndex ? maxCourseScrollLeft() : Math.min(targetIndex * step, maxCourseScrollLeft());
+      coursesTrack.scrollTo({ left: targetLeft, behavior: 'smooth' });
+    }
+
+    function startCoursesAutoplay() {
+      if (coursesAutoplayStopped || courseCards.length < 2) return;
+      clearInterval(coursesAutoplayTimer);
+      coursesAutoplayTimer = setInterval(() => {
+        if (!document.hidden) {
+          if (coursesTrack.scrollLeft >= maxCourseScrollLeft() - 2) goToCourse(0, false);
+          else goToCourse(currentCourseIndex() + 1, false);
+        }
+      }, 3300);
+    }
+
+    coursesPrev?.addEventListener('click', () => {
+      if (coursesTrack.scrollLeft <= 2) goToCourse(lastCourseIndex(), true);
+      else goToCourse(currentCourseIndex() - 1, true);
+    });
+    coursesNext?.addEventListener('click', () => {
+      if (coursesTrack.scrollLeft >= maxCourseScrollLeft() - 2) goToCourse(0, true);
+      else goToCourse(currentCourseIndex() + 1, true);
+    });
+
+    if (courseFilterButton && courseFilterMenu) {
+      courseCards.forEach((card, index) => {
+        const title = card.querySelector('h3')?.textContent.trim() || `Curso ${index + 1}`;
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'project-option';
+        option.textContent = title;
+        option.addEventListener('click', event => {
+          event.stopPropagation();
+          courseFilterMenu.classList.remove('open');
+          courseFilterButton.setAttribute('aria-expanded', 'false');
+          if (courseFilterLabel) courseFilterLabel.textContent = title;
+          goToCourse(index, true);
+          openCourseModal(card, index);
+        });
+        courseFilterMenu.appendChild(option);
+      });
+
+      courseFilterButton.addEventListener('click', event => {
+        event.stopPropagation();
+        const open = courseFilterMenu.classList.toggle('open');
+        courseFilterButton.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    courseModalClose?.addEventListener('click', closeCourseModal);
+    courseModal?.addEventListener('click', event => {
+      if (event.target === courseModal) closeCourseModal();
+    });
+
+    window.addEventListener('resize', () => {
+      const idx = currentCourseIndex();
+      requestAnimationFrame(() => goToCourse(idx, false));
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && !coursesAutoplayStopped) startCoursesAutoplay();
+    });
+    startCoursesAutoplay();
+
+    /* Cierre de menús y visores */
+    document.addEventListener('click', event => {
+      if (projectFilterMenu && !event.target.closest('.project-filter')) {
+        projectFilterMenu.classList.remove('open');
+        projectFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (publicationTypeFilterMenu && !event.target.closest('.publication-toolbar')) {
+        publicationTypeFilterMenu.classList.remove('open');
+        publicationTypeFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (publicationRoleFilterMenu && !event.target.closest('.publication-toolbar')) {
+        publicationRoleFilterMenu.classList.remove('open');
+        publicationRoleFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (yearFilterMenu && !event.target.closest('.publication-toolbar')) {
+        yearFilterMenu.classList.remove('open');
+        yearFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (roleFilterMenu && !event.target.closest('#formacion .mentoring-filter')) {
+        roleFilterMenu.classList.remove('open');
+        roleFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (mentoringYearFilterMenu && !event.target.closest('#formacion .mentoring-filter')) {
+        mentoringYearFilterMenu.classList.remove('open');
+        mentoringYearFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+      if (courseFilterMenu && !event.target.closest('#cursos .project-filter')) {
+        courseFilterMenu.classList.remove('open');
+        courseFilterButton?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      if (lightbox?.classList.contains('open')) closeLightbox();
+      else if (courseModal?.classList.contains('open')) closeCourseModal();
+      else if (projectModal?.classList.contains('open')) closeProjectModal();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Title: Predicción espacio-temporal con imágenes
+Label: Deep Learning geoespacial
+Summary: Flujos orientados a utilizar variables ambientales representadas como raster para modelar su evolución espacial y temporal.
+Technologies: Raster · Sentinel-2 · MODIS · CNN · ConvLSTM
+Order: 8
+Placeholder: ST
