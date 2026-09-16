@@ -1,0 +1,15 @@
+# Configuración general del sitio. Edita este archivo; no necesitas tocar index.html.
+Brand: BARM
+BrowserTitle: Bastián Alejandro Rivas Maldonado | Portafolio
+MetaDescription: Portafolio académico y profesional de Bastián Alejandro Rivas Maldonado. Ciencias Forestales, hidrología, teledetección, modelación, inteligencia artificial y reconstrucción 3D.
+FooterName: Bastián Alejandro Rivas Maldonado
+FooterText: Forestal · Agua · Teledetección · Computación · 3D
+NavKnowledge: Conocimientos
+NavFocus: Enfoque
+NavProjects: Proyectos
+NavProduction: Producción
+NavFormation: Formación
+NavTools: Herramientas
+NavCourses: Cursos
+NavContact: Contacto
+

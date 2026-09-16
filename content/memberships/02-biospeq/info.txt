@@ -1,0 +1,6 @@
+Title: BioSpeQ
+Link: https://www.instagram.com/biospequdec/
+Order: 2
+Short: BQ
+ShowInNavbar: yes
+Cover: biospeq.png

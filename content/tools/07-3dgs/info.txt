@@ -1,0 +1,3 @@
+Title: 3D Gaussian Splatting
+Link: https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/
+Order: 7

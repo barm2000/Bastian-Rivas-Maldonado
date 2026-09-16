@@ -1,0 +1,8 @@
+# Copia esta carpeta para agregar otro laboratorio, grupo, universidad o centro.
+Title: Nombre de la institución o grupo
+Link: https://...
+Order: 99
+Short: ABC
+ShowInNavbar: yes
+# Cover: logo.png
+# Coloca el logo/imagen dentro de esta misma carpeta. Si Cover queda vacío se usa el primer archivo multimedia.

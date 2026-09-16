@@ -1,0 +1,3 @@
+Title: CloudCompare
+Link: https://www.cloudcompare.org/
+Order: 9

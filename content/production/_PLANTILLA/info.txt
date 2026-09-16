@@ -1,0 +1,14 @@
+# Sirve para publicaciones y colaboraciones/proyectos.
+Title: Título de la contribución
+Type: Publicación
+Role: Autor
+Year: 2026
+Date: 2026-01
+Authors: Bastián Rivas · Otros autores
+Source: Revista, congreso, proyecto o institución
+Details:
+Link: https://...
+LinkText: DOI
+Order: 99
+# Type: Publicación o Proyecto
+# Role: Autor o Colaborador

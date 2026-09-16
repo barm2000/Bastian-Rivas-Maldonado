@@ -1,0 +1,3 @@
+Title: QGIS
+Link: https://qgis.org/
+Order: 4

@@ -1,0 +1,4 @@
+Category: Espectro
+Title: Información hiperespectral
+Description: Análisis espacial y espectral para estudiar condición, estrés y respuestas fisiológicas de plantas.
+Order: 3

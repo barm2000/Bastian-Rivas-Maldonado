@@ -1,0 +1,3 @@
+Kicker: 06 · Herramientas
+Title: Herramientas y tecnologías.
+Intro: Software, lenguajes y plataformas utilizados en mis flujos de trabajo.

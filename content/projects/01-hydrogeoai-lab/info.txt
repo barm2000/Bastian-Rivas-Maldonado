@@ -1,0 +1,9 @@
+Title: HydroGeoAI Lab
+Label: Desarrollo web · Ciencia
+Summary: Diseño y desarrollo del sitio web del laboratorio, organizado para comunicar proyectos, equipo, servicios, publicaciones, equipamiento y recursos.
+Technologies: GitHub Pages · HTML · CSS · JavaScript · Automatización
+Link: https://syepez14.github.io/HydroGeoAI-Lab/
+LinkText: Visitar HydroGeoAI Lab
+Order: 1
+Placeholder: HLab
+Cover: logo.jpeg

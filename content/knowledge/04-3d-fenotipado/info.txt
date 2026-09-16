@@ -1,0 +1,5 @@
+Title: 3D & Fenotipado Digital
+Description: Representación tridimensional y caracterización digital de plantas.
+Keywords: 3DGS; Reconstrucción 3D; Point Clouds; Hyperspectral; 3D Spectral Data
+Order: 4
+Color: green

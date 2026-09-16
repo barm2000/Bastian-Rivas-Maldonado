@@ -1,0 +1,6 @@
+Kicker: 08 · Contacto
+Title: Contacto y perfiles.
+Intro: Perfiles académicos, profesionales y repositorios de código.
+QRTitle: Abrir portafolio
+QRText: Escanea el código QR desde otro dispositivo.
+QRImage: qr.png

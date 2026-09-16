@@ -1,0 +1,6 @@
+Title: HydroGeoAI Lab
+Link: https://syepez14.github.io/HydroGeoAI-Lab/
+Order: 1
+Short: HGAI
+ShowInNavbar: yes
+Cover: logo.jpeg

@@ -1,0 +1,6 @@
+Title: Nueva área de conocimiento
+Description: Descripción breve del área.
+Keywords: Palabra 1; Palabra 2; Palabra 3
+Order: 99
+Color: green
+# Color puede ser green o water.

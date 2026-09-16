@@ -1,0 +1,9 @@
+Title: Hyperion Explorer
+Label: Google Earth Engine · Hiperespectral
+Summary: Aplicación desarrollada en Google Earth Engine para explorar y analizar información hiperespectral de EO-1 Hyperion mediante una interfaz web interactiva.
+Technologies: Google Earth Engine · Hyperion · JavaScript · Visualización
+Link: https://batyrivas2000.users.earthengine.app/view/hyperion-explorer
+LinkText: Abrir Hyperion Explorer
+Order: 2
+Placeholder: HE
+Cover: normal.png

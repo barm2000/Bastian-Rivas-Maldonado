@@ -1,0 +1,3 @@
+Kicker: 02 · Enfoque aplicado
+Title: ¿Qué tipo de problemas puedo abordar?
+Intro: Flujos de trabajo que integran adquisición y preparación de datos, procesamiento, modelación, validación y generación de información útil para investigación o gestión.

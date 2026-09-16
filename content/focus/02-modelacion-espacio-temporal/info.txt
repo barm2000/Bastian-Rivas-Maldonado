@@ -1,0 +1,4 @@
+Category: Espacio + tiempo
+Title: Modelación espacio-temporal
+Description: Procesamiento de información raster y series temporales preservando la distribución espacial de las variables.
+Order: 2

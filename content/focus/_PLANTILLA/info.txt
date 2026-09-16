@@ -1,0 +1,4 @@
+Category: Categoría corta
+Title: Nombre del problema o enfoque
+Description: Descripción breve.
+Order: 99

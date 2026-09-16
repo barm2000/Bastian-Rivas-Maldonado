@@ -1,0 +1,5 @@
+Title: Métodos Computacionales
+Description: Programación científica y análisis de datos ambientales.
+Keywords: Python; R; MATLAB; Data Science; Computer Vision; Machine Learning
+Order: 3
+Color: water

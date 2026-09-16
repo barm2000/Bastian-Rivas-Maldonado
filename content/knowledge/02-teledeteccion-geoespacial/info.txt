@@ -1,0 +1,5 @@
+Title: Teledetección & Geoespacial
+Description: Observación de la Tierra y análisis espacial ambiental.
+Keywords: GIS / SIG; QGIS; ArcGIS; Google Earth Engine; LiDAR; Hyperspectral Imaging; UAV / RPA
+Order: 2
+Color: water

@@ -1,0 +1,11 @@
+# PORTADA / PERFIL PRINCIPAL
+Eyebrow: Portafolio académico y profesional
+NameLine1: Bastián Alejandro
+NameLine2: Rivas Maldonado
+Subtitle: Ingeniero Forestal · Estudiante de Magíster en Ciencias Forestales
+Description: Desarrollo y aplico herramientas computacionales para estudiar sistemas forestales y ambientales mediante información espacial, temporal, espectral y tridimensional.
+Tags: Ciencias Forestales; Hidrología; Teledetección; LiDAR; Hiperespectral; Machine Learning; 3D Gaussian Splatting
+PrimaryText: Explorar proyectos
+PrimaryLink: #proyectos
+SecondaryText: Contacto
+SecondaryLink: #contacto

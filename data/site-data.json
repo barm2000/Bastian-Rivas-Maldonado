@@ -1,0 +1,663 @@
+{
+  "site": {
+    "brand": "BARM",
+    "browserTitle": "Bastián Alejandro Rivas Maldonado | Portafolio",
+    "metaDescription": "Portafolio académico y profesional de Bastián Alejandro Rivas Maldonado. Ciencias Forestales, hidrología, teledetección, modelación, inteligencia artificial y reconstrucción 3D.",
+    "footerName": "Bastián Alejandro Rivas Maldonado",
+    "footerText": "Forestal · Agua · Teledetección · Computación · 3D",
+    "navKnowledge": "Conocimientos",
+    "navFocus": "Enfoque",
+    "navProjects": "Proyectos",
+    "navProduction": "Producción",
+    "navFormation": "Formación",
+    "navTools": "Herramientas",
+    "navCourses": "Cursos",
+    "navContact": "Contacto"
+  },
+  "profile": {
+    "eyebrow": "Portafolio académico y profesional",
+    "nameLine1": "Bastián Alejandro",
+    "nameLine2": "Rivas Maldonado",
+    "subtitle": "Ingeniero Forestal · Estudiante de Magíster en Ciencias Forestales",
+    "description": "Desarrollo y aplico herramientas computacionales para estudiar sistemas forestales y ambientales mediante información espacial, temporal, espectral y tridimensional.",
+    "tags": [
+      "Ciencias Forestales",
+      "Hidrología",
+      "Teledetección",
+      "LiDAR",
+      "Hiperespectral",
+      "Machine Learning",
+      "3D Gaussian Splatting"
+    ],
+    "primaryText": "Explorar proyectos",
+    "primaryLink": "#proyectos",
+    "secondaryText": "Contacto",
+    "secondaryLink": "#contacto"
+  },
+  "sections": {
+    "memberships": {
+      "kicker": "Miembro de",
+      "title": "Miembro de",
+      "intro": ""
+    },
+    "knowledge": {
+      "kicker": "01 · Conocimientos",
+      "title": "Áreas de conocimiento.",
+      "intro": "Un perfil interdisciplinario que integra ciencias forestales, hidrología, información geoespacial, programación, inteligencia artificial y tecnologías tridimensionales."
+    },
+    "focus": {
+      "kicker": "02 · Enfoque aplicado",
+      "title": "¿Qué tipo de problemas puedo abordar?",
+      "intro": "Flujos de trabajo que integran adquisición y preparación de datos, procesamiento, modelación, validación y generación de información útil para investigación o gestión."
+    },
+    "projects": {
+      "kicker": "03 · Proyectos",
+      "title": "Investigación y desarrollo.",
+      "intro": "Selección de trabajos, desarrollos y líneas que representan mi trayectoria y proyección actual."
+    },
+    "production": {
+      "kicker": "04 · Publicaciones",
+      "title": "Producción científica y colaboraciones.",
+      "intro": "Publicaciones, resultados y colaboraciones en proyectos de investigación y desarrollo."
+    },
+    "formation": {
+      "kicker": "05 · Formación",
+      "title": "Formación de capital humano.",
+      "intro": "Participación en guía y co-guía de tesis, memorias y trabajos de titulación."
+    },
+    "tools": {
+      "kicker": "06 · Herramientas",
+      "title": "Herramientas y tecnologías.",
+      "intro": "Software, lenguajes y plataformas utilizados en mis flujos de trabajo."
+    },
+    "courses": {
+      "kicker": "07 · Cursos",
+      "title": "Cursos y formación.",
+      "intro": ""
+    },
+    "contact": {
+      "kicker": "08 · Contacto",
+      "title": "Contacto y perfiles.",
+      "intro": "Perfiles académicos, profesionales y repositorios de código.",
+      "qrTitle": "Abrir portafolio",
+      "qrText": "Escanea el código QR desde otro dispositivo.",
+      "qrImage": "qr.png",
+      "qr": {
+        "src": "content/contact/qr.png",
+        "type": "image",
+        "name": "qr.png"
+      }
+    }
+  },
+  "memberships": [
+    {
+      "title": "HydroGeoAI Lab",
+      "link": "https://syepez14.github.io/HydroGeoAI-Lab/",
+      "order": 1,
+      "short": "HGAI",
+      "showInNavbar": true,
+      "cover": {
+        "src": "content/memberships/01-hydrogeoai-lab/logo.jpeg",
+        "type": "image",
+        "name": "logo.jpeg"
+      },
+      "folder": "01-hydrogeoai-lab",
+      "media": [
+        {
+          "src": "content/memberships/01-hydrogeoai-lab/logo.jpeg",
+          "type": "image",
+          "name": "logo.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "BioSpeQ",
+      "link": "https://www.instagram.com/biospequdec/",
+      "order": 2,
+      "short": "BQ",
+      "showInNavbar": true,
+      "cover": {
+        "src": "content/memberships/02-biospeq/biospeq.png",
+        "type": "image",
+        "name": "biospeq.png"
+      },
+      "folder": "02-biospeq",
+      "media": [
+        {
+          "src": "content/memberships/02-biospeq/biospeq.png",
+          "type": "image",
+          "name": "biospeq.png"
+        }
+      ]
+    }
+  ],
+  "knowledge": [
+    {
+      "title": "Ciencias Forestales",
+      "description": "Estructura, manejo y funcionamiento de ecosistemas forestales.",
+      "keywords": [
+        "Dendrometría",
+        "Silvicultura",
+        "Hidrología Forestal",
+        "Climatología",
+        "Cuencas",
+        "Incendios Forestales",
+        "Viveros"
+      ],
+      "order": 1,
+      "color": "green",
+      "folder": "01-ciencias-forestales",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Teledetección & Geoespacial",
+      "description": "Observación de la Tierra y análisis espacial ambiental.",
+      "keywords": [
+        "GIS / SIG",
+        "QGIS",
+        "ArcGIS",
+        "Google Earth Engine",
+        "LiDAR",
+        "Hyperspectral Imaging",
+        "UAV / RPA"
+      ],
+      "order": 2,
+      "color": "water",
+      "folder": "02-teledeteccion-geoespacial",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Métodos Computacionales",
+      "description": "Programación científica y análisis de datos ambientales.",
+      "keywords": [
+        "Python",
+        "R",
+        "MATLAB",
+        "Data Science",
+        "Computer Vision",
+        "Machine Learning"
+      ],
+      "order": 3,
+      "color": "water",
+      "folder": "03-metodos-computacionales",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "3D & Fenotipado Digital",
+      "description": "Representación tridimensional y caracterización digital de plantas.",
+      "keywords": [
+        "3DGS",
+        "Reconstrucción 3D",
+        "Point Clouds",
+        "Hyperspectral",
+        "3D Spectral Data"
+      ],
+      "order": 4,
+      "color": "green",
+      "folder": "04-3d-fenotipado",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Modelación Ambiental",
+      "description": "Representación cuantitativa de procesos hidrológicos y respuesta de cuencas.",
+      "keywords": [
+        "Modelación Hidrológica",
+        "Modelación de Escorrentía",
+        "GRxJ",
+        "SRM",
+        "CemaNeige",
+        "SWAT"
+      ],
+      "order": 5,
+      "color": "water",
+      "folder": "05-modelacion-ambiental",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "focus": [
+    {
+      "category": "Agua",
+      "title": "Predicción hidrológica",
+      "description": "Modelos tradicionales y aprendizaje automático para estimación y predicción de caudales y respuesta de cuencas.",
+      "order": 1,
+      "folder": "01-prediccion-hidrologica",
+      "media": [],
+      "cover": null
+    },
+    {
+      "category": "Espacio + tiempo",
+      "title": "Modelación espacio-temporal",
+      "description": "Procesamiento de información raster y series temporales preservando la distribución espacial de las variables.",
+      "order": 2,
+      "folder": "02-modelacion-espacio-temporal",
+      "media": [],
+      "cover": null
+    },
+    {
+      "category": "Espectro",
+      "title": "Información hiperespectral",
+      "description": "Análisis espacial y espectral para estudiar condición, estrés y respuestas fisiológicas de plantas.",
+      "order": 3,
+      "folder": "03-informacion-hiperespectral",
+      "media": [],
+      "cover": null
+    },
+    {
+      "category": "3D",
+      "title": "Fenotipado 3D",
+      "description": "Reconstrucción tridimensional y extracción de características morfológicas, arquitectónicas y biométricas.",
+      "order": 4,
+      "folder": "04-fenotipado-3d",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "projects": [
+    {
+      "title": "HydroGeoAI Lab",
+      "label": "Desarrollo web · Ciencia",
+      "summary": "Diseño y desarrollo del sitio web del laboratorio, organizado para comunicar proyectos, equipo, servicios, publicaciones, equipamiento y recursos.",
+      "technologies": "GitHub Pages · HTML · CSS · JavaScript · Automatización",
+      "link": "https://syepez14.github.io/HydroGeoAI-Lab/",
+      "linkText": "Visitar HydroGeoAI Lab",
+      "order": 1,
+      "placeholder": "HLab",
+      "cover": {
+        "src": "content/projects/01-hydrogeoai-lab/logo.jpeg",
+        "type": "image",
+        "name": "logo.jpeg"
+      },
+      "folder": "01-hydrogeoai-lab",
+      "media": [
+        {
+          "src": "content/projects/01-hydrogeoai-lab/logo.jpeg",
+          "type": "image",
+          "name": "logo.jpeg"
+        }
+      ]
+    },
+    {
+      "title": "Hyperion Explorer",
+      "label": "Google Earth Engine · Hiperespectral",
+      "summary": "Aplicación desarrollada en Google Earth Engine para explorar y analizar información hiperespectral de EO-1 Hyperion mediante una interfaz web interactiva.",
+      "technologies": "Google Earth Engine · Hyperion · JavaScript · Visualización",
+      "link": "https://batyrivas2000.users.earthengine.app/view/hyperion-explorer",
+      "linkText": "Abrir Hyperion Explorer",
+      "order": 2,
+      "placeholder": "HE",
+      "cover": {
+        "src": "content/projects/02-hyperion-explorer/normal.png",
+        "type": "image",
+        "name": "normal.png"
+      },
+      "folder": "02-hyperion-explorer",
+      "media": [
+        {
+          "src": "content/projects/02-hyperion-explorer/normal.png",
+          "type": "image",
+          "name": "normal.png"
+        }
+      ]
+    },
+    {
+      "title": "Modelación hidrológica mediante SRM y modelos GRxJ",
+      "label": "Hidrología",
+      "summary": "Comparación del desempeño de SRM y la familia GRxJ, con y sin CemaNeige, para simulación diaria de caudales en cuencas chilenas con regímenes hidrológicos contrastantes.",
+      "technologies": "SRM · GRxJ · CemaNeige · QSWAT · R-SWAT",
+      "link": "https://doi.org/10.3390/w17233413",
+      "linkText": "Ver publicación asociada",
+      "order": 3,
+      "placeholder": "HYD",
+      "folder": "03-modelacion-hidrologica",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Reconstrucción tridimensional de plantas",
+      "label": "Reconstrucción 3D",
+      "summary": "Desarrollo y comparación de flujos de reconstrucción mediante Structure from Motion, Multi-View Stereo y 3D Gaussian Splatting.",
+      "technologies": "SfM · MVS · 3DGS · Nubes de puntos",
+      "order": 4,
+      "placeholder": "3D",
+      "cover": {
+        "src": "content/projects/04-reconstruccion-3d/3dgs.gif",
+        "type": "image",
+        "name": "3dgs.gif"
+      },
+      "folder": "04-reconstruccion-3d",
+      "media": [
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgs.gif",
+          "type": "image",
+          "name": "3dgs.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgs_nube1.gif",
+          "type": "image",
+          "name": "3dgs_nube1.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/3dgsae.gif",
+          "type": "image",
+          "name": "3dgsae.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/mvs.gif",
+          "type": "image",
+          "name": "mvs.gif"
+        },
+        {
+          "src": "content/projects/04-reconstruccion-3d/sfm.gif",
+          "type": "image",
+          "name": "sfm.gif"
+        }
+      ]
+    },
+    {
+      "title": "Fenotipado digital de plantas",
+      "label": "Fenotipado digital",
+      "summary": "Uso de imágenes y reconstrucciones 3D para caracterizar estructuras vegetales y obtener variables morfológicas, arquitectónicas y biométricas.",
+      "technologies": "Visión computacional · 3D · Segmentación · Morfometría",
+      "order": 5,
+      "placeholder": "FEN",
+      "cover": {
+        "src": "content/projects/05-fenotipado-digital/3dgs_nube.gif",
+        "type": "image",
+        "name": "3dgs_nube.gif"
+      },
+      "folder": "05-fenotipado-digital",
+      "media": [
+        {
+          "src": "content/projects/05-fenotipado-digital/3dgs_nube.gif",
+          "type": "image",
+          "name": "3dgs_nube.gif"
+        }
+      ]
+    },
+    {
+      "title": "Análisis de vegetación mediante LiDAR",
+      "label": "LiDAR · Gestión de vegetación",
+      "summary": "Procesamiento de nubes de puntos para caracterizar vegetación en torno a redes eléctricas y derivar altura, densidad, proximidad, prioridad y potenciales plazos de intervención.",
+      "technologies": "LiDAR · Point Clouds · CHM · Análisis espacial",
+      "order": 6,
+      "placeholder": "LID",
+      "cover": {
+        "src": "content/projects/06-lidar-vegetacion/lineas.png",
+        "type": "image",
+        "name": "lineas.png"
+      },
+      "folder": "06-lidar-vegetacion",
+      "media": [
+        {
+          "src": "content/projects/06-lidar-vegetacion/lineas.png",
+          "type": "image",
+          "name": "lineas.png"
+        }
+      ]
+    },
+    {
+      "title": "Aprendizaje automático para variables ambientales",
+      "label": "Machine Learning",
+      "summary": "Exploración de modelos como LSTM, GRU y XGBoost para estimar variables de interés a partir de información climática, hidrológica y ambiental.",
+      "technologies": "LSTM · GRU · XGBoost · Series temporales",
+      "order": 7,
+      "placeholder": "ML",
+      "folder": "07-ml-variables-ambientales",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Predicción espacio-temporal con imágenes",
+      "label": "Deep Learning geoespacial",
+      "summary": "Flujos orientados a utilizar variables ambientales representadas como raster para modelar su evolución espacial y temporal.",
+      "technologies": "Raster · Sentinel-2 · MODIS · CNN · ConvLSTM",
+      "order": 8,
+      "placeholder": "ST",
+      "folder": "08-prediccion-espacio-temporal",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Detección de estrés y condición vegetal",
+      "label": "Hiperespectral",
+      "summary": "Investigación del uso de información hiperespectral y redes neuronales para clasificar condiciones fisiológicas de plantas, incluyendo estrés hídrico.",
+      "technologies": "Hiperespectral · 3D-CNN · Clasificación",
+      "order": 9,
+      "placeholder": "HSI",
+      "cover": {
+        "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
+        "type": "video",
+        "name": "hsi.mp4"
+      },
+      "folder": "09-estres-condicion-vegetal",
+      "media": [
+        {
+          "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
+          "type": "video",
+          "name": "hsi.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Fenotipado estructural automatizado",
+      "label": "3D vegetal",
+      "summary": "Proyección de métodos para identificar y cuantificar hojas, tallos, ramas y flores directamente sobre modelos tridimensionales.",
+      "technologies": "3D · Segmentación · Deep Learning · Morfometría",
+      "order": 10,
+      "placeholder": "PH",
+      "folder": "10-fenotipado-estructural",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "production": [
+    {
+      "title": "Performance Evaluation of the SRM and GRxJ—CemaNeige Models for Daily Streamflow Simulation in Two Catchments with Snow and Rain Dominated Hydrological Regimes",
+      "type": "Publicación",
+      "role": "Autor",
+      "year": "2025",
+      "date": "2025-12",
+      "authors": "Bastián Rivas · Víctor Osores · David González · Carlo Gualtieri · Santiago Yépez",
+      "source": "Water 2025, 17(23), 3413",
+      "link": "https://doi.org/10.3390/w17233413",
+      "linkText": "DOI",
+      "order": 1,
+      "folder": "2025-water-srm-grxj",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "formation": [
+    {
+      "title": "EVALUACIÓN RADIOMÉTRICA DE IMÁGENES SENTINEL-2 DEEP RESOLUTION 3.0 (S2DR3) MEDIANTE COMPARACIÓN CON SENTINEL-2 Y PLANETSCOPE",
+      "role": "Co-guía",
+      "year": "2026",
+      "date": "2026-06",
+      "dateText": "Junio 2026",
+      "student": "Francisco Ignacio Oñate Vidal",
+      "degree": "Ingeniero en Biotecnología Vegetal",
+      "institution": "Facultad de Ciencias Forestales · Universidad de Concepción",
+      "guide": "David González Lanteri",
+      "coGuide": "Bastián Alejandro Rivas Maldonado",
+      "order": 1,
+      "folder": "2026-francisco-onate",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "tools": [
+    {
+      "title": "R",
+      "link": "https://www.r-project.org/",
+      "order": 1,
+      "folder": "01-r",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Python",
+      "link": "https://www.python.org/",
+      "order": 2,
+      "folder": "02-python",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "MATLAB",
+      "link": "https://la.mathworks.com/products/matlab.html",
+      "order": 3,
+      "folder": "03-matlab",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "QGIS",
+      "link": "https://qgis.org/",
+      "order": 4,
+      "folder": "04-qgis",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "ArcGIS",
+      "link": "https://www.esri.com/en-us/arcgis/geospatial-platform/overview",
+      "order": 5,
+      "folder": "05-arcgis",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Google Earth Engine",
+      "link": "https://earthengine.google.com/",
+      "order": 6,
+      "folder": "06-gee",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "3D Gaussian Splatting",
+      "link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "order": 7,
+      "folder": "07-3dgs",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "ENVI",
+      "link": "https://www.esri.cl/es-cl/imagenes/capabilities/content/envi",
+      "order": 8,
+      "folder": "08-envi",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "CloudCompare",
+      "link": "https://www.cloudcompare.org/",
+      "order": 9,
+      "folder": "09-cloudcompare",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Power BI",
+      "link": "https://app.powerbi.com",
+      "order": 10,
+      "folder": "10-powerbi",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Google AppSheet",
+      "link": "https://about.appsheet.com/home/",
+      "order": 11,
+      "folder": "11-appsheet",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Google Apps Script",
+      "link": "https://developers.google.com/apps-script",
+      "order": 12,
+      "folder": "12-appsscript",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "courses": [
+    {
+      "title": "Teledetección y análisis geoespacial",
+      "status": "Próximamente",
+      "summary": "Cursos orientados al procesamiento, interpretación y análisis de información espacial aplicada a recursos naturales y ambiente.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 1,
+      "placeholder": "GEO",
+      "folder": "01-teledeteccion-geoespacial",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "Programación aplicada a datos ambientales",
+      "status": "Próximamente",
+      "summary": "Formación práctica para automatizar análisis y trabajar con datos ambientales mediante herramientas computacionales.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 2,
+      "placeholder": "DATA",
+      "folder": "02-programacion-ambiental",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "3D, visión computacional y nuevas tecnologías",
+      "status": "Próximamente",
+      "summary": "Contenidos enfocados en reconstrucción 3D, procesamiento de imágenes y metodologías emergentes aplicadas a investigación.",
+      "platforms": "Udemy · Hotmart",
+      "participants": 10,
+      "order": 3,
+      "placeholder": "3D",
+      "folder": "03-3d-vision",
+      "media": [],
+      "cover": null
+    }
+  ],
+  "contact": [
+    {
+      "title": "GitHub",
+      "link": "https://github.com/barm2000",
+      "order": 1,
+      "folder": "01-github",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/barm-bastian",
+      "order": 2,
+      "folder": "02-linkedin",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "ORCID",
+      "link": "https://orcid.org/0009-0002-2931-9683",
+      "order": 3,
+      "folder": "03-orcid",
+      "media": [],
+      "cover": null
+    },
+    {
+      "title": "ResearchGate",
+      "link": "https://www.researchgate.net/profile/Bastian-Rivas-Maldonado?ev=prf_overview",
+      "order": 4,
+      "folder": "04-researchgate",
+      "media": [],
+      "cover": null
+    }
+  ]
+}
