@@ -5,4 +5,5 @@ Technologies: GitHub Pages · HTML · CSS · JavaScript · Automatización
 Link: https://syepez14.github.io/HydroGeoAI-Lab/
 LinkText: Visitar HydroGeoAI Lab
 Order: 1
-Placeholder: logo.jpeg
+Placeholder: HLab
+Cover: logo.jpeg
