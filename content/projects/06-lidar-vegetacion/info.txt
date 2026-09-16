@@ -1,7 +1,0 @@
-Title: Análisis de vegetación mediante LiDAR
-Label: LiDAR · Gestión de vegetación
-Summary: Procesamiento de nubes de puntos para caracterizar vegetación en torno a redes eléctricas y derivar altura, densidad, proximidad, prioridad y potenciales plazos de intervención.
-Technologies: LiDAR · Point Clouds · CHM · Análisis espacial
-Order: 6
-Placeholder: LID
-Cover: lineas.png

@@ -1,7 +1,0 @@
-Title: Detección de estrés y condición vegetal
-Label: Hiperespectral
-Summary: Investigación del uso de información hiperespectral y redes neuronales para clasificar condiciones fisiológicas de plantas, incluyendo estrés hídrico.
-Technologies: Hiperespectral · 3D-CNN · Clasificación
-Order: 9
-Placeholder: HSI
-Cover: hsi.mp4

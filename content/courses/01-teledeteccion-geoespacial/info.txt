@@ -1,7 +1,0 @@
-Title: Teledetección y análisis geoespacial
-Status: Próximamente
-Summary: Cursos orientados al procesamiento, interpretación y análisis de información espacial aplicada a recursos naturales y ambiente.
-Platforms: Udemy · Hotmart
-Participants: 10
-Order: 1
-Placeholder: GEO

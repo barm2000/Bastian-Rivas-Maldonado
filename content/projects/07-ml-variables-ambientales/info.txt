@@ -1,6 +1,0 @@
-Title: Aprendizaje automático para variables ambientales
-Label: Machine Learning
-Summary: Exploración de modelos como LSTM, GRU y XGBoost para estimar variables de interés a partir de información climática, hidrológica y ambiental.
-Technologies: LSTM · GRU · XGBoost · Series temporales
-Order: 7
-Placeholder: ML
