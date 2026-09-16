@@ -429,19 +429,9 @@ window.PORTFOLIO_DATA = {
       "technologies": "Hiperespectral · 3D-CNN · Clasificación",
       "order": 9,
       "placeholder": "HSI",
-      "cover": {
-        "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
-        "type": "video",
-        "name": "hsi.mp4"
-      },
+      "cover": null,
       "folder": "09-estres-condicion-vegetal",
-      "media": [
-        {
-          "src": "content/projects/09-estres-condicion-vegetal/hsi.mp4",
-          "type": "video",
-          "name": "hsi.mp4"
-        }
-      ]
+      "media": []
     },
     {
       "title": "Fenotipado estructural automatizado",
