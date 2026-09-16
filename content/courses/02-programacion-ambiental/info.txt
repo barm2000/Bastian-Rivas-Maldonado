@@ -1,0 +1,7 @@
+Title: Programación aplicada a datos ambientales
+Status: Próximamente
+Summary: Formación práctica para automatizar análisis y trabajar con datos ambientales mediante herramientas computacionales.
+Platforms: Udemy · Hotmart
+Participants: 10
+Order: 2
+Placeholder: DATA

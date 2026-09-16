@@ -1,0 +1,7 @@
+Title: Fenotipado digital de plantas
+Label: Fenotipado digital
+Summary: Uso de imágenes y reconstrucciones 3D para caracterizar estructuras vegetales y obtener variables morfológicas, arquitectónicas y biométricas.
+Technologies: Visión computacional · 3D · Segmentación · Morfometría
+Order: 5
+Placeholder: FEN
+Cover: 3dgs_nube.gif
