@@ -1,6 +1,0 @@
-Title: Fenotipado estructural automatizado
-Label: 3D vegetal
-Summary: Proyección de métodos para identificar y cuantificar hojas, tallos, ramas y flores directamente sobre modelos tridimensionales.
-Technologies: 3D · Segmentación · Deep Learning · Morfometría
-Order: 10
-Placeholder: PH

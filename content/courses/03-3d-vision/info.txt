@@ -1,7 +1,0 @@
-Title: 3D, visión computacional y nuevas tecnologías
-Status: Próximamente
-Summary: Contenidos enfocados en reconstrucción 3D, procesamiento de imágenes y metodologías emergentes aplicadas a investigación.
-Platforms: Udemy · Hotmart
-Participants: 10
-Order: 3
-Placeholder: 3D
