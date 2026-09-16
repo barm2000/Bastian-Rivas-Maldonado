@@ -5,4 +5,5 @@ Technologies: Google Earth Engine · Hyperion · JavaScript · Visualización
 Link: https://batyrivas2000.users.earthengine.app/view/hyperion-explorer
 LinkText: Abrir Hyperion Explorer
 Order: 2
+Placeholder: HE
 Cover: normal.png
