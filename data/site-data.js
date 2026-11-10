@@ -483,7 +483,7 @@ window.PORTFOLIO_DATA = {
       "degree": "Ingeniero en Biotecnología Vegetal",
       "institution": "Facultad de Ciencias Forestales · Universidad de Concepción",
       "guide": "David González Lanteri",
-      "coGuide": "Bastián Alejandro Rivas Maldonado",
+      "coGuide": "Bastián Alejandro Rivas Maldonado · Elvis Gavilán Gutiérrez",
       "order": 1,
       "folder": "2026-francisco-onate",
       "media": [],
