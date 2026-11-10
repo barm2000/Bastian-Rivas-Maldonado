@@ -7,5 +7,5 @@ Student: Francisco Ignacio Oñate Vidal
 Degree: Ingeniero en Biotecnología Vegetal
 Institution: Facultad de Ciencias Forestales · Universidad de Concepción
 Guide: David González Lanteri
-CoGuide: Bastián Alejandro Rivas Maldonado
+CoGuide: Bastián Alejandro Rivas Maldonado · Elvis Gavilán Gutiérrez
 Order: 1
